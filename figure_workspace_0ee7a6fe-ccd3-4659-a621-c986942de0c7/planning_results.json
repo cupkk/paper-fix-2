@@ -1,0 +1,71 @@
+{
+  "ablation_figures": [
+    {
+      "filename": "architectural_component_ablation.png",
+      "description": "A grouped bar chart comparing Log Loss (lower is better) and Recall@5 (higher is better) for the Transformer baseline and all FRAA ablated variants (full, -KB, -TE, -Dyn). The chart highlights that the full FRAA achieves the lowest Log Loss (0.5163) and highest Recall@5 (0.4185), while removal of the knowledge module (-KB) causes the largest performance drop, followed by time encoding and dynamic context. Error bars are not shown as pilot estimates are single-point.",
+      "old_string": "Overall, the full FRAA consistently dominates all its crippled versions, validating the synergy between the three modules."
+    },
+    {
+      "filename": "feature_group_importance.png",
+      "description": "A horizontal bar chart showing the AUC drop (%) when each feature group is occluded. The groups are: Knowledge‑retrieved context (3.92%), Transaction dynamics (2.87%), Macroeconomic indicators (1.55%), and Quasi‑static profile (0.93%). The bars are sorted by descending importance, clearly illustrating that the knowledge context is the most influential input signal for the full FRAA model.",
+      "old_string": "This ranking aligns with the module ablation and provides clear evidence that FRAA effectively integrates external, time‑sensitive information rather than relying on stale user attributes."
+    },
+    {
+      "filename": "incremental_feature_addition.png",
+      "description": "A line plot showing the evolution of Log Loss and Recall@5 as feature groups are progressively added according to their importance ranking. The x-axis represents the cumulatively included groups (Knowledge only, +Transaction, +Macro, +Static profile = full FRAA), with separate lines for Log Loss (left y-axis) and Recall@5 (right y-axis). Both metrics improve monotonically, with the sharpest gains when adding transaction dynamics, confirming the additive value of each signal family.",
+      "old_string": "This experiment not only reaffirms the additive value of each signal family but also illustrates that a substantial portion of predictive power stems from the combination of external knowledge and dynamic transaction patterns—a parallel to the observation in prior work that a few most relevant interactions can carry the majority of predictive signal."
+    },
+    {
+      "filename": "retrieval_depth_sensitivity.png",
+      "description": "A dual-axis line plot showing the effect of retrieval depth K (number of knowledge documents) on Log Loss and Recall@5. K values on the x-axis: 1, 3, 5, 7, 10. The left y-axis displays Log Loss (downward trend, optimal at K=5 with 0.5163), and the right y-axis shows Recall@5 (upward trend, optimal at K=5 with 0.4185). The plot highlights a sweet spot at K=5, with performance degrading slightly for both smaller (insufficient context) and larger (noise) values.",
+      "old_string": "The default value of 5 is therefore adopted in all other experiments."
+    }
+  ],
+  "main_result_figures": [
+    {
+      "filename": "main_results_comparison.png",
+      "description": "A grouped bar chart comparing the performance of all models (RF, RF+KB Features, XGBoost, LSTM, Transformer, FRAA ablated variants -Dyn, -TE, -KB, and the full FRAA) on the main risk‑score prediction test set. The left y-axis shows Log Loss (lower is better) and the right y-axis shows Recall@5 (higher is better). X-axis lists model names. The chart highlights that FRAA (full) achieves the lowest Log Loss (0.5163) and the highest Recall@5 (0.4185), with the -KB ablation showing the largest performance drop among the FRAA variants, confirming the importance of knowledge‑retrieved context.",
+      "old_string": "The main results are summarized in the table above."
+    },
+    {
+      "filename": "product_adaptation_lifts.png",
+      "description": "A grouped bar chart showing relative lift in Recall@1 and Recall@5 (%) for Credit Card and Mortgage scenarios. There are two sub-panels or one side-by-side grouped bar chart. X-axis: adaptation methods (Scenario-specific baseline, LP-FT, LoRA-FT, FRAA full-FT). Y-axis: relative lift in percentage. Bars are grouped by metric (R@1, R@5) and colored by scenario. The chart highlights that FRAA full-FT yields the largest gains (+18.21% R@1 for Credit Card, +16.45% R@1 for Mortgage), and LoRA-FT also shows strong competitive lifts while updating fewer parameters.",
+      "old_string": "The scenario adaptation gains are reported in the next table."
+    },
+    {
+      "filename": "business_impact_scatter.png",
+      "description": "A scatter plot (or bubble chart) showing the relationship between offline Log Loss reduction (%) and estimated Risk‑Adjusted Revenue (RAR) lift (%). Each model (RF+KB Features, Transformer, FRAA (-KB), FRAA full) is a point, with the point size optionally representing the relative computational cost. X-axis: Log Loss reduction (more negative is better). Y-axis: estimated RAR lift (%). The plot demonstrates a directional consistency: larger Log Loss improvements correspond to higher RAR lifts, with FRAA (full) achieving the best trade‑off (-19.57% Log Loss, +10.45% RAR). It also shows that the relationship is not strictly linear.",
+      "old_string": "The relationship between offline metric improvements and downstream business outcomes is explored in the following table."
+    },
+    {
+      "filename": "feature_importance_occlusion.png",
+      "description": "A horizontal bar chart showing the drop in AUC (%) when each feature group is removed from the full FRAA model. The feature groups on the y-axis are ordered from most to least important: Knowledge‑retrieved context (-3.92%), Transaction dynamics (-2.87%), Macroeconomic indicators (-1.55%), Quasi‑static profile (-0.93%). The negative x-axis shows AUC drop magnitude (more negative = larger importance). The chart reinforces that knowledge‑retrieved context and transaction dynamics are the most influential signals.",
+      "old_string": "To verify that the model relies on meaningful signals, we measure the drop in AUC when each logically grouped feature set is artificially removed."
+    },
+    {
+      "filename": "context_window_sensitivity.png",
+      "description": "A line plot with two y-axes showing Log Loss (left) and Recall@5 (right) as a function of the context window length (days). X-axis: window length in days (30, 60, 90, 120, 180). Log Loss curve decreases from 0.5413 at 30 days to a minimum of 0.5163 at 120 days, then slightly rises to 0.5172 at 180 days. Recall@5 curve increases from 0.3942 at 30 days to a peak of 0.4185 at 120 days, then slightly drops to 0.4171 at 180 days. The plot highlights that performance improves up to 120 days, and extending beyond that yields no further benefit, suggesting an optimal lookback of approximately 4 months.",
+      "old_string": "The sensitivity to the length of the ingested transaction and event sequence is studied in the table above."
+    },
+    {
+      "filename": "training_dynamics.png",
+      "description": "A line plot showing validation Log Loss and Recall@5 across training epochs (5, 10, 20, 30, 38, 45) for the full FRAA model. Left y-axis: Log Loss (decreasing) and right y-axis: Recall@5 (increasing). X-axis: epochs. Log Loss declines steeply from 0.5832 at epoch 5 to 0.5163 at epoch 38, then slightly increases to 0.5170 at epoch 45. Recall@5 rises from 0.3938 to 0.4185 at epoch 38, then drops to 0.4178. The plot demonstrates smooth convergence, with minimal overfitting after epoch 38, and indicates that the selected checkpoint (lowest validation Log Loss) corresponds to a well‑calibrated model.",
+      "old_string": "The table below reports the validation metrics at selected epochs under the full FRAA configuration."
+    },
+    {
+      "filename": "explanation_quality_evaluation.png",
+      "description": "A grouped bar chart comparing two risk explanation methods (Template‑based top‑3 groups and FRAA full) on three metrics: Faithfulness (1-5), Readability (1-5), and ROUGE‑L F1 score. X-axis: metrics. Each metric has two bars (Template vs FRAA). Y-axis: score values. FRAA achieves 4.32 faithfulness, 4.51 readability, and 0.4131 ROUGE‑L, outperforming the template baseline (3.89, 4.02, 0.3026). The chart clearly demonstrates FRAA’s superiority in generating faithful, readable, and relevant explanations.",
+      "old_string": "The table below summarizes the results."
+    },
+    {
+      "filename": "inference_latency_throughput.png",
+      "description": "A scatter plot (or dual-bar chart) comparing inference latency (ms/query) and throughput (queries/s) for all benchmarked models: RF+KB Features, XGBoost, LSTM, Transformer, and FRAA (full). X-axis: latency per query. Y-axis: throughput (queries per second). Each model is a point annotated with its name. Alternatively, a horizontal/vertical line can indicate the operational latency bound. The plot shows that FRAA (15.7 ms, 4,070 q/s) offers competitive latency while providing far superior ranking performance (R@5 0.4185), and that the retrieval step accounts for about 4.2 ms of the total time.",
+      "old_string": "The following table reports the mean per‑user latency (including data preprocessing, retrieval, and model forward pass) and the throughput in queries per second."
+    },
+    {
+      "filename": "retrieval_depth_sensitivity.png",
+      "description": "A line plot (or bar chart) showing the impact of the number of retrieved documents K on Log Loss and Recall@5, based on the ablation studies mentioned in the text. X-axis: K = 1, 3, 5, 7, 9. Left y-axis: Log Loss, right y-axis: Recall@5. The curve illustrates that K=5 achieves the best trade‑off, reducing K to 1 or 3 degrades both calibration and ranking, while larger K (≥7) slightly degrade performance due to signal dilution. The plot supports the choice of K=5 as the default configuration.",
+      "old_string": "We evaluate how many retrieved documents should be fused into the user representation."
+    }
+  ]
+}

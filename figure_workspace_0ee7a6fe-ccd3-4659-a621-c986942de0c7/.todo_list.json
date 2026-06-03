@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "id": "1ef2206d-801e-4c7c-b73a-57e32d54791f",
+      "description": "Explore current directory and understand project structure",
+      "required_tools": [
+        "list_directory"
+      ],
+      "success_criteria": "Identify all files in the workspace, especially original_tex.tex and references.bib",
+      "status": "completed"
+    },
+    {
+      "id": "c5c8532e-c1ba-4c0d-bbac-0e3a1e86e609",
+      "description": "Read all relevant files (original_tex.tex and references.bib)",
+      "required_tools": [
+        "Read"
+      ],
+      "success_criteria": "Successfully read the full contents of both original_tex.tex and references.bib",
+      "status": "completed"
+    },
+    {
+      "id": "36c9a127-11e4-49a9-97d6-92a26da74373",
+      "description": "Extract BibTeX entries from references.bib using bibtex_extract",
+      "required_tools": [
+        "bibtex_extract"
+      ],
+      "success_criteria": "All BibTeX entries extracted and stored in memory",
+      "status": "completed"
+    },
+    {
+      "id": "9d6e5d84-5765-45d2-a264-de4121b977c7",
+      "description": "Identify all semantically appropriate citation locations in the LaTeX document",
+      "required_tools": [
+        "Read"
+      ],
+      "success_criteria": "Map of all locations where citations should be placed, matched to appropriate BibTeX entries",
+      "status": "completed"
+    },
+    {
+      "id": "945c2613-6446-4905-8b9f-0430a3a1dcfe",
+      "description": "Insert citations manually via BatchEdit (2-5 calls, maximizing citations per call)",
+      "required_tools": [
+        "BatchEdit"
+      ],
+      "success_criteria": "As many citations as possible inserted at semantically appropriate locations",
+      "status": "completed"
+    },
+    {
+      "id": "c87464b6-b97b-4f29-89a5-2fca96cb7240",
+      "description": "Use bibtex_insert to force-insert all remaining uncited entries",
+      "required_tools": [
+        "bibtex_insert"
+      ],
+      "success_criteria": "All remaining BibTeX entries inserted into the document",
+      "status": "completed"
+    },
+    {
+      "id": "a8fb1488-d850-4ba8-89f8-52783c3edade",
+      "description": "Add bibliography style and bibliography commands at end of file",
+      "required_tools": [
+        "BatchEdit"
+      ],
+      "success_criteria": "\\bibliographystyle{IEEEtran} and \\bibliography{references} added before \\end{document}",
+      "status": "completed"
+    },
+    {
+      "id": "cbfc3065-95fa-4824-ba2e-fe5c8bf039c8",
+      "description": "Verify all citations are properly inserted and fix any [t!] issues",
+      "required_tools": [
+        "Read",
+        "BatchEdit"
+      ],
+      "success_criteria": "All BibTeX entries cited, all table/figure environments use [t!], LaTeX structure intact",
+      "status": "completed"
+    },
+    {
+      "id": "714d570d-5464-4516-b0b1-ec01c48f74a3",
+      "description": "Save important artifacts",
+      "required_tools": [
+        "save_important_artifacts"
+      ],
+      "success_criteria": "Modified original_tex.tex saved as important artifact",
+      "status": "completed"
+    }
+  ],
+  "created_at": "2026-06-02 03:07:54"
+}

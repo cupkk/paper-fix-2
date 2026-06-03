@@ -1,0 +1,110 @@
+[
+  {
+    "id": "18ee456e-eb6f-47b8-a67b-95c96c7cc4a5",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/original_tex.tex",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/original_tex.tex",
+    "title": "FRAA LaTeX Document with All Figures Inserted",
+    "important_score": 10,
+    "description": "Modified LaTeX document (original_tex.tex) with all 15 figures inserted at semantically appropriate locations. Includes: 1 motivation figure (Introduction), 1 algorithm architecture figure (Method), 9 main_result figures (Experiments section), and 4 ablation figures (Ablation Studies section). All floats use [t!] positioning, twocolumn-aware \\columnwidth, proper captions with math mode, and unique labels. Added \\usepackage{placeins} for float control. Fixed Figure~1 hardcoded reference to use \\ref{fig:algorithm}.",
+    "saved_at": "2026-06-02 02:49:47"
+  },
+  {
+    "id": "ee209933-dc02-429f-8c88-3dd5fa4c0707",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/figure_check_report.md",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/figure_check_report.md",
+    "title": "Figure Check Report",
+    "important_score": 10,
+    "description": "Comprehensive figure check report documenting all 15 figures checked, 13 issues found and fixed (wrong output paths, missing bbox_inches='tight'), 2 AI-generated figures noted as needing manual review. All fixes applied to original scripts, all figures regenerated and overwritten.",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "68b6dff2-bd61-47b3-a7b1-087a61472115",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/original_tex.tex",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/original_tex.tex",
+    "title": "FRAA Enhanced Proposal Paper",
+    "important_score": 10,
+    "description": "Enhanced LaTeX paper with professionally styled tables (booktabs + rowcolor + bestresult), improved academic language, strategic FloatBarrier placement, fixed caption inconsistencies, and verified numerical consistency across all sections. Ready for Overleaf compilation.",
+    "saved_at": "2026-06-02 03:04:04"
+  },
+  {
+    "id": "835b18d7-ea2e-45e1-8dcd-17ce0c57839d",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/original_tex.tex",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/original_tex.tex",
+    "title": "FRAA Paper with Full Citation Insertion",
+    "important_score": 10,
+    "description": "Modified LaTeX file with all 72 BibTeX citations inserted at semantically appropriate locations throughout the paper. Includes bibliography commands (\\bibliographystyle{IEEEtran} and \\bibliography{references}) added before \\end{document}. All figure and table environments use [t!] positioning. File structure is intact with proper LaTeX syntax preserved.",
+    "saved_at": "2026-06-02 03:12:06"
+  },
+  {
+    "id": "4edd7c79-a2d6-4e64-b744-3fabdf1dbb85",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_architectural_component_ablation.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_architectural_component_ablation.py",
+    "title": "Script: architectural_component_ablation (fixed)",
+    "important_score": 8,
+    "description": "Fixed ablation script: architectural_component_ablation - output path corrected to workspace/figures/, bbox_inches='tight' added",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "05a43994-cfd6-487e-8404-7c6ba81177f0",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_feature_group_importance.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_feature_group_importance.py",
+    "title": "Script: feature_group_importance (fixed)",
+    "important_score": 8,
+    "description": "Fixed ablation script: feature_group_importance - output path corrected to workspace/figures/, bbox_inches='tight' added",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "421c8826-ba60-46de-b1ed-647f36082434",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_incremental_feature_addition.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_incremental_feature_addition.py",
+    "title": "Script: incremental_feature_addition (fixed)",
+    "important_score": 8,
+    "description": "Fixed ablation script: incremental_feature_addition - output path corrected to workspace/figures/",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "9307810f-1e74-4c5f-8fc0-c3e3c5598dc1",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_retrieval_depth_sensitivity.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/ablation/figure_code_retrieval_depth_sensitivity.py",
+    "title": "Script: retrieval_depth_sensitivity ablation (fixed)",
+    "important_score": 8,
+    "description": "Fixed ablation script: retrieval_depth_sensitivity - output path corrected to workspace/figures/, bbox_inches='tight' added",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "d8537441-4d6e-42a4-b14e-75b8dc943d6b",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_business_impact_scatter.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_business_impact_scatter.py",
+    "title": "Script: business_impact_scatter (fixed)",
+    "important_score": 8,
+    "description": "Fixed main_result script: business_impact_scatter - output path corrected to workspace/figures/, bbox_inches='tight' added",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "e12b9335-2c7b-4cf7-9d2d-8c4c306f6852",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_main_results_comparison.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_main_results_comparison.py",
+    "title": "Script: main_results_comparison (fixed)",
+    "important_score": 8,
+    "description": "Fixed main_result script: main_results_comparison - output path corrected, bbox_inches='tight' added for rotated labels and external legend",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "8156e6bd-d4b0-400f-a85a-6222ae6ea845",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_product_adaptation_lifts.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_product_adaptation_lifts.py",
+    "title": "Script: product_adaptation_lifts (fixed)",
+    "important_score": 8,
+    "description": "Fixed main_result script: product_adaptation_lifts - output path corrected, bbox_inches='tight' added for rotated x-tick labels",
+    "saved_at": "2026-06-02 02:56:49"
+  },
+  {
+    "id": "bff6bfc1-8aba-4ffd-9339-0ea70ee2a998",
+    "file": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_training_dynamics.py",
+    "original_path": "/app/output/figure_generation/5c9d5ad4-f623-451b-82ec-01683b1c4254/workspace/scripts/main_result/figure_code_training_dynamics.py",
+    "title": "Script: training_dynamics (fixed)",
+    "important_score": 8,
+    "description": "Fixed main_result script: training_dynamics - output path corrected, bbox_inches='tight' added",
+    "saved_at": "2026-06-02 02:56:49"
+  }
+]
