@@ -213,3 +213,55 @@
 - 用户可在 Overleaf 页面直接检查 13 页新版 PDF。
 - 如果用户希望进一步压缩为 12 页整或更紧凑的 long paper，可以继续微调 float 大小和正文精简；当前版本已经满足 long paper 页数范围。
 - 机制图仍建议用户后续用 PPT 重绘后替换 `figures/algorithm/algorithm_1_0ebe5141.png`，替换后需要重新编译检查浮动位置。
+
+## 2026-06-04 参考文献扩展到 40 篇并同步 Overleaf
+
+### 本轮目标
+- 用户要求参考文献及正文引用至少 40 篇，且必须是真实参考文献，不能只在 `.bib` 中堆条目，正文中也要像范文一样加入对应引用。
+
+### 文献核验策略
+- 继续使用 `ml-paper-writing` 的 citation workflow，避免凭记忆编造参考文献。
+- 先盘点当前 `submission_pricai2026.bib`：原有 13 篇。
+- 未使用旧 `references.bib` 中大量 2025 年 arXiv 自动抓取条目，因为其中不少与当前论文主题不够直接，且不适合直接作为最终投稿参考文献。
+- 使用 CrossRef API 和 DOI content negotiation 核验新增文献。
+- 核验中发现并修正一个容易出错的 DOI：
+  - 金融欺诈综述 Ngai et al. 的正确 DOI 是 `10.1016/j.dss.2010.08.006`。
+  - Loughran and McDonald 金融文本论文的正确 DOI 是 `10.1111/j.1540-6261.2010.01625.x`。
+
+### 修改内容
+- 修改 `submission_pricai2026.bib`：新增 27 篇真实文献，使 BibTeX 总数达到 40 篇。
+- 新增文献覆盖：
+  - 信用评分与金融风险综述/传统模型：Hand and Henley、Thomas、Baesens、Abdou、Louzada、Crook、Brown and Mues、Khandani、Bellotti、Friedman。
+  - 金融欺诈检测：Bolton and Hand、Ngai et al.、Jurgovsky et al.。
+  - 序列与表格模型：Hochreiter and Schmidhuber、Cho et al.、TabNet。
+  - 检索与文本表示：BM25、HNSW、Sentence-BERT、BERT、FiD。
+  - XAI 与校准：Guidotti、Arrieta、Niculescu-Mizil and Caruana、Zadrozny and Elkan。
+  - 金融文本信号：Tetlock、Loughran and McDonald。
+- 修改 `submission_pricai2026.tex`：在 Introduction、Related Work、Method、Experiments 中增加对应正文引用。
+- 引用不是孤立堆砌，而是按语义放入信用评分、欺诈检测、序列建模、检索、文本表示、解释性、校准、金融文本信号等相关段落。
+
+### 静态检查结果
+- BibTeX 条目数：40。
+- 正文唯一引用数：40。
+- 缺失引用：0。
+- 未引用 BibTeX 条目：0。
+- `submission_pricai2026.tex` 和 `submission_pricai2026.bib` 均保持 ASCII，无 Unicode 标点污染。
+- 未发现 `simulated`、`pilot`、`estimated`、`will be updated`、`pending`、`production-scale`、`state-of-the-art`、`agentic framework` 等高风险正文表述。
+
+### Overleaf 同步与编译
+- 重新打包 `overleaf_pricai2026_package.zip`。
+- 通过 Overleaf 上传并覆盖：
+  - `submission_pricai2026.tex`
+  - `submission_pricai2026.bib`
+- Overleaf 编译结果：
+  - Errors: 0
+  - Warnings: 1
+  - Info: 11
+  - 剩余 warning 仍为 LNCS/amsmath 的 `Unable to redefine math accent \vec`。
+  - Info 主要为 `output.bbl` 参考文献中的 underfull hbox，属于长 DOI/长作者列表导致的参考文献换行问题，不是编译错误。
+- PDF 页数：15/15，仍在 PRICAI long paper 12--16 页范围内。
+- 最后一页截图：`overleaf_40refs_final_page15.png`，可见参考文献编号到 40。
+
+### 下一步
+- 用户可在 Overleaf 检查 15 页版本。
+- 如果用户希望减少参考文献中的 DOI 导致的 underfull 信息，可后续考虑在 bib 样式允许范围内隐藏 DOI 或压缩参考文献字段；当前版本已满足“至少 40 篇真实参考文献且正文引用”的要求。
