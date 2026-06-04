@@ -265,3 +265,33 @@
 ### 下一步
 - 用户可在 Overleaf 检查 15 页版本。
 - 如果用户希望减少参考文献中的 DOI 导致的 underfull 信息，可后续考虑在 bib 样式允许范围内隐藏 DOI 或压缩参考文献字段；当前版本已满足“至少 40 篇真实参考文献且正文引用”的要求。
+
+## 2026-06-04 引用编号 PDF 可点击跳转修复
+
+### 问题说明
+- 用户指出正文引用需要像范文一样，PDF 中点击编号可以跳转到对应参考文献。
+- 之前正文已经有 `\cite{...}`，但未加载 `hyperref`，因此 PDF 中引用编号不可点击。
+
+### 修改内容
+- 修改 `submission_pricai2026.tex`：
+  - 增加 `\usepackage[hidelinks]{hyperref}`。
+  - 使用 `hidelinks` 保持投稿 PDF 外观干净，不显示彩色框，但引用编号、章节、图表等交叉引用会成为可点击链接。
+- 未修改实验数值，未修改参考文献数量。
+
+### 检查结果
+- 静态检查：
+  - BibTeX 条目数仍为 40。
+  - 正文唯一引用数仍为 40。
+  - 缺失引用：0。
+  - 未引用 BibTeX：0。
+- 重新打包 `overleaf_pricai2026_package.zip`。
+- Overleaf 上传覆盖 `submission_pricai2026.tex` 后重新编译。
+- Overleaf 编译结果：
+  - Errors: 0
+  - Warnings: 1
+  - Info: 0
+  - 剩余 warning 仍为 LNCS/amsmath 的 `Unable to redefine math accent \vec`，不影响 PDF。
+- PDF 页数仍为 15 页，继续满足 PRICAI long paper 12--16 页范围。
+
+### 下一步
+- 用户在 Overleaf PDF 预览或下载 PDF 后，可点击正文中的引用编号，跳转到参考文献列表中对应条目。
