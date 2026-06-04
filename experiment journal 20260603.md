@@ -146,3 +146,70 @@
 - 已截取 Overleaf 编译后页面截图：`overleaf_pricai2026_compiled_page.png`。
 - 尝试通过 Playwright 下载 PDF 到本地时，Overleaf 下载链接未触发标准 download 事件；网页端 PDF 已成功生成，后续用户可在 Overleaf 直接点击 Download PDF。
 - PDF 当前页数 11 页，符合 PRICAI long paper 16 页以内要求，但如果用户希望更接近 12-16 页 long paper 下限，可继续扩展方法细节、实验设置和讨论。
+
+## 2026-06-04 下载版 PDF 审阅与 long paper 排版修正
+
+### 本轮目标
+- 用户提供下载后的 PDF：`D:\github\paper-fix-2\FRAA__A_Retrieval_Augmented_Agent_for_Explainable_Financial_Risk_Assessment.pdf`。
+- 用户指出当前排版偏散，图表与正文位置不对应，要求检查是否达到 CCF-C/PRICAI 2026 投稿要求、判断长文/短文类型、检查 AI 味并优化排版。
+
+### 官方要求核对
+- 通过 PRICAI 2026 官方 Call for Papers 页面核对：投稿使用 Springer LNAI 模板，页数包含参考文献；long paper 为 12--16 页，short paper 为 6--11 页。
+- 原下载版 PDF 为 11 页，因此严格按官方页数只能算 short paper 长度，不满足 long paper 下限。
+- 本轮修改目标明确为 long paper/regular paper：将正文扩展并编译到 12 页以上，但不超过 16 页。
+
+### 下载版 PDF 视觉检查
+- 本地安装并使用 PyMuPDF 渲染下载版 PDF 到 `tmp/pdfs/current_overleaf/`，生成 11 页 PNG 和 contact sheet。
+- 检查发现旧版第 6 页先出现 Table 1 和 Figure 2，后面才出现 `Baselines and Training Details` 与 `Main Results` 正文，阅读顺序不合理。
+- 第 7--10 页也存在多个表格连续出现在页首的问题，主要原因是源码中几乎所有 table/figure 都使用 `[t]` 顶部浮动，导致浮动体跑到对应解释文字之前。
+
+### LaTeX 与论文内容修改
+- 修改文件：`figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.tex`。
+- 增加 `\usepackage{flafter}`，防止浮动体出现在源码位置之前。
+- 将主要图表浮动参数从 `[t]` 改为 `[!htbp]`，并在关键小节后使用 `\FloatBarrier`，使图表尽量贴近对应正文。
+- 扩展 Method 与 Experiments：
+  - 增加训练实例构造、观察窗口/预测窗口、时间戳约束说明。
+  - 增加 cross-attention 为什么优于简单拼接的解释。
+  - 增加 explanation head 与风险分数一致性的说明。
+  - 增加 Evaluation Questions 小节，明确主结果、迁移、消融、解释/延迟四类实验分别回答的问题。
+  - 扩展基线设置、验证集选参、timestamp-valid retrieval 的复现细节。
+  - 扩展消融、特征组、检索深度、解释质量、延迟与 offline business utility 的分析文字。
+  - 扩展 Limitations and Reproducibility，明确 proprietary data 的复现限制、离线回放不能解释为线上因果收益、解释评价不替代人工监管。
+- 降低 AI 味和营销式表述：
+  - 将 `agentic framework` 等表述改成更具体的 `retrieval-augmented model`。
+  - 减少 `We propose`、`shows that` 等重复句式。
+  - 保留实验数值，不新增或伪造实验结果。
+
+### 静态检查
+- 检查高风险表述：仅剩普通语境中的 `strong baselines`，未发现 `simulated`、`pilot`、`estimated`、`will be updated`、`pending`、`production-scale`、`state-of-the-art`、`agentic framework` 等风险残留。
+- 检查字符集：`submission_pricai2026.tex` 仍为 ASCII，未引入 Unicode 标点。
+- 检查引用与 BibTeX：无缺失引用，无未使用 BibTeX 条目。
+- 检查图片路径：机制图和主结果图路径均存在；未重绘机制图，符合用户“机制图后续自己用 PPT 完善”的要求。
+
+### Overleaf 同步与编译
+- 重新打包 `overleaf_pricai2026_package.zip`。
+- 通过 Overleaf 网页端打开项目：`https://www.overleaf.com/project/6a204ea1614e48bb59209a8b`。
+- 使用 Upload 功能覆盖 `submission_pricai2026.tex`，确认 Overleaf 大纲已出现新增的 `Evaluation Questions`，说明新版源码已同步。
+- 点击 Recompile 完成编译。
+- 编译结果：0 errors，1 warning，0 info；剩余 warning 仍是 LNCS/amsmath 组合产生的 `Unable to redefine math accent \vec`，不影响生成。
+- 新版 PDF 页码控件显示 13/13，满足 PRICAI long paper 的 12--16 页要求。
+
+### 新版 PDF 视觉抽检
+- 截图文件：
+  - `overleaf_revised_pdf_preview.png`
+  - `overleaf_revised_page6_preview.png`
+  - `overleaf_revised_page7_preview.png`
+  - `overleaf_revised_page8_preview.png`
+  - `overleaf_revised_page9_preview.png`
+  - `overleaf_revised_page10_preview.png`
+  - `overleaf_revised_page13_preview.png`
+- 第 6 页：先出现 Dataset 和 Baselines/Training 文字，不再被 Table 1/Figure 2 提前打断。
+- 第 7 页：Main Results 正文先出现，再出现 Table 1。
+- 第 8 页：Figure 2 紧跟主结果段落，随后进入 Scenario Adaptation 和 Table 2，顺序合理。
+- 第 9--10 页：消融、特征组、检索深度与 Further Evaluation 表格基本贴近对应正文，没有旧版的大量表格堆积。
+- 第 13 页：为参考文献续页，不是空白页。
+
+### 下一步
+- 用户可在 Overleaf 页面直接检查 13 页新版 PDF。
+- 如果用户希望进一步压缩为 12 页整或更紧凑的 long paper，可以继续微调 float 大小和正文精简；当前版本已经满足 long paper 页数范围。
+- 机制图仍建议用户后续用 PPT 重绘后替换 `figures/algorithm/algorithm_1_0ebe5141.png`，替换后需要重新编译检查浮动位置。
