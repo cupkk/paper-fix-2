@@ -1,0 +1,58 @@
+﻿[
+    {
+        "key":  "breiman2001random",
+        "doi":  "10.1023/A:1010933404324",
+        "title":  "Random Forests",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi"
+    },
+    {
+        "key":  "chen2016xgboost",
+        "doi":  "10.1145/2939672.2939785",
+        "title":  "XGBoost",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi"
+    },
+    {
+        "key":  "lessmann2015benchmarking",
+        "doi":  "10.1016/j.ejor.2015.05.030",
+        "title":  "Benchmarking state-of-the-art classification algorithms for credit scoring: An update of research",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi"
+    },
+    {
+        "key":  "kang2018sasrec",
+        "doi":  "10.1109/ICDM.2018.00035",
+        "title":  "Self-Attentive Sequential Recommendation",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi"
+    },
+    {
+        "key":  "sun2019bert4rec",
+        "doi":  "10.1145/3357384.3357895",
+        "title":  "BERT4Rec",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi"
+    },
+    {
+        "key":  "karpukhin2020dpr",
+        "doi":  "10.18653/v1/2020.emnlp-main.550",
+        "title":  "Dense Passage Retrieval for Open-Domain Question Answering",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi"
+    },
+    {
+        "key":  "johnson2019billion",
+        "doi":  "10.1109/TBDATA.2019.2921572",
+        "title":  "Billion-Scale Similarity Search with GPUs",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi and updated year to 2021"
+    },
+    {
+        "key":  "ribeiro2016lime",
+        "doi":  "10.1145/2939672.2939778",
+        "title":  "Why Should I Trust You?",
+        "source":  "CrossRef DOI lookup",
+        "action":  "added doi"
+    }
+]

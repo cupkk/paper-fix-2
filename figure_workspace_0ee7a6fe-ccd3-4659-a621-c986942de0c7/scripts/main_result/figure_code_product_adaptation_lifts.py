@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+﻿import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 
@@ -73,7 +73,7 @@ ax.text(0.02, 0.96, 'Credit Card', transform=ax.transAxes,
 # legend placed inside the subplot (top-right, does not overlap data)
 ax.legend(
     loc='upper right',
-    frameon=True,
+    frameon=False,
     framealpha=0.95,
     edgecolor='#CCCCCC'
 )
@@ -101,7 +101,7 @@ ax.text(0.02, 0.96, 'Mortgage', transform=ax.transAxes,
         fontsize=11, va='top', ha='left')
 ax.legend(
     loc='upper right',
-    frameon=True,
+    frameon=False,
     framealpha=0.95,
     edgecolor='#CCCCCC'
 )

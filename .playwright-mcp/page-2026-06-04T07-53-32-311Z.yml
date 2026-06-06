@@ -1,0 +1,484 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e7]:
+      - navigation "Project actions" [ref=e8]:
+        - generic [ref=e9]:
+          - link "Overleaf logo" [ref=e12] [cursor=pointer]:
+            - /url: /project
+            - generic "Overleaf logo" [ref=e13]
+          - menubar [ref=e14]:
+            - button "File" [ref=e16] [cursor=pointer]
+            - button "Edit" [ref=e18] [cursor=pointer]
+            - button "Insert" [ref=e20] [cursor=pointer]
+            - button "View" [ref=e22] [cursor=pointer]
+            - button "Format" [ref=e24] [cursor=pointer]
+            - button "Help" [ref=e26] [cursor=pointer]
+        - button "Project title options" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: "FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment"
+          - generic [ref=e30]: keyboard_arrow_down
+        - generic [ref=e31]:
+          - button "h" [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]: h
+          - button "History" [ref=e37] [cursor=pointer]:
+            - generic [ref=e39]: history
+          - button "Layout options" [ref=e43] [cursor=pointer]:
+            - generic [ref=e44]: space_dashboard
+          - button "Share" [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: person_add
+              - text: Share
+          - link "Upgrade" [ref=e50] [cursor=pointer]:
+            - /url: /user/subscription/choose-your-plan?itm_referrer=editor-header-upgrade-prompt
+            - generic [ref=e51]: Upgrade
+      - generic [ref=e53]:
+        - navigation "Sidebar" [ref=e54]:
+          - tablist [ref=e55]:
+            - generic [ref=e56]:
+              - tab "File tree" [selected] [ref=e57] [cursor=pointer]:
+                - generic [ref=e58]: description
+                - generic [ref=e59]: File tree
+              - tab "Project search" [ref=e60] [cursor=pointer]:
+                - generic [ref=e61]: search
+                - generic [ref=e62]: Project search
+              - tab "Integrations" [ref=e63] [cursor=pointer]:
+                - generic [ref=e64]: integration_instructions
+                - generic [ref=e65]: Integrations
+              - tab "Review panel" [ref=e66] [cursor=pointer]:
+                - generic [ref=e67]: rate_review
+                - generic [ref=e68]: Review panel
+              - tab "Chat" [ref=e69] [cursor=pointer]:
+                - generic [ref=e70]: forum
+                - generic [ref=e71]: Chat
+              - tab "AI assistant" [ref=e72] [cursor=pointer]:
+                - img [ref=e73]
+                - generic [ref=e76]: AI assistant
+            - navigation "Help and editor settings" [ref=e77]:
+              - button "Help" [ref=e80] [cursor=pointer]:
+                - generic [ref=e81]: help
+              - button "Settings" [ref=e82] [cursor=pointer]:
+                - generic [ref=e83]: settings
+        - tabpanel "File tree" [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - button "Hide file tree" [ref=e92] [cursor=pointer]:
+                  - generic [ref=e93]: keyboard_arrow_down
+                  - heading "File tree" [level=4] [ref=e94]
+                - generic [ref=e95]:
+                  - button "New file" [ref=e96] [cursor=pointer]:
+                    - generic [ref=e97]: note_add
+                    - generic [ref=e98]: New file
+                  - button "New folder" [ref=e99] [cursor=pointer]:
+                    - generic [ref=e100]: create_new_folder
+                    - generic [ref=e101]: New folder
+                  - button "Upload" [ref=e102] [cursor=pointer]:
+                    - generic [ref=e103]: upload
+                    - generic [ref=e104]: Upload
+                  - button "Close" [ref=e105] [cursor=pointer]:
+                    - generic [ref=e106]: close
+                    - generic [ref=e107]: Close
+              - tree [ref=e109]:
+                - generic [ref=e110]:
+                  - treeitem "figures" [expanded] [ref=e111]:
+                    - button "Collapse figures" [ref=e112] [cursor=pointer]:
+                      - generic "Collapse" [ref=e113]:
+                        - generic [ref=e114]: expand_more
+                      - generic [ref=e116]: figures
+                  - tree [ref=e117]:
+                    - generic [ref=e118]:
+                      - treeitem "algorithm" [ref=e119]:
+                        - button "Expand algorithm" [ref=e120] [cursor=pointer]:
+                          - generic "Expand" [ref=e121]:
+                            - generic [ref=e122]: chevron_right
+                          - generic [ref=e124]: algorithm
+                      - treeitem "main_result" [expanded] [ref=e125]:
+                        - button "Collapse main_result" [ref=e126] [cursor=pointer]:
+                          - generic "Collapse" [ref=e127]:
+                            - generic [ref=e128]: expand_more
+                          - generic [ref=e130]: main_result
+                      - tree [ref=e131]:
+                        - generic [ref=e132]:
+                          - treeitem "main_results_comparison.pdf" [ref=e133]:
+                            - generic [ref=e134] [cursor=pointer]:
+                              - generic [ref=e135]: image
+                              - generic [ref=e137]: main_results_comparison.pdf
+                          - treeitem "main_results_comparison.png" [ref=e138]:
+                            - generic [ref=e139] [cursor=pointer]:
+                              - generic [ref=e140]: image
+                              - generic [ref=e142]: main_results_comparison.png
+                          - treeitem "submission_pricai2026.tex" [ref=e143]:
+                            - generic [ref=e144] [cursor=pointer]:
+                              - generic [ref=e145]: description
+                              - generic [ref=e147]: submission_pricai2026.tex
+                  - treeitem "llncs.cls" [ref=e148]:
+                    - generic [ref=e149] [cursor=pointer]:
+                      - generic [ref=e150]: description
+                      - generic [ref=e152]: llncs.cls
+                  - treeitem "splncs04.bst" [ref=e153]:
+                    - generic [ref=e154] [cursor=pointer]:
+                      - generic [ref=e155]: description
+                      - generic [ref=e157]: splncs04.bst
+                  - treeitem "submission_pricai2026.bib" [ref=e158]:
+                    - generic [ref=e159] [cursor=pointer]:
+                      - generic [ref=e160]: book_5
+                      - generic [ref=e162]: submission_pricai2026.bib
+                  - treeitem "submission_pricai2026.tex" [selected] [ref=e163]:
+                    - generic [ref=e164] [cursor=pointer]:
+                      - generic [ref=e165]: description
+                      - generic [ref=e167]: submission_pricai2026.tex
+                    - button "Open submission_pricai2026.tex action menu" [ref=e169] [cursor=pointer]:
+                      - generic [ref=e170]: more_vert
+                      - generic [ref=e171]: Menu
+            - separator [ref=e172]:
+              - generic "Resize" [ref=e173]
+            - generic [ref=e176]:
+              - button "Hide File outline" [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]: keyboard_arrow_down
+                - heading "File outline" [level=4] [ref=e180]
+              - tree [ref=e183]:
+                - treeitem "Introduction" [ref=e184]:
+                  - button "Introduction" [ref=e186] [cursor=pointer]
+                - treeitem "Related Work" [expanded] [ref=e187]:
+                  - generic [ref=e188]:
+                    - button "Collapse" [ref=e189] [cursor=pointer]:
+                      - generic [ref=e190]: keyboard_arrow_down
+                    - button "Related Work" [ref=e191] [cursor=pointer]
+                  - group [ref=e192]:
+                    - treeitem "Financial Risk Modeling and Tabular Baselines" [ref=e193]:
+                      - button "Financial Risk Modeling and Tabular Baselines" [ref=e195] [cursor=pointer]
+                    - treeitem "Sequential User Modeling" [ref=e196]:
+                      - button "Sequential User Modeling" [ref=e198] [cursor=pointer]
+                    - treeitem "Retrieval-Augmented and Explainable AI" [ref=e199]:
+                      - button "Retrieval-Augmented and Explainable AI" [ref=e201] [cursor=pointer]
+                - treeitem "Method" [expanded] [ref=e202]:
+                  - generic [ref=e203]:
+                    - button "Collapse" [ref=e204] [cursor=pointer]:
+                      - generic [ref=e205]: keyboard_arrow_down
+                    - button "Method" [ref=e206] [cursor=pointer]
+                  - group [ref=e207]:
+                    - treeitem "Problem Formulation" [ref=e208]:
+                      - button "Problem Formulation" [ref=e210] [cursor=pointer]
+                    - treeitem "Multi-Source State Construction" [ref=e211]:
+                      - button "Multi-Source State Construction" [ref=e213] [cursor=pointer]
+                    - treeitem "Time-Aware Sequence Encoding" [ref=e214]:
+                      - button "Time-Aware Sequence Encoding" [ref=e216] [cursor=pointer]
+                    - treeitem "Retrieval-Augmented Evidence Fusion" [ref=e217]:
+                      - button "Retrieval-Augmented Evidence Fusion" [ref=e219] [cursor=pointer]
+                    - treeitem "Risk Scoring and Explanation Generation" [ref=e220]:
+                      - button "Risk Scoring and Explanation Generation" [ref=e222] [cursor=pointer]
+                - treeitem "Experiments" [expanded] [ref=e223]:
+                  - generic [ref=e224]:
+                    - button "Collapse" [ref=e225] [cursor=pointer]:
+                      - generic [ref=e226]: keyboard_arrow_down
+                    - button "Experiments" [ref=e227] [cursor=pointer]
+                  - group [ref=e228]:
+                    - treeitem "Dataset and Evaluation Protocol" [ref=e229]:
+                      - button "Dataset and Evaluation Protocol" [ref=e231] [cursor=pointer]
+                    - treeitem "Baselines and Training Details" [ref=e232]:
+                      - button "Baselines and Training Details" [ref=e234] [cursor=pointer]
+                    - treeitem "Evaluation Questions" [ref=e235]:
+                      - button "Evaluation Questions" [ref=e237] [cursor=pointer]
+                    - treeitem "Main Results" [ref=e238]:
+                      - button "Main Results" [ref=e240] [cursor=pointer]
+                    - treeitem "Scenario Adaptation" [ref=e241]:
+                      - button "Scenario Adaptation" [ref=e243] [cursor=pointer]
+                - treeitem "Ablation and Analysis" [expanded] [ref=e244]:
+                  - generic [ref=e245]:
+                    - button "Collapse" [ref=e246] [cursor=pointer]:
+                      - generic [ref=e247]: keyboard_arrow_down
+                    - button "Ablation and Analysis" [ref=e248] [cursor=pointer]
+                  - group [ref=e249]:
+                    - treeitem "Architectural Components" [ref=e250]:
+                      - button "Architectural Components" [ref=e252] [cursor=pointer]
+                    - treeitem "Feature Groups and Retrieval Depth" [ref=e253]:
+                      - button "Feature Groups and Retrieval Depth" [ref=e255] [cursor=pointer]
+                - treeitem "Further Evaluation" [expanded] [ref=e256]:
+                  - generic [ref=e257]:
+                    - button "Collapse" [ref=e258] [cursor=pointer]:
+                      - generic [ref=e259]: keyboard_arrow_down
+                    - button "Further Evaluation" [ref=e260] [cursor=pointer]
+                  - group [ref=e261]:
+                    - treeitem "Explanation Quality" [ref=e262]:
+                      - button "Explanation Quality" [ref=e264] [cursor=pointer]
+                    - treeitem "Latency and Offline Business Utility" [ref=e265]:
+                      - button "Latency and Offline Business Utility" [ref=e267] [cursor=pointer]
+                - treeitem "Limitations and Reproducibility" [ref=e268]:
+                  - button "Limitations and Reproducibility" [ref=e270] [cursor=pointer]
+                - treeitem "Conclusion" [ref=e271]:
+                  - button "Conclusion" [ref=e273] [cursor=pointer]
+        - separator [ref=e274]:
+          - generic "Resize" [ref=e275]:
+            - button "Click to hide the panel" [ref=e276] [cursor=pointer]:
+              - generic: chevron_left
+        - generic [ref=e278]:
+          - region "Editor" [ref=e279]:
+            - generic [ref=e286]:
+              - generic [ref=e289]:
+                - toolbar "Editor tools" [ref=e290]:
+                  - generic "Undo/Redo actions" [ref=e291]:
+                    - button "Undo" [ref=e292] [cursor=pointer]:
+                      - generic [ref=e293]: undo
+                      - generic [ref=e294]: Undo
+                    - button "Redo" [ref=e295] [cursor=pointer]:
+                      - generic [ref=e296]: redo
+                      - generic [ref=e297]: Redo
+                  - generic "Text formatting"
+                  - generic "Text style" [ref=e298]:
+                    - button "Bold" [ref=e299] [cursor=pointer]:
+                      - generic [ref=e300]: format_bold
+                      - generic [ref=e301]: Bold
+                    - button "Italic" [ref=e302] [cursor=pointer]:
+                      - generic [ref=e303]: format_italic
+                      - generic [ref=e304]: Italic
+                  - generic "Insert math and symbols"
+                  - generic "Insert misc (links, citations, cross-references, figures, tables)"
+                  - generic "List and indentation"
+                  - button "More editor toolbar items" [ref=e306] [cursor=pointer]:
+                    - generic [ref=e307]: more_horiz
+                  - generic [ref=e308]:
+                    - generic "Code and visual editor switch" [ref=e309]:
+                      - group "Editor mode." [ref=e311]:
+                        - generic [ref=e312]: Editor mode.
+                        - radio "Code" [checked] [ref=e313]
+                        - generic [ref=e315] [cursor=pointer]: Code
+                        - generic [ref=e316]:
+                          - radio "Visual" [ref=e317]
+                          - generic [ref=e319] [cursor=pointer]: Visual
+                    - button "Toggle Writefull toolbar" [ref=e322] [cursor=pointer]:
+                      - img "Writefull logo" [ref=e323]
+                    - button "Search file" [ref=e324] [cursor=pointer]:
+                      - generic [ref=e325]: search
+                      - generic [ref=e326]: Search file
+                - menubar "Writefull toolbar" [ref=e328]:
+                  - generic "Writefull suggestions" [ref=e329]:
+                    - button "Reject suggestion" [disabled] [ref=e331]:
+                      - generic [ref=e332]: close
+                    - button "Block this suggestion from appearing again" [disabled] [ref=e334]:
+                      - generic [ref=e335]: block
+                    - button "Accept suggestion" [disabled] [ref=e337]:
+                      - generic [ref=e338]: check
+                    - button "Previous suggestion" [ref=e340] [cursor=pointer]:
+                      - generic [ref=e341]: chevron_left
+                    - button "Next suggestion" [ref=e343] [cursor=pointer]:
+                      - generic [ref=e344]: chevron_right
+                  - generic "Generation options" [ref=e345]:
+                    - button "Get AI assistance for your LaTeX writing and more" [ref=e347] [cursor=pointer]:
+                      - generic [ref=e348]: smart_toy
+                  - generic "Contextual widgets" [ref=e349]:
+                    - 'button "Paraphrase: Select some text to use this widget" [disabled] [ref=e351]':
+                      - generic [ref=e352]: transform
+                    - button "Translate" [disabled] [ref=e354]:
+                      - generic [ref=e355]: translate
+                    - button "Change style" [disabled] [ref=e357]:
+                      - generic [ref=e358]: shuffle
+                  - generic "Settings" [ref=e359]:
+                    - button "Settings" [ref=e361] [cursor=pointer]:
+                      - generic [ref=e362]: settings
+                  - button "More editor toolbar items" [ref=e364] [cursor=pointer]:
+                    - generic [ref=e365]: more_horiz
+                - generic [ref=e366]:
+                  - generic [ref=e367]: description
+                  - generic [ref=e368]: submission_pricai2026.tex
+              - generic [ref=e369]:
+                - generic [ref=e370]:
+                  - generic [ref=e371]:
+                    - generic [ref=e372]: "349"
+                    - generic [ref=e373]: "350"
+                    - generic [ref=e374]: "351"
+                    - generic [ref=e375]: "352"
+                    - generic [ref=e376]: "353"
+                    - generic [ref=e377]: "354"
+                    - generic [ref=e378]: "355"
+                    - generic [ref=e379]: "356"
+                    - generic [ref=e380]: "357"
+                    - generic [ref=e381]: "358"
+                    - generic [ref=e382]: "359"
+                    - generic [ref=e383]: "360"
+                    - generic [ref=e384]: "361"
+                    - generic [ref=e385]: "362"
+                    - generic [ref=e386]: "363"
+                    - generic [ref=e387]: "364"
+                    - generic [ref=e388]: "365"
+                    - generic [ref=e389]: "366"
+                    - generic [ref=e390]: "367"
+                    - generic [ref=e391]: "368"
+                    - generic [ref=e392]: "369"
+                    - generic [ref=e393]: "370"
+                    - generic [ref=e394]: "371"
+                    - generic [ref=e395]: "372"
+                    - generic [ref=e396]: "373"
+                  - generic [ref=e397]:
+                    - generic [ref=e399] [cursor=pointer]: ▾
+                    - generic [ref=e401] [cursor=pointer]: ▾
+                - textbox "Source Editor editing" [active] [ref=e403]:
+                  - generic [ref=e405]: RF + KB features & -2.06 & +1.89 \\
+                  - generic [ref=e406]: "\\rowcolor{tablerowalt}"
+                  - generic [ref=e407]: Transformer & -11.26 & +5.34 \\
+                  - generic [ref=e408]: FRAA (-KB) & -16.13 & +7.80 \\
+                  - generic [ref=e409]: "\\rowcolor{tablerowalt}"
+                  - generic [ref=e410]: "\\textbf{FRAA (full)} & \\best{-19.59} & \\best{+10.45} \\\\"
+                  - generic [ref=e411]: \bottomrule
+                  - generic [ref=e412]: "\\end{tabular}"
+                  - generic [ref=e413]: "\\end{table}"
+                  - generic [ref=e416]: "The offline replay in Table~\\ref{tab:business} connects calibration improvement with downstream utility under a fixed risk-appetite constraint. We report this as offline decision-support evidence, not as a claim of causal online revenue impact. The main value of this analysis is that it checks whether lower Log Loss corresponds to a practically meaningful ordering of cases under a fixed review budget."
+                  - generic [ref=e419]: "\\section{Limitations and Reproducibility}"
+                  - generic [ref=e422]: The evaluation uses a proprietary financial dataset that cannot be publicly released because it contains sensitive user-level risk and transaction information. This is a limitation for independent replication. To support reproducibility within this constraint, we report the data scale, feature families, chronological split, training configuration, retrieval depth, baselines, and ablation settings. The knowledge base is timestamped, and retrieval only uses documents available at or before the scoring time. These details are intended to make the experimental protocol auditable even when the raw records cannot be shared.
+                  - generic [ref=e425]: Several claims should be read with this scope in mind. First, the results establish performance on one large multi-source financial environment, but not universal transfer across institutions. Second, the business-utility analysis is based on offline replay and should not be interpreted as causal online impact evidence. Third, the current evaluation does not report multi-seed variance or formal statistical significance tests, because the available audit record contains one fixed proprietary chronological split rather than repeated independent training runs. Fourth, the explanation evaluation measures expert-perceived faithfulness and readability for high-risk test predictions; it does not remove the need for human oversight in regulated decisions. Future work should add public benchmark evaluations where legally possible, repeatability analysis under multiple splits or random seeds, institution-level transfer tests, and governance mechanisms for retrieved evidence that may become outdated or disputed.
+                  - generic [ref=e428]: "\\section{Conclusion}"
+                  - generic [ref=e431]: This paper presented FRAA, a retrieval-augmented model for explainable financial risk assessment. FRAA combines time-aware sequence modeling, timestamp-valid knowledge retrieval, cross-attention evidence fusion, calibrated risk scoring, and explanation generation. On a large-scale proprietary multi-source dataset, FRAA achieves the best Log Loss and Recall@5 among all evaluated models. Ablations identify knowledge retrieval as the most important component, and retrieval-depth analysis selects five documents as the best trade-off between evidence coverage and noise. Additional evaluations cover cross-scenario transfer, explanation quality, and tested latency. Overall, the results indicate that external evidence retrieval is most useful when it is constrained by time validity, fused with temporal user behavior, and exposed through auditable explanations.
+                  - generic [ref=e434]: "\\bibliographystyle{splncs04}"
+                  - generic [ref=e435]: "\\bibliography{submission_pricai2026}"
+                - button "Editing" [ref=e441] [cursor=pointer]:
+                  - generic [ref=e442]: edit
+                  - generic [ref=e443]: Editing
+                  - generic [ref=e444]: keyboard_arrow_down
+          - separator [ref=e445]:
+            - generic "Resize" [ref=e446]:
+              - button "Click to hide the PDF" [ref=e447] [cursor=pointer]:
+                - generic: chevron_right
+              - generic [ref=e448]:
+                - button "Go to code location in PDF" [ref=e450] [cursor=pointer]:
+                  - generic [ref=e452]: arrow_right_alt
+                - 'button "Go to PDF location in code (Tip: double click on the PDF for best results)" [ref=e454] [cursor=pointer]':
+                  - generic [ref=e456]: arrow_left_alt
+          - region "PDF preview" [ref=e457]:
+            - generic [ref=e458]:
+              - toolbar "PDF" [ref=e459]:
+                - generic [ref=e460]:
+                  - group [ref=e461]:
+                    - button "Recompile" [ref=e462] [cursor=pointer]:
+                      - generic [ref=e463]: Recompile
+                    - button "Toggle compile options menu" [ref=e464] [cursor=pointer]:
+                      - generic [ref=e465]: expand_more
+                  - button "View logs" [ref=e466] [cursor=pointer]:
+                    - generic [ref=e467]:
+                      - generic [ref=e468]: description
+                      - generic:
+                        - generic: "1"
+                  - link "Download PDF" [ref=e469] [cursor=pointer]:
+                    - /url: /download/project/6a204ea1614e48bb59209a8b/build/19e919f50c1-c2d00a431b3be211/output/output.pdf?compileGroup=standard&clsiserverid=clsi-reg-c3d-d-f-5chx&enable_pdf_caching=true&popupDownload=true&editorId=2ea6a87b-d16c-43a6-b5b0-9b18f66c254c
+                    - generic [ref=e471]: download
+                - generic [ref=e474]:
+                  - group [ref=e475]:
+                    - button "Previous page" [ref=e476] [cursor=pointer]:
+                      - generic [ref=e478]: keyboard_arrow_up
+                    - button "Next page" [ref=e479] [cursor=pointer]:
+                      - generic [ref=e481]: keyboard_arrow_down
+                  - generic [ref=e482]:
+                    - textbox "Page 7, Current Page" [ref=e484]: "7"
+                    - generic [ref=e485]: / 15
+                  - generic [ref=e486]:
+                    - group [ref=e487]:
+                      - button "Zoom out" [ref=e488] [cursor=pointer]:
+                        - generic [ref=e490]: remove
+                      - button "Zoom in" [ref=e491] [cursor=pointer]:
+                        - generic [ref=e493]: add
+                    - button "PDF zoom level" [ref=e495] [cursor=pointer]: 74%
+              - tabpanel [ref=e498]:
+                - generic [ref=e499]:
+                  - generic "Page ⁨1⁩" [ref=e500]:
+                    - generic [ref=e502]:
+                      - text: "FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment Abstract. Financial risk assessment requires calibrated predictions, timely external evidence, and explanations that can be inspected by human reviewers. Existing industrial systems often rely on manually engineered tabular features and tree ensembles, which are effective but limited in modeling long-range behavioral sequences and fast-changing market or regulatory context. This paper presents the Financial Risk Assessment Agent (FRAA), a retrieval-augmented model for explain- able financial risk assessment. For each scoring request, FRAA encodes heterogeneous user behavior with a time-aware Transformer, forms a retrieval query from the current user state, retrieves timestamp-valid documents from a financial knowledge base, fuses retrieved evidence through cross-attention, and outputs both a calibrated risk score and a concise textual justification. On a proprietary 24-month multi-source dataset with over 20 million users, 1.2 billion interactions, and 15 data sources, FRAA achieves a Log Loss of 0.5163 and Recall@5 of 0.4185, reducing Log Loss by 19.6% relative to a deployed Random Forest baseline and by 9.4% relative to a non-retrieval Transformer. Ablation studies identify knowledge retrieval as the largest contributor, while retrieval-depth analysis shows that five documents give the best trade-off between evidence coverage and noise. Additional evaluations cover cross-scenario adaptation, explanation quality rated 4.32/5 by domain experts, and 15.7 ms per-query latency under the tested serving configuration. Keywords: Financial risk assessment · Retrieval-augmented generation · Explainable AI · Risk scoring · Time-aware Transformer 1 Introduction Financial institutions assess user-level risk from heterogeneous and time-varying evidence, including transaction histories, account states, macroeconomic indica- tors, regulatory disclosures, and news sentiment. Accurate risk estimates sup-"
+                      - generic [ref=e503]:
+                        - text: port credit review, fraud prevention, margin control, and compliance workflows
+                        - link [ref=e504] [cursor=pointer]:
+                          - /url: "#cite.hand1997statistical"
+                        - link [ref=e505] [cursor=pointer]:
+                          - /url: "#cite.thomas2000survey"
+                        - link [ref=e506] [cursor=pointer]:
+                          - /url: "#cite.crook2007recent"
+                        - link [ref=e507] [cursor=pointer]:
+                          - /url: "#cite.bolton2002statistical"
+                        - link [ref=e508] [cursor=pointer]:
+                          - /url: "#cite.ngai2011application"
+                      - text: "[16,38,11,6,31]. In practice, many deployed systems still depend on carefully en-"
+                      - generic [ref=e509]:
+                        - text: gineered tabular features and tree-based models such as Random Forests and
+                        - link [ref=e510] [cursor=pointer]:
+                          - /url: "#cite.breiman2001random"
+                        - link [ref=e511] [cursor=pointer]:
+                          - /url: "#cite.friedman2001greedy"
+                        - link [ref=e512] [cursor=pointer]:
+                          - /url: "#cite.chen2016xgboost"
+                        - link [ref=e513] [cursor=pointer]:
+                          - /url: "#cite.lessmann2015benchmarking"
+                      - text: gradient boosting [7,13,9,25]. These models remain strong baselines, but they do not naturally capture long-range sequential dependencies, and they require repeated manual updates when external conditions change. Recent neural sequence models and Transformer architectures provide a more
+                      - generic [ref=e514]:
+                        - text: flexible way to model user behavior over time [17,10,39,22,36,21]. However, a
+                        - link [ref=e515] [cursor=pointer]:
+                          - /url: "#cite.hochreiter1997lstm"
+                        - link [ref=e516] [cursor=pointer]:
+                          - /url: "#cite.cho2014learning"
+                        - link [ref=e517] [cursor=pointer]:
+                          - /url: "#cite.vaswani2017attention"
+                        - link [ref=e518] [cursor=pointer]:
+                          - /url: "#cite.kang2018sasrec"
+                        - link [ref=e519] [cursor=pointer]:
+                          - /url: "#cite.sun2019bert4rec"
+                        - link [ref=e520] [cursor=pointer]:
+                          - /url: "#cite.jurgovsky2018sequence"
+                  - generic "Page ⁨2⁩" [ref=e536]
+                  - generic "Page ⁨3⁩" [ref=e537]
+                  - generic "Page ⁨4⁩" [ref=e538]
+                  - generic "Page ⁨5⁩" [ref=e539]
+                  - generic "Page ⁨6⁩" [ref=e540]
+                  - generic "Page ⁨7⁩" [ref=e541]:
+                    - generic [ref=e543]:
+                      - text: "FRAA for Financial Risk Assessment 7 setting: tabular ensembles, tabular ensembles with manually attached external features, recurrent sequence modeling, and neural sequence modeling without retrieval. We keep the deployed tree-based baseline because prior credit-scoring"
+                      - generic [ref=e544]:
+                        - text: and tabular-learning studies repeatedly find tree ensembles difficult to displace
+                        - link [ref=e545] [cursor=pointer]:
+                          - /url: "#cite.baesens2003benchmarking"
+                        - link [ref=e546] [cursor=pointer]:
+                          - /url: "#cite.brown2012experimental"
+                        - link [ref=e547] [cursor=pointer]:
+                          - /url: "#cite.arik2021tabnet"
+                      - text: on heterogeneous tabular data [3,8,2]. All baselines use the same chronologi- cal split and available feature families. FRAA is implemented in PyTorch and trained with AdamW, learning rate 1 × 10 − 4 , weight decay 1 × 10 − 5 , batch size 64, and a maximum budget of 50 epochs. The selected checkpoint is the one with the lowest validation Log Loss. Hyperparameters are chosen on the validation month and kept fixed for the test month. For the retrieval variants, document embeddings are constructed of- fline and indexed before evaluation. During scoring, the retrieval pool is filtered by timestamp before nearest-neighbor search. This procedure is important be- cause a high-capacity retrieval model can otherwise learn from documents that were not available when the decision should have been made. 4.3 Evaluation Questions The experiments are organized around four questions. First, does retrieval- augmented evidence improve calibrated risk prediction and high-risk ranking compared with tree-based and neural baselines? Second, do the learned repre- sentations transfer to related financial scenarios, or are they tied to a single product-specific task? Third, which components of FRAA account for the im- provement, especially the dynamic transaction encoder, time-gap encoding, and knowledge retrieval module? Fourth, can the model provide explanations and latency that are compatible with analyst-facing risk review? The tables in the following sections follow this order so that the main predictive result is separated from auxiliary analyses. 4.4 Main Results This experiment tests the first question by comparing the full model with de-
+                      - generic [ref=e548]:
+                        - text: ployed and neural baselines under the same chronological split. Table 1 reports
+                        - link [ref=e549] [cursor=pointer]:
+                          - /url: "#table.1"
+                        - link [ref=e550] [cursor=pointer]:
+                          - /url: "#figure.2"
+                      - text: "the numerical results, while Fig. 2 visualizes the same comparison for the two primary metrics. The ordering is consistent across calibration and ranking met- rics: the full retrieval-augmented model outperforms tree-based baselines, the non-retrieval Transformer, and all ablated FRAA variants. Relative to the deployed RF baseline, FRAA reduces Log Loss by 19.6% and improves Recall@5 from 0.3172 to 0.4185. Relative to the non-retrieval Trans- former, FRAA reduces Log Loss by 9.4% and improves Recall@5 by 8.8%. The ablated variants remain below the full model, indicating that the retrieval, tem- poral, and dynamic-feature components contribute complementary information."
+                  - generic "Page ⁨8⁩" [ref=e556]:
+                    - generic [ref=e558]:
+                      - text: 8 Table 1. Main test-set performance. Lower Log Loss and higher Recall@5 are better. Model Log Loss Recall@5 RF (deployed baseline) 0.6421 0.3172 RF + KB features 0.6289 0.3291 XGBoost 0.6104 0.3495 LSTM 0.5873 0.3738 Transformer 0.5698 0.3846 FRAA (-Dyn) 0.5642 0.3891 FRAA (-TE) 0.5510 0.3957 FRAA (-KB) 0.5385 0.4023 FRAA (full) 0.5163 0.4185 RF RF+KB XGBoost LSTM Transformer FRAA (-Dyn) FRAA (-TE) FRAA (-KB) FRAA 0.500 0.525 0.550 0.575 0.600 0.625 0.650 Log Loss 0.642 0.629 0.610 0.587 0.570 0.564 0.551 0.538 0.516 RF RF+KB XGBoost LSTM Transformer FRAA (-Dyn) FRAA (-TE) FRAA (-KB) FRAA 0.30 0.32 0.34 0.36 0.38 0.40 0.42 Recall@5 0.317 0.329 0.349 0.374 0.385 0.389 0.396 0.402 0.418 Fig. 2. Main-result comparison. FRAA obtains the lowest Log Loss and highest Re- call@5 among all evaluated models. 4.5 Scenario Adaptation This experiment evaluates whether the representation learned from the multi- source corpus can be adapted to related risk scenarios with different product
+                      - generic [ref=e559]:
+                        - text: distributions.
+                        - link [ref=e560] [cursor=pointer]:
+                          - /url: "#table.2"
+                      - text: Table 2 evaluates whether representations learned from the multi-source risk corpus transfer to related financial scenarios. Linear-probe fine-tuning (LP-FT) updates only a small prediction layer, low-rank adaptation fine-tuning (LoRA-
+                      - generic [ref=e561]:
+                        - text: FT) updates low-rank adapter parameters [18], and full fine-tuning (full-FT)
+                        - link [ref=e562] [cursor=pointer]:
+                          - /url: "#cite.hu2022lora"
+                      - text: updates the full model. Full-FT produces the largest gains, while LoRA-FT retains most of the benefit with fewer updated parameters. These results support the claim that FRAA learns reusable cross-product risk representations rather than only fitting a single product-specific task.
+                  - generic "Page ⁨9⁩" [ref=e565]:
+                    - generic [ref=e567]:
+                      - text: FRAA for Financial Risk Assessment 9 Table 2. Cross-scenario adaptation measured by relative Recall lift over scenario- specific baselines. Adaptation method Credit card R@1 / R@5 Mortgage R@1 / R@5 Scenario-specific model 0.00 / 0.00 0.00 / 0.00 LP-FT ( < 1% params) +3.14 / +2.97 +2.88 / +2.45 LoRA-FT ( < 5% params) +13.49 / +12.63 +11.72 / +10.88 FRAA full-FT +18.21 / +17.10 +16.45 / +15.33 5 Ablation and Analysis 5.1 Architectural Components The component ablation removes one design choice at a time while keeping the training split, feature availability, and evaluation metrics unchanged. The goal is to distinguish improvements due to retrieval from improvements due to stronger sequence modeling. Table 3. Component ablation on the risk-score prediction task. Model variant Log Loss Recall@5 Transformer 0.5698 0.3846 FRAA (-Dyn) 0.5642 0.3891 FRAA (-TE) 0.5510 0.3957 FRAA (-KB) 0.5385 0.4023 FRAA (full) 0.5163
+                      - generic [ref=e568]:
+                        - text: "0.4185"
+                        - link [ref=e569] [cursor=pointer]:
+                          - /url: "#table.3"
+                      - text: "Table 3 isolates the contribution of dynamic transactions (-Dyn), temporal encoding (-TE), and knowledge retrieval (-KB). Removing the knowledge com- ponent causes the largest degradation among FRAA variants: Log Loss increases from 0.5163 to 0.5385 and Recall@5 decreases from 0.4185 to 0.4023. This sup- ports the retrieval-augmented design. Removing temporal encoding also hurts performance, confirming the importance of irregular event timing in risk assess- ment. The -Dyn variant remains stronger than the non-retrieval Transformer, which suggests that external evidence and temporal encoding can partially com- pensate for a weaker dynamic-feature branch, but they do not replace it. 5.2 Feature Groups and Retrieval Depth We next examine the source of the gain from two complementary views: feature-"
+                      - generic [ref=e570]:
+                        - text: family occlusion and the number of retrieved documents.
+                        - link [ref=e571] [cursor=pointer]:
+                          - /url: "#table.4"
+                      - text: The occlusion results in Table 4 are consistent with the component abla- tion. Knowledge-retrieved context produces the largest AUC drop, followed by
+                  - generic "Page ⁨10⁩" [ref=e574]
+                  - generic "Page ⁨11⁩" [ref=e575]
+                  - generic "Page ⁨12⁩" [ref=e576]
+                  - generic "Page ⁨13⁩" [ref=e577]
+                  - generic "Page ⁨14⁩" [ref=e578]
+                  - generic "Page ⁨15⁩" [ref=e579]
+  - generic:
+    - generic:
+      - button "Close overlay"
+  - generic:
+    - generic:
+      - button "Close overlay"
+  - generic:
+    - generic:
+      - button "Close overlay"

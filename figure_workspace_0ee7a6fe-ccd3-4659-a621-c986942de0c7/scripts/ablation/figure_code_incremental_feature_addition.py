@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+﻿import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 
@@ -75,7 +75,7 @@ handles = line1 + line2
 labels = [h.get_label() for h in handles]
 ax1.legend(handles, labels,
            loc='lower left',
-           frameon=True,
+           frameon=False,
            framealpha=0.95,
            edgecolor='#CCCCCC',
            fontsize=11)

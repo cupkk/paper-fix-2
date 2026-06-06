@@ -1,0 +1,68 @@
+{
+  "version": "0.1",
+  "metadata": {
+    "title": "FRAA Algorithm Pipeline",
+    "created_by": "codex.visiomaster.manual_scene",
+    "style_profile": "paper_white",
+    "fidelity": "editable_semantic_redraw",
+    "region_strategy": "module_first",
+    "source_image": "D:/github/paper-fix-2/visiomaster_rebuild/algorithm/source/original.png",
+    "source_aspect_ratio": 1.822389666307858,
+    "notes": [
+      "Editable Visio redraw from the user-provided prompt and source image.",
+      "No LaTeX figure replacement is made automatically."
+    ]
+  },
+  "page": {
+    "width": 1693,
+    "height": 929,
+    "units": "px",
+    "origin": "top-left",
+    "target_width_in": 13.2,
+    "background": "#FFFFFF"
+  },
+  "nodes": [
+    {"id": "stage1_num", "type": "ellipse_node", "x": 121, "y": 31, "w": 50, "h": 50, "text": "1", "style": {"fill": "#F97316", "line": "#F97316", "font_family": "Arial", "font_size_pt": 15, "font_weight": "bold", "text_color": "#FFFFFF", "text_fit": "shrink_to_fit"}},
+    {"id": "stage1_title", "type": "text_block", "x": 175, "y": 34, "w": 360, "h": 54, "text": "Multi-Source Inputs", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 18, "font_weight": "bold", "text_color": "#111111", "text_fit": "shrink_to_fit"}},
+    {"id": "stage2_num", "type": "ellipse_node", "x": 628, "y": 31, "w": 50, "h": 50, "text": "2", "style": {"fill": "#155FB5", "line": "#155FB5", "font_family": "Arial", "font_size_pt": 15, "font_weight": "bold", "text_color": "#FFFFFF", "text_fit": "shrink_to_fit"}},
+    {"id": "stage2_title", "type": "text_block", "x": 680, "y": 34, "w": 520, "h": 54, "text": "Temporal Encoding & Representation", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 18, "font_weight": "bold", "text_color": "#111111", "text_fit": "shrink_to_fit"}},
+    {"id": "stage3_num_a", "type": "ellipse_node", "x": 1294, "y": 31, "w": 50, "h": 50, "text": "3", "style": {"fill": "#F97316", "line": "#F97316", "font_family": "Arial", "font_size_pt": 15, "font_weight": "bold", "text_color": "#FFFFFF", "text_fit": "shrink_to_fit"}},
+    {"id": "stage3_num_b", "type": "ellipse_node", "x": 1342, "y": 31, "w": 50, "h": 50, "text": "3", "style": {"fill": "#168C28", "line": "#168C28", "font_family": "Arial", "font_size_pt": 15, "font_weight": "bold", "text_color": "#FFFFFF", "text_fit": "shrink_to_fit"}},
+    {"id": "stage3_title", "type": "text_block", "x": 1392, "y": 34, "w": 330, "h": 54, "text": "Task-Specific Outputs", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 18, "font_weight": "bold", "text_color": "#111111", "text_fit": "shrink_to_fit"}},
+
+    {"id": "input_dynamic", "type": "rounded_process", "x": 43, "y": 123, "w": 304, "h": 127, "text": "Dynamic\nTransactional\nContext", "style": {"fill": "#FFFFFF", "line": "#111111", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 18, "text_color": "#111111", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "input_profile", "type": "rounded_process", "x": 43, "y": 287, "w": 304, "h": 128, "text": "Quasi-Static\nProfile", "style": {"fill": "#FFFFFF", "line": "#111111", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 20, "text_color": "#111111", "rounding_in": 0.08}},
+    {"id": "input_knowledge", "type": "rounded_process", "x": 43, "y": 452, "w": 304, "h": 125, "text": "Knowledge-\nRetrieved\nContext", "style": {"fill": "#FFFFFF", "line": "#111111", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 18, "text_color": "#111111", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "merge_junction", "type": "junction_point", "x": 431, "y": 344, "w": 8, "h": 8, "text": "", "style": {"fill": "#F97316", "line": "#F97316", "line_weight_pt": 0}},
+    {"id": "fusion", "type": "rounded_process", "x": 519, "y": 218, "w": 210, "h": 278, "text": "Multi-Source\nFusion &\nProjection", "style": {"fill": "#FFFFFF", "line": "#111111", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 19, "text_color": "#111111", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "encoder", "type": "rounded_process", "x": 824, "y": 218, "w": 288, "h": 300, "text": "", "style": {"fill": "#FFFFFF", "line": "#155FB5", "line_weight_pt": 2.5, "font_family": "Arial", "font_size_pt": 21, "text_color": "#111111", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "wave", "type": "wave_signal", "x": 944, "y": 252, "w": 62, "h": 62, "text": "", "style": {"line": "#155FB5", "line_weight_pt": 2.0}},
+    {"id": "wave_circle", "type": "ellipse_node", "x": 930, "y": 249, "w": 86, "h": 86, "text": "", "allow_overlap": true, "style": {"fill": "none", "line": "#155FB5", "line_weight_pt": 2.0}},
+    {"id": "encoder_label", "type": "text_block", "x": 872, "y": 354, "w": 200, "h": 150, "text": "Time-Aware\nTransformer\nEncoder\n(L=8 layers)", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 19, "text_color": "#111111", "text_fit": "shrink_to_fit"}},
+    {"id": "risk_head", "type": "rounded_process", "x": 1310, "y": 156, "w": 337, "h": 134, "text": "Risk Scoring Head\n(Sigmoid)", "style": {"fill": "#FFFFFF", "line": "#F97316", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 20, "text_color": "#111111", "rounding_in": 0.08}},
+    {"id": "explain_head", "type": "rounded_process", "x": 1310, "y": 404, "w": 345, "h": 133, "text": "Explanation Generation\nHead (Decoder)", "style": {"fill": "#FFFFFF", "line": "#168C28", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 18, "text_color": "#111111", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "reasoning", "type": "rounded_process", "x": 690, "y": 686, "w": 326, "h": 129, "text": "Generative\nRetrieval-Augmented\nReasoning", "style": {"fill": "#FFFFFF", "line": "#168C28", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 16, "text_color": "#111111", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "knowledge_base", "type": "rounded_process", "x": 1196, "y": 695, "w": 322, "h": 120, "text": "Financial Knowledge Base\n(1.2M Docs)", "style": {"fill": "#FFFFFF", "line": "#111111", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 16, "text_color": "#111111", "rounding_in": 0.12, "text_fit": "shrink_to_fit"}},
+    {"id": "feedback_label", "type": "text_block", "x": 410, "y": 604, "w": 260, "h": 72, "text": "Dynamic Knowledge\nRetrieval (Feedback)", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 13, "text_color": "#07820E", "text_fit": "shrink_to_fit"}},
+    {"id": "legend", "type": "legend_block", "x": 43, "y": 694, "w": 292, "h": 172, "text": "", "allow_overlap": true, "style": {"fill": "#FFFFFF", "line": "#9CA3AF", "line_dash": "dash", "line_weight_pt": 1.2, "font_family": "Arial", "font_size_pt": 12, "text_color": "#111111", "text_fit": "shrink_to_fit"}},
+    {"id": "legend_title", "type": "text_block", "x": 82, "y": 706, "w": 180, "h": 30, "text": "Legend", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 12, "text_color": "#111111", "text_fit": "shrink_to_fit"}},
+    {"id": "legend_orange_text", "type": "text_block", "x": 123, "y": 742, "w": 220, "h": 32, "text": "Data Ingestion Flow", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 11, "text_color": "#111111", "text_fit": "shrink_to_fit"}},
+    {"id": "legend_green_text", "type": "text_block", "x": 123, "y": 785, "w": 220, "h": 56, "text": "Knowledge Retrieval /\nFeedback Flow", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 11, "text_color": "#111111", "text_fit": "shrink_to_fit"}}
+  ],
+  "edges": [
+    {"id": "sep1_line", "type": "line_segment", "from_point": [482, 92], "to_point": [482, 590], "style": {"line": "#B8B8B8", "line_dash": "dash", "line_weight_pt": 1.0, "end_arrow": "none"}},
+    {"id": "sep2_line", "type": "line_segment", "from_point": [1206, 92], "to_point": [1206, 590], "style": {"line": "#B8B8B8", "line_dash": "dash", "line_weight_pt": 1.0, "end_arrow": "none"}},
+    {"id": "input1_to_merge", "type": "rounded_orthogonal_connector", "from": "input_dynamic:right@0.5", "points": [[432, 187]], "to_point": [432, 351], "corner_radius_px": 22, "style": {"line": "#F97316", "line_weight_pt": 2.6, "end_arrow": "none"}},
+    {"id": "input2_to_merge", "type": "line_segment", "from_point": [347, 351], "to_point": [432, 351], "style": {"line": "#F97316", "line_weight_pt": 2.6, "end_arrow": "none"}},
+    {"id": "input3_to_merge", "type": "rounded_orthogonal_connector", "from": "input_knowledge:right@0.5", "points": [[432, 515]], "to_point": [432, 351], "corner_radius_px": 22, "style": {"line": "#F97316", "line_weight_pt": 2.6, "end_arrow": "none"}},
+    {"id": "merge_to_fusion", "type": "lane_arrow", "from_point": [432, 351], "to_point": [518, 351], "route": "horizontal", "style": {"line": "#F97316", "line_weight_pt": 2.8, "arrow_size": "medium"}},
+    {"id": "fusion_to_encoder", "type": "lane_arrow", "from": "fusion:right@0.5", "to": "encoder:left@0.5", "route": "horizontal", "style": {"line": "#155FB5", "line_weight_pt": 2.8, "arrow_size": "medium"}},
+    {"id": "encoder_to_risk", "type": "rounded_orthogonal_connector", "from": "encoder:right@0.42", "points": [[1209, 344], [1209, 221]], "to": "risk_head:left@0.5", "corner_radius_px": 24, "orthogonalize_points": true, "style": {"line": "#F97316", "line_weight_pt": 2.6, "arrow_size": "medium"}},
+    {"id": "encoder_to_explain", "type": "rounded_orthogonal_connector", "from": "encoder:right@0.5", "points": [[1209, 351], [1209, 470]], "to": "explain_head:left@0.5", "corner_radius_px": 24, "orthogonalize_points": true, "style": {"line": "#168C28", "line_weight_pt": 2.6, "arrow_size": "medium"}},
+    {"id": "reasoning_to_fusion", "type": "rounded_orthogonal_connector", "from": "reasoning:left@0.55", "points": [[624, 758], [624, 510]], "to": "fusion:bottom@0.5", "corner_radius_px": 22, "orthogonalize_points": true, "style": {"line": "#168C28", "line_weight_pt": 2.5, "arrow_size": "medium"}},
+    {"id": "knowledge_to_reasoning", "type": "dashed_feedback_path", "from": "knowledge_base:left@0.52", "points": [[1097, 756]], "to": "reasoning:right@0.5", "style": {"line": "#168C28", "line_weight_pt": 2.4, "line_dash": "dash", "arrow_size": "medium"}},
+    {"id": "legend_orange", "type": "lane_arrow", "from_point": [65, 764], "to_point": [118, 764], "route": "horizontal", "style": {"line": "#F97316", "line_weight_pt": 2.5, "arrow_size": "small"}},
+    {"id": "legend_green", "type": "lane_arrow", "from_point": [65, 810], "to_point": [118, 810], "route": "horizontal", "style": {"line": "#168C28", "line_weight_pt": 2.5, "arrow_size": "small"}}
+  ],
+  "assets": []
+}

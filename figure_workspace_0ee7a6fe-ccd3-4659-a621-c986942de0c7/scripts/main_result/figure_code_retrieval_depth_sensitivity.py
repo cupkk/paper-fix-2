@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+﻿import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 
@@ -85,7 +85,7 @@ ax1.legend(
     loc='upper right',
     bbox_to_anchor=(0.98, 0.98),       # 置于右上角轻微内缩
     ncol=1,
-    frameon=True,
+    frameon=False,
     framealpha=0.95,
     edgecolor='#CCCCCC',
 )

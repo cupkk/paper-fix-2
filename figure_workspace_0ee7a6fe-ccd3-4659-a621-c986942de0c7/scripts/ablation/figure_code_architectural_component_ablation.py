@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+﻿import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 
@@ -68,7 +68,7 @@ for bar_container, values in zip(bars_ll, log_loss):
 # Legend placed in the upper‑right corner where data are lowest – no overlap
 ax0.legend(
     loc='upper right',
-    frameon=True,
+    frameon=False,
     framealpha=0.95,
     edgecolor='#CCCCCC',
     fontsize=9,

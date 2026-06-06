@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+﻿import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 
@@ -80,7 +80,7 @@ ax1.legend(
     handles=[line1, line2],
     loc='upper right',
     bbox_to_anchor=(0.99, 0.95),
-    frameon=True,
+    frameon=False,
     framealpha=0.95,
     edgecolor='#CCCCCC',
     fontsize=10

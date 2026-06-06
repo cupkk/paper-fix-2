@@ -1,0 +1,468 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e7]:
+      - navigation "Project actions" [ref=e8]:
+        - generic [ref=e9]:
+          - link "Overleaf logo" [ref=e12] [cursor=pointer]:
+            - /url: /project
+            - generic "Overleaf logo" [ref=e13]
+          - menubar [ref=e14]:
+            - button "File" [ref=e16] [cursor=pointer]
+            - button "Edit" [ref=e18] [cursor=pointer]
+            - button "Insert" [ref=e20] [cursor=pointer]
+            - button "View" [ref=e22] [cursor=pointer]
+            - button "Format" [ref=e24] [cursor=pointer]
+            - button "Help" [ref=e26] [cursor=pointer]
+        - button "Project title options" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: "FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment"
+          - generic [ref=e30]: keyboard_arrow_down
+        - generic [ref=e31]:
+          - button "History" [ref=e33] [cursor=pointer]:
+            - generic [ref=e35]: history
+          - button "Layout options" [ref=e39] [cursor=pointer]:
+            - generic [ref=e40]: space_dashboard
+          - button "Share" [ref=e42] [cursor=pointer]:
+            - generic [ref=e43]:
+              - generic [ref=e44]: person_add
+              - text: Share
+          - link "Upgrade" [ref=e46] [cursor=pointer]:
+            - /url: /user/subscription/choose-your-plan?itm_referrer=editor-header-upgrade-prompt
+            - generic [ref=e47]: Upgrade
+      - generic [ref=e49]:
+        - navigation "Sidebar" [ref=e50]:
+          - tablist [ref=e51]:
+            - generic [ref=e52]:
+              - tab "File tree" [selected] [ref=e53] [cursor=pointer]:
+                - generic [ref=e54]: description
+                - generic [ref=e55]: File tree
+              - tab "Project search" [ref=e56] [cursor=pointer]:
+                - generic [ref=e57]: search
+                - generic [ref=e58]: Project search
+              - tab "Integrations" [ref=e59] [cursor=pointer]:
+                - generic [ref=e60]: integration_instructions
+                - generic [ref=e61]: Integrations
+              - tab "Review panel" [ref=e62] [cursor=pointer]:
+                - generic [ref=e63]: rate_review
+                - generic [ref=e64]: Review panel
+              - tab "Chat" [ref=e65] [cursor=pointer]:
+                - generic [ref=e66]: forum
+                - generic [ref=e67]: Chat
+              - tab "AI assistant" [ref=e68] [cursor=pointer]:
+                - img [ref=e69]
+                - generic [ref=e72]: AI assistant
+            - navigation "Help and editor settings" [ref=e73]:
+              - button "Help" [ref=e76] [cursor=pointer]:
+                - generic [ref=e77]: help
+              - button "Settings" [ref=e78] [cursor=pointer]:
+                - generic [ref=e79]: settings
+        - tabpanel "File tree" [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - button "Hide file tree" [ref=e88] [cursor=pointer]:
+                  - generic [ref=e89]: keyboard_arrow_down
+                  - heading "File tree" [level=4] [ref=e90]
+                - generic [ref=e91]:
+                  - button "New file" [ref=e92] [cursor=pointer]:
+                    - generic [ref=e93]: note_add
+                    - generic [ref=e94]: New file
+                  - button "New folder" [ref=e95] [cursor=pointer]:
+                    - generic [ref=e96]: create_new_folder
+                    - generic [ref=e97]: New folder
+                  - button "Upload" [ref=e98] [cursor=pointer]:
+                    - generic [ref=e99]: upload
+                    - generic [ref=e100]: Upload
+                  - button "Close" [ref=e101] [cursor=pointer]:
+                    - generic [ref=e102]: close
+                    - generic [ref=e103]: Close
+              - tree [ref=e105]:
+                - generic [ref=e106]:
+                  - treeitem "figures" [expanded] [ref=e107]:
+                    - button "Collapse figures" [ref=e108] [cursor=pointer]:
+                      - generic "Collapse" [ref=e109]:
+                        - generic [ref=e110]: expand_more
+                      - generic [ref=e112]: figures
+                  - tree [ref=e113]:
+                    - generic [ref=e114]:
+                      - treeitem "algorithm" [ref=e115]:
+                        - button "Expand algorithm" [ref=e116] [cursor=pointer]:
+                          - generic "Expand" [ref=e117]:
+                            - generic [ref=e118]: chevron_right
+                          - generic [ref=e120]: algorithm
+                      - treeitem "main_result" [expanded] [ref=e121]:
+                        - button "Collapse main_result" [ref=e122] [cursor=pointer]:
+                          - generic "Collapse" [ref=e123]:
+                            - generic [ref=e124]: expand_more
+                          - generic [ref=e126]: main_result
+                      - tree [ref=e127]:
+                        - generic [ref=e128]:
+                          - treeitem "main_results_comparison.pdf" [ref=e129]:
+                            - generic [ref=e130] [cursor=pointer]:
+                              - generic [ref=e131]: image
+                              - generic [ref=e133]: main_results_comparison.pdf
+                          - treeitem "main_results_comparison.png" [ref=e134]:
+                            - generic [ref=e135] [cursor=pointer]:
+                              - generic [ref=e136]: image
+                              - generic [ref=e138]: main_results_comparison.png
+                          - treeitem "submission_pricai2026.tex" [ref=e139]:
+                            - generic [ref=e140] [cursor=pointer]:
+                              - generic [ref=e141]: description
+                              - generic [ref=e143]: submission_pricai2026.tex
+                  - treeitem "llncs.cls" [ref=e144]:
+                    - generic [ref=e145] [cursor=pointer]:
+                      - generic [ref=e146]: description
+                      - generic [ref=e148]: llncs.cls
+                  - treeitem "splncs04.bst" [ref=e149]:
+                    - generic [ref=e150] [cursor=pointer]:
+                      - generic [ref=e151]: description
+                      - generic [ref=e153]: splncs04.bst
+                  - treeitem "submission_pricai2026.bib" [ref=e154]:
+                    - generic [ref=e155] [cursor=pointer]:
+                      - generic [ref=e156]: book_5
+                      - generic [ref=e158]: submission_pricai2026.bib
+                  - treeitem "submission_pricai2026.tex" [selected] [ref=e159]:
+                    - generic [ref=e160] [cursor=pointer]:
+                      - generic [ref=e161]: description
+                      - generic [ref=e163]: submission_pricai2026.tex
+                    - button "Open submission_pricai2026.tex action menu" [ref=e165] [cursor=pointer]:
+                      - generic [ref=e166]: more_vert
+                      - generic [ref=e167]: Menu
+            - separator [ref=e168]:
+              - generic "Resize" [ref=e169]
+            - generic [ref=e172]:
+              - button "Hide File outline" [ref=e174] [cursor=pointer]:
+                - generic [ref=e175]: keyboard_arrow_down
+                - heading "File outline" [level=4] [ref=e176]
+              - tree [ref=e179]:
+                - treeitem "\\refname" [ref=e585]:
+                  - button "\\refname" [ref=e586] [cursor=pointer]
+                - treeitem "Introduction" [ref=e587]:
+                  - button "Introduction" [ref=e588] [cursor=pointer]
+                - treeitem "Related Work" [expanded] [ref=e589]:
+                  - generic [ref=e199]:
+                    - button "Collapse" [ref=e200] [cursor=pointer]:
+                      - generic [ref=e201]: keyboard_arrow_down
+                    - button "Related Work" [ref=e590] [cursor=pointer]
+                  - group [ref=e203]:
+                    - treeitem "Multivariate and Fusion Approaches" [ref=e591]:
+                      - button "Multivariate and Fusion Approaches" [ref=e592] [cursor=pointer]
+                    - treeitem "Multimodal Learning" [ref=e593]:
+                      - button "Multimodal Learning" [ref=e594] [cursor=pointer]
+                    - treeitem "Learning under Missing Modalities" [ref=e595]:
+                      - button "Learning under Missing Modalities" [ref=e596] [cursor=pointer]
+                    - treeitem "Financial Risk Surveillance and Multi-Agent Reasoning" [ref=e597]:
+                      - button "Financial Risk Surveillance and Multi-Agent Reasoning" [ref=e598] [cursor=pointer]
+                - treeitem "Method" [expanded] [ref=e599]:
+                  - generic [ref=e220]:
+                    - button "Collapse" [ref=e221] [cursor=pointer]:
+                      - generic [ref=e222]: keyboard_arrow_down
+                    - button "Method" [ref=e600] [cursor=pointer]
+                  - group [ref=e224]:
+                    - treeitem "Problem Formulation for Financial Risk Surveillance" [ref=e601]:
+                      - button "Problem Formulation for Financial Risk Surveillance" [ref=e602] [cursor=pointer]
+                    - treeitem "Financial Tokenization with Volatility-Aware Symbolic Projection" [ref=e603]:
+                      - button "Financial Tokenization with Volatility-Aware Symbolic Projection" [ref=e604] [cursor=pointer]
+                    - treeitem "Risk-Modulated Sparse Attention for Intra-modal Encoding" [ref=e605]:
+                      - button "Risk-Modulated Sparse Attention for Intra-modal Encoding" [ref=e606] [cursor=pointer]
+                    - treeitem "Multi-Agent Collaboration with Retrieval-Augmented Memory" [expanded] [ref=e607]:
+                      - generic [ref=e235]:
+                        - button "Collapse" [ref=e608] [cursor=pointer]:
+                          - generic [ref=e609]: keyboard_arrow_down
+                        - button "Multi-Agent Collaboration with Retrieval-Augmented Memory" [ref=e610] [cursor=pointer]
+                      - group [ref=e611]:
+                        - treeitem "Agent Roles and Communication Backbone" [ref=e612]:
+                          - button "Agent Roles and Communication Backbone" [ref=e614] [cursor=pointer]
+                        - treeitem "Sparse Agent-Aware Cross-Modal Attention" [ref=e615]:
+                          - button "Sparse Agent-Aware Cross-Modal Attention" [ref=e617] [cursor=pointer]
+                        - treeitem "Retrieval-Augmented Case Memory" [ref=e618]:
+                          - button "Retrieval-Augmented Case Memory" [ref=e620] [cursor=pointer]
+                    - treeitem "Explainable Risk Routing and Decision" [expanded] [ref=e621]:
+                      - generic [ref=e238]:
+                        - button "Collapse" [ref=e622] [cursor=pointer]:
+                          - generic [ref=e623]: keyboard_arrow_down
+                        - button "Explainable Risk Routing and Decision" [ref=e624] [cursor=pointer]
+                      - group [ref=e625]:
+                        - treeitem "Sparse Mixture-of-Experts with Attributable Specialization" [ref=e626]:
+                          - button "Sparse Mixture-of-Experts with Attributable Specialization" [ref=e628] [cursor=pointer]
+                        - treeitem "Training Objectives" [ref=e629]:
+                          - button "Training Objectives" [ref=e631] [cursor=pointer]
+                        - treeitem "Dynamic Adaptation via Monitor-Analyst Loop" [ref=e632]:
+                          - button "Dynamic Adaptation via Monitor-Analyst Loop" [ref=e634] [cursor=pointer]
+                - treeitem "Experiments" [expanded] [ref=e635]:
+                  - generic [ref=e241]:
+                    - button "Collapse" [ref=e242] [cursor=pointer]:
+                      - generic [ref=e243]: keyboard_arrow_down
+                    - button "Experiments" [ref=e636] [cursor=pointer]
+                  - group [ref=e245]:
+                    - treeitem "Performance under Full Modality and Robustness to Missingness" [ref=e637]:
+                      - button "Performance under Full Modality and Robustness to Missingness" [ref=e638] [cursor=pointer]
+                    - treeitem "Architecture, Efficiency, and Empirical Case Study" [expanded] [ref=e639]:
+                      - generic [ref=e250]:
+                        - button "Collapse" [ref=e640] [cursor=pointer]:
+                          - generic [ref=e641]: keyboard_arrow_down
+                        - button "Architecture, Efficiency, and Empirical Case Study" [ref=e642] [cursor=pointer]
+                      - group [ref=e643]:
+                        - treeitem "Computational Complexity and Latency" [ref=e644]:
+                          - button "Computational Complexity and Latency" [ref=e646] [cursor=pointer]
+                        - treeitem "Ablation Study" [ref=e647]:
+                          - button "Ablation Study" [ref=e649] [cursor=pointer]
+                        - treeitem "Sensitivity to Modality Noise" [ref=e650]:
+                          - button "Sensitivity to Modality Noise" [ref=e652] [cursor=pointer]
+                        - 'treeitem "Case Study: Modality Importance on FraudDetect" [ref=e653]':
+                          - 'button "Case Study: Modality Importance on FraudDetect" [ref=e655] [cursor=pointer]'
+                - treeitem "Limitations" [ref=e656]:
+                  - button "Limitations" [ref=e657] [cursor=pointer]
+                - treeitem "Conclusion" [ref=e658]:
+                  - button "Conclusion" [ref=e659] [cursor=pointer]
+        - separator [ref=e270]:
+          - generic "Resize" [ref=e271]:
+            - button "Click to hide the panel" [ref=e272] [cursor=pointer]:
+              - generic: chevron_left
+        - generic [ref=e274]:
+          - region "Editor" [ref=e275]:
+            - generic [ref=e282]:
+              - generic [ref=e285]:
+                - toolbar "Editor tools" [ref=e286]:
+                  - generic "Undo/Redo actions" [ref=e287]:
+                    - button "Undo" [ref=e288] [cursor=pointer]:
+                      - generic [ref=e289]: undo
+                      - generic [ref=e290]: Undo
+                    - button "Redo" [ref=e291] [cursor=pointer]:
+                      - generic [ref=e292]: redo
+                      - generic [ref=e293]: Redo
+                  - generic "Text formatting"
+                  - generic "Text style" [ref=e294]:
+                    - button "Bold" [ref=e295] [cursor=pointer]:
+                      - generic [ref=e296]: format_bold
+                      - generic [ref=e297]: Bold
+                    - button "Italic" [ref=e298] [cursor=pointer]:
+                      - generic [ref=e299]: format_italic
+                      - generic [ref=e300]: Italic
+                  - generic "Insert math and symbols"
+                  - generic "Insert misc (links, citations, cross-references, figures, tables)"
+                  - generic "List and indentation"
+                  - button "More editor toolbar items" [ref=e302] [cursor=pointer]:
+                    - generic [ref=e303]: more_horiz
+                  - generic [ref=e304]:
+                    - generic "Code and visual editor switch" [ref=e305]:
+                      - group "Editor mode." [ref=e307]:
+                        - generic [ref=e308]: Editor mode.
+                        - radio "Code" [checked] [ref=e309]
+                        - generic [ref=e311] [cursor=pointer]: Code
+                        - generic [ref=e312]:
+                          - radio "Visual" [ref=e313]
+                          - generic [ref=e315] [cursor=pointer]: Visual
+                    - button "Toggle Writefull toolbar" [ref=e318] [cursor=pointer]:
+                      - img "Writefull logo" [ref=e319]
+                    - button "Search file" [ref=e320] [cursor=pointer]:
+                      - generic [ref=e321]: search
+                      - generic [ref=e322]: Search file
+                - menubar "Writefull toolbar" [ref=e324]:
+                  - generic "Writefull suggestions" [ref=e325]:
+                    - button "Reject suggestion" [disabled] [ref=e327]:
+                      - generic [ref=e328]: close
+                    - button "Block this suggestion from appearing again" [disabled] [ref=e330]:
+                      - generic [ref=e331]: block
+                    - button "Accept suggestion" [disabled] [ref=e333]:
+                      - generic [ref=e334]: check
+                    - button "Previous suggestion" [ref=e336] [cursor=pointer]:
+                      - generic [ref=e337]: chevron_left
+                    - button "Next suggestion" [ref=e339] [cursor=pointer]:
+                      - generic [ref=e340]: chevron_right
+                  - generic "Generation options" [ref=e341]:
+                    - button "Get AI assistance for your LaTeX writing and more" [ref=e343] [cursor=pointer]:
+                      - generic [ref=e344]: smart_toy
+                  - generic "Contextual widgets" [ref=e345]:
+                    - 'button "Paraphrase: Select some text to use this widget" [disabled] [ref=e347]':
+                      - generic [ref=e348]: transform
+                    - button "Translate" [disabled] [ref=e350]:
+                      - generic [ref=e351]: translate
+                    - button "Change style" [disabled] [ref=e353]:
+                      - generic [ref=e354]: shuffle
+                  - generic "Settings" [ref=e355]:
+                    - button "Settings" [ref=e357] [cursor=pointer]:
+                      - generic [ref=e358]: settings
+                  - button "More editor toolbar items" [ref=e360] [cursor=pointer]:
+                    - generic [ref=e361]: more_horiz
+                - generic [ref=e362]:
+                  - generic [ref=e363]: description
+                  - generic [ref=e364]: submission_pricai2026.tex
+                  - generic [ref=e660]: chevron_right
+                  - generic [ref=e661]: Conclusion
+              - generic [ref=e365]:
+                - generic [ref=e366]:
+                  - generic [ref=e367]:
+                    - generic [ref=e368]: "512"
+                    - generic [ref=e369]: "513"
+                    - generic [ref=e370]: "514"
+                    - generic [ref=e371]: "515"
+                    - generic [ref=e372]: "516"
+                    - generic [ref=e373]: "517"
+                    - generic [ref=e374]: "518"
+                    - generic [ref=e375]: "519"
+                    - generic [ref=e376]: "520"
+                    - generic [ref=e377]: "521"
+                    - generic [ref=e378]: "522"
+                    - generic [ref=e379]: "523"
+                    - generic [ref=e380]: "524"
+                    - generic [ref=e381]: "525"
+                    - generic [ref=e382]: "526"
+                    - generic [ref=e383]: "527"
+                    - generic [ref=e384]: "528"
+                    - generic [ref=e385]: "529"
+                    - generic [ref=e386]: "530"
+                    - generic [ref=e387]: "531"
+                    - generic [ref=e388]: "532"
+                    - generic [ref=e389]: "533"
+                  - generic [ref=e662] [cursor=pointer]: ▾
+                - textbox "Source Editor editing" [ref=e404]:
+                  - generic [ref=e666]: "\\textsc{Fiscal} is evaluated on financial risk benchmarks with heterogeneous access constraints. The FinStress and CreditRisk settings include internal or licensed sources, so exact public reproduction may require institutionally available analogues. The explanation analysis is based on a limited manually inspected subset, and the current study uses fixed memory banks rather than online memory updates. These limitations do not change the reported benchmark comparisons, but they delimit the claims to offline risk classification and retrieval-grounded explanation under the evaluated data conditions."
+                  - generic [ref=e669]: "\\section{Conclusion}"
+                  - generic [ref=e670]: "\\label{sec:conclusion}"
+                  - generic [ref=e673]: "We introduced \\textsc{Fiscal}, a multi-agent method for real-time financial risk surveillance under heterogeneous, partially missing multimodal data and strict latency constraints. The model couples volatility-weighted symbolic tokenization with extreme-event symbols, risk-modulated sparse attention, retrieval-augmented case memory, and explainable mixture-of-experts routing, allowing computation and reasoning to adapt to the current risk level while predictions remain linked to historical precedents."
+                  - generic [ref=e676]:
+                    - text: "Experiments on three financial benchmarks (\\textsc{FinStress}, \\textsc{FraudDetect"
+                    - generic [ref=e677]: "},"
+                    - text: "and \\textsc{CreditRisk}) show that \\textsc{Fiscal} exceeds the best-performing baseline by 2.8--4.5 percentage points in macro-F1 and by 1.8--2.3 percentage points in AUC under full modality availability. The advantage grows under missing-data conditions: at 40\\% modality dropout, \\textsc{Fiscal} retains 92--94\\% of its clean-data performance and widens the relative margin over the next-best baseline to 9--14\\% F1. Ablation studies identify retrieval-augmented memory and volatility-weighted tokenization as the largest contributors, while the risk-modulated attention budget reduces GMACs by 31\\% and inference latency by 28\\% compared with a fully dense cross-modal transformer. The model also remains resilient to input noise and compensates for missing weaker modalities, as shown by the modality analysis on fraud detection."
+                  - generic [ref=e680]: "\\textsc{Fiscal} brings together multimodal fusion, adaptive resource allocation, and analyst-facing explanations anchored in retrieved historical cases. Future work will extend the method to online continual learning, where the retrieval memory is incrementally updated, and to cross-market transfer scenarios in which risk patterns learned in one jurisdiction are adapted to another with minimal fine-tuning."
+                  - generic [ref=e683]: \begingroup
+                  - generic [ref=e684]: \scriptsize
+                  - generic [ref=e685]: "\\renewcommand{\\baselinestretch}{0.88}\\selectfont"
+                  - generic [ref=e686]: "\\setlength{\\parskip}{0pt}"
+                  - generic [ref=e687]: "\\bibliographystyle{splncs04}"
+                  - generic [ref=e688]: "\\bibliography{references}"
+                  - generic [ref=e689]: \endgroup
+                  - generic [ref=e692]: "\\end{document}"
+                - button "Editing" [ref=e445] [cursor=pointer]:
+                  - generic [ref=e446]: edit
+                  - generic [ref=e447]: Editing
+                  - generic [ref=e448]: keyboard_arrow_down
+          - separator [ref=e449]:
+            - generic "Resize" [ref=e450]:
+              - button "Click to hide the PDF" [ref=e451] [cursor=pointer]:
+                - generic: chevron_right
+              - generic [ref=e452]:
+                - button "Go to code location in PDF" [ref=e454] [cursor=pointer]:
+                  - generic [ref=e456]: arrow_right_alt
+                - 'button "Go to PDF location in code (Tip: double click on the PDF for best results)" [ref=e458] [cursor=pointer]':
+                  - generic [ref=e460]: arrow_left_alt
+          - region "PDF preview" [ref=e461]:
+            - generic [ref=e462]:
+              - toolbar "PDF" [ref=e463]:
+                - generic [ref=e464]:
+                  - group [ref=e465]:
+                    - button "Recompile" [ref=e466] [cursor=pointer]:
+                      - generic [ref=e467]: Recompile
+                    - button "Toggle compile options menu" [ref=e468] [cursor=pointer]:
+                      - generic [ref=e469]: expand_more
+                  - button "View logs" [ref=e470] [cursor=pointer]:
+                    - generic [ref=e471]:
+                      - generic [ref=e472]: description
+                      - generic:
+                        - generic: "103"
+                  - link "Download PDF" [ref=e473] [cursor=pointer]:
+                    - /url: /download/project/6a204ea1614e48bb59209a8b/build/19e921d3bf2-ed99e0c793b3d594/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-c3d-b-f-trp5&enable_pdf_caching=true&popupDownload=true&editorId=d53c9140-0c4d-4e1f-bb0d-c2ad1fd2b081
+                    - generic [ref=e475]: download
+                - generic [ref=e482]:
+                  - group [ref=e483]:
+                    - button "Previous page" [ref=e484] [cursor=pointer]:
+                      - generic [ref=e486]: keyboard_arrow_up
+                    - button "Next page" [ref=e487] [cursor=pointer]:
+                      - generic [ref=e489]: keyboard_arrow_down
+                  - generic [ref=e490]:
+                    - textbox "Page 7, Current Page" [ref=e492]: "7"
+                    - generic [ref=e493]: / 15
+                  - generic [ref=e494]:
+                    - group [ref=e495]:
+                      - button "Zoom out" [ref=e496] [cursor=pointer]:
+                        - generic [ref=e498]: remove
+                      - button "Zoom in" [ref=e499] [cursor=pointer]:
+                        - generic [ref=e501]: add
+                    - button "PDF zoom level" [ref=e503] [cursor=pointer]: 74%
+              - tabpanel [ref=e480]:
+                - generic [ref=e481]:
+                  - generic "Page ⁨1⁩" [ref=e697]:
+                    - generic [ref=e699]: "FISCAL: Sparse Cross-Modal Multi-Agent Learning for Explainable Financial Risk Surveillance Anonymous Authors Abstract. Financial risk surveillance must combine heterogeneous time- series feeds, tolerate missing inputs, and return explanations that ana- lysts can inspect. Many existing models collapse all inputs into a single multivariate sequence, which obscures modality-specific evidence and offers limited precedent-based reasoning. We propose Fiscal ( F inancial I ntelligence via S parse C ross-modal A daptive L earning), a multimodal method for explainable financial risk classification under changing modal- ity availability. Fiscal combines volatility-aware symbolic tokenization with explicit missing and extreme-event tokens, risk-modulated sparse at- tention for temporal encoding, multi-agent cross-modal coordination with retrieval-augmented case memory, and prototype-aligned expert routing for attributable decisions. On three financial risk benchmarks covering operational stress, payment fraud, and credit migration, Fiscal improves macro-F1 by up to 4.5 percentage points over the best-performing base- line and degrades by only 6–8% under 40% modality dropout. Ablations identify retrieval memory and volatility-aware tokenization as the largest contributors, while latency measurements show that risk-modulated spar- sity reduces computation relative to dense cross-modal attention. The results indicate that sparse, precedent-aware multimodal reasoning is well suited to financial risk surveillance. Keywords: Multimodal learning · Missing modalities · Sparse attention · Multi-agent learning · Financial risk surveillance. 1 Introduction Financial risk surveillance, including fraud detection, credit migration prediction, and operational risk monitoring, now depends on the joint analysis of transaction logs, order-book snapshots, news feeds, and alternative data [ ? , ? , ? , ? ]. These feeds form multimodal time series that encode market dynamics and behavioral patterns from different viewpoints. They are not interchangeable: each modality has its own sampling rate, noise profile, and sensitivity to risk events. Feeds may also disappear because of latency, outages, or selective reporting, producing changing patterns of modality missingness. A deployable model must combine accurate classification, low-latency inference, missing-modality robustness, and explanations that analysts can inspect. Existing approaches often reduce multimodal time series to a single multi- variate representation, which weakens modality-specific reasoning. Sensor-fusion"
+                  - generic "Page ⁨2⁩" [ref=e700]
+                  - generic "Page ⁨3⁩" [ref=e701]
+                  - generic "Page ⁨4⁩" [ref=e702]
+                  - generic "Page ⁨5⁩" [ref=e703]
+                  - generic "Page ⁨6⁩" [ref=e704]
+                  - generic "Page ⁨7⁩" [ref=e705]:
+                    - generic [ref=e707]: "FISCAL for Financial Risk Surveillance 7 Inside the encoder, for a given query q ∈ Q j we sample a random key set K ′ of size u j i log L K j and evaluate P ( q , K ′ ) = max k ∈ K ′ a qk − 1 | K ′ | X k ∈ K ′ a qk , a qk = qk ⊤ √ d . (6) Here L K j and L Q j denote the key and query sequence lengths for modality j . Only the top υ j i = u j i log L Q j queries are retained per head, and the attention output is ¯ s j = Softmax \x12 ¯ Q j ( K j ) ⊤ √ d \x13 V j , (7) where ¯ Q j contains the selected queries. A standard residual connection and 1D-convolutional distillation (with leaky ReLU activation for gradient flow) are applied to obtain the final intra-modal embedding z j i ∈ R d j × L j . 3.4 Multi-Agent Collaboration with Retrieval-Augmented Memory Agent Roles and Communication Backbone The multi-agent module contains three specialist agents. The Monitor Agent A mon assesses risk levels from raw data and updates attention budgets by producing r i . The Analyst Agent A ana interprets the multimodal context by attending over tokenized summaries and the retrieval memory. The Decision Agent A dec produces the final risk prediction and an explanation anchored in retrieved precedents. Agents communicate through a shared sparse cross-modal attention canvas (the multimodal sequence c i , analogous to concatenation) and via dedicated message vectors. These messages are learned vector states rather than free-form text: the monitor message contains the modality risk scores and availability mask, the analyst message summarizes the attended multimodal context, and the decision message concatenates the analyst state with retrieved-case evidence before routing. We form the multimodal sequence from the intra-modal encodings after adding learned modality and temporal position embeddings: ˆ z j i = z j i + E j mod + P j time , c i = [ˆ z 1 i ∥ ˆ z 2 i ∥ . . . ∥ ˆ z M i ] ∈ R d × L tot . (8) where ∥ denotes temporal concatenation. Sparse Agent-Aware Cross-Modal Attention The analyst agent A ana refines c i using sparse cross-modal attention where the query matrix is a learned linear combination of the agent’s context state h ana i and the modality-specific queries: Q c = c i W Q + H ana i U Q , (9) with H ana i formed by tiling the state vector h ana i across the temporal dimension. The key and value matrices are obtained solely from c i . The sparsity budget is"
+                  - generic "Page ⁨8⁩" [ref=e708]:
+                    - generic [ref=e710]: "8 Anonymous Authors set to a fixed fraction (controlled by the monitor’s risk budget, but smoothed to avoid abrupt changes), yielding: ¯ c i = SparseCrossAttn ( Q c , K c , V c ; u cross ) , (10) where u cross = ρ max j u j i and ρ controls the cross-modal sparsity fraction. The output ¯ c i is then refined by a lightweight feed-forward network with a gated linear unit (GLU) to produce the analyst embedding e ana i . Retrieval-Augmented Case Memory A central component of Fiscal is a retrieval-augmented case base B that stores historical risk episodes. In the evaluation protocol, the memory bank is constructed only from training episodes to avoid test leakage. After a warm-up encoder pass, each training episode is stored as a tuple ( e hist , risk_label , explanation_template , case_notes , a sym ) , where a sym records sparse symbolic alerts such as <HI> , <LO> , and <MISS> . The memory bank is fixed during validation and testing. Given the analyst embedding e ana i , we perform a two-stage retrieval. First, approximate nearest-neighbor search over e hist forms a candidate set K cand , and dense retrieval then computes bilinear similarity scores within this set: α i,k = exp( e ana i W mem e hist k /τ ) P k ′ ∈K cand exp( e ana i W mem e hist k ′ /τ ) , k ∈ K cand . (11) Here W mem is a learned bilinear memory metric and τ is a temperature parameter. Second, a sparse keyword gate filters entries based on the overlap between the current alert symbols and a sym (e.g., <HI> appearing in corresponding order-book windows), so retrieved cases share a similar alert pattern rather than only a similar dense embedding. The two-stage design follows the same efficiency motivation as approximate nearest-neighbor retrieval systems [ ? , ? ]. Let K i ⊆ K cand denote the retained cases after this gate. The aggregated memory vector is m i = X k ∈K i α i,k v hist k , (12) where v hist k is a compressed representation of the episode’s explanation and case notes. The memory vector m i is then fused with e ana i through a cross-attention gate to form the decision state d i : d i = β i e ana i + (1 − β i ) m i , β i = σ \x00 w ⊤ β [ e ana i ; m i ] \x01 . (13) This mechanism uses past patterns for prediction and lets the decision agent refer to concrete historical precedents. It is inspired by retrieval-augmented models [ ? ] but uses structured case entries rather than open-domain documents."
+                  - generic "Page ⁨9⁩" [ref=e711]:
+                    - generic [ref=e713]: "FISCAL for Financial Risk Surveillance 9 3.5 Explainable Risk Routing and Decision Sparse Mixture-of-Experts with Attributable Specialization The decision agent receives d i and routes it through a Sparse Mixture-of-Experts (MoE) layer, where each expert corresponds to a distinct risk sub-type (e.g., liquidity risk, fraud, market abuse). Sparse expert routing has been used to increase conditional capacity without activating all parameters for every input [ ? , ? ]. We enforce a partially supervised assignment using a risk-type prototypical loss that aligns expert representations with known risk categories. The router R computes: g i = softmax \x00 W r d i + b r \x01 ∈ R Ω , (14) and selects the top- k experts; typically k = 1 to retain a crisp attribution. The final logit is ˆ y i = Ω X ω =1 ⊮ [ ω ∈ top- k ] g i,ω Expert ω ( d i ) . (15) Here Ω is the number of risk experts. Explainability. Because an expert is activated for a given sample, we can attribute the decision to the expert specialization and to the retrieved memory entries that contributed to d i . We generate a natural language explanation by instantiating the explanation template of the top-retrieved case with the current sample’s specific features (attention map highlights, volatile segments, activated extreme symbols). An example explanation would read: “Risk score HIGH due to extreme volatility ( <HI> ) in order-book spread at t=14:32, similar to case #A127 (market manipulation alert) where a 23% drop followed within 5 minutes.” Training Objectives The overall objective combines four terms. The first is the task loss, given by cross-entropy on the risk label, L ce = − log p y . The second is a risk-prototype alignment term over the subset I proto with subtype annotations. These targets come from labeled risk subtypes when available and from offline clustering of labeled training episodes otherwise: L proto = 1 |I proto | X i ∈I proto g i − t i 2 2 , t i ∈ { 0 , 1 } Ω . (16) The third term is a memory attention sparsity loss, implemented as an entropy regularizer on the retrieval weights α i,k to encourage focused recall: L mem = − 1 N X i X k ∈K i α i,k log( α i,k + ε ) . (17) where ε is a small numerical constant. The fourth term is a latency penalty, L lat = η \x00 b T i − T target \x01 + , where η is a hyperparameter and ( · ) + denotes the positive part. The differentiable proxy b T i is computed from the selected intra-modal and cross-modal attention budgets; wall-clock latency is measured separately for"
+                  - generic "Page ⁨10⁩" [ref=e714]
+                  - generic "Page ⁨11⁩" [ref=e715]
+                  - generic "Page ⁨12⁩" [ref=e716]
+                  - generic "Page ⁨13⁩" [ref=e717]
+                  - generic "Page ⁨14⁩" [ref=e718]
+                  - generic "Page ⁨15⁩" [ref=e719]
+  - generic:
+    - generic:
+      - button "Close overlay"
+  - generic:
+    - generic:
+      - button "Close overlay"
+  - generic:
+    - generic:
+      - button "Close overlay"
+  - dialog [ref=e721]:
+    - generic [ref=e723]:
+      - generic [ref=e724]:
+        - heading "Add files" [level=2] [ref=e725]
+        - button "Close dialog" [ref=e726] [cursor=pointer]
+      - table [ref=e728]:
+        - rowgroup [ref=e729]:
+          - row "New file Upload From another project From external URL From Papers From Zotero From Mendeley Uppy Dashboard" [ref=e730]:
+            - cell "New file Upload From another project From external URL From Papers From Zotero From Mendeley" [ref=e731]:
+              - list [ref=e732]:
+                - listitem [ref=e733]:
+                  - button "New file" [ref=e734] [cursor=pointer]:
+                    - generic [ref=e735]:
+                      - generic [ref=e736]: description
+                      - text: New file
+                - listitem [ref=e737]:
+                  - button "Upload" [ref=e738] [cursor=pointer]:
+                    - generic [ref=e739]:
+                      - generic [ref=e740]: upload
+                      - text: Upload
+                - listitem [ref=e741]:
+                  - button "From another project" [ref=e742] [cursor=pointer]:
+                    - generic [ref=e743]:
+                      - generic [ref=e744]: folder_open
+                      - text: From another project
+                - listitem [ref=e745]:
+                  - button "From external URL" [ref=e746] [cursor=pointer]:
+                    - generic [ref=e747]:
+                      - generic [ref=e748]: globe
+                      - text: From external URL
+                - listitem [ref=e749]:
+                  - button "From Papers" [ref=e750] [cursor=pointer]:
+                    - generic [ref=e751]:
+                      - generic [ref=e752]: menu_book
+                      - text: From Papers
+                - listitem [ref=e753]:
+                  - button "From Zotero" [ref=e754] [cursor=pointer]:
+                    - generic [ref=e755]:
+                      - generic [ref=e756]: menu_book
+                      - text: From Zotero
+                - listitem [ref=e757]:
+                  - button "From Mendeley" [ref=e758] [cursor=pointer]:
+                    - generic [ref=e759]:
+                      - generic [ref=e760]: menu_book
+                      - text: From Mendeley
+            - cell "Uppy Dashboard" [ref=e761]:
+              - generic "Uppy Dashboard" [ref=e765]:
+                - generic [ref=e768]:
+                  - generic [ref=e769]:
+                    - text: Drop or paste your files, folder, or images here.
+                    - button "Select files" [active] [ref=e770] [cursor=pointer]
+                    - text: or
+                    - button "select a folder" [ref=e771] [cursor=pointer]
+                    - text: from your computer.
+                  - tablist [ref=e772]
+      - button "Cancel" [ref=e775] [cursor=pointer]:
+        - generic [ref=e776]: Cancel

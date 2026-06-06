@@ -1,0 +1,9 @@
+﻿Overleaf sync/recompile log summary (2026-06-04)
+Project: https://www.overleaf.com/project/6a204ea1614e48bb59209a8b
+Build: 19e9227317b-47a24acbf80a5f92
+Errors: 0
+Warnings: 1
+Info: 1
+Warning: Package amsmath Warning: Unable to redefine math accent \\vec.
+Info: Underfull \\vbox (badness 10000) has occurred while \\output is active []
+Downloaded PDF: overleaf_after_sync_recompile_output_full.pdf

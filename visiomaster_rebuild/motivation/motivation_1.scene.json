@@ -1,0 +1,88 @@
+{
+  "version": "0.1",
+  "metadata": {
+    "title": "FRAA Motivation Figure",
+    "created_by": "codex.visiomaster.manual_scene",
+    "style_profile": "clean_white",
+    "fidelity": "editable_semantic_redraw",
+    "region_strategy": "module_first",
+    "source_image": "D:/github/paper-fix-2/visiomaster_rebuild/motivation/source/original.png",
+    "source_aspect_ratio": 1.267379679144385,
+    "notes": [
+      "Editable Visio redraw from the user-provided prompt and source image.",
+      "Mechanism figure only; LaTeX source is not modified in this pass."
+    ]
+  },
+  "page": {
+    "width": 1402,
+    "height": 1122,
+    "units": "px",
+    "origin": "top-left",
+    "target_width_in": 12.0,
+    "background": "#FFFFFF"
+  },
+  "nodes": [
+    {"id": "left_bg", "type": "page_background", "x": 0, "y": 0, "w": 635, "h": 1122, "text": "", "style": {"fill": "#F1F2F3", "line": "none", "line_weight_pt": 0}},
+    {"id": "right_bg", "type": "page_background", "x": 635, "y": 0, "w": 767, "h": 1122, "text": "", "style": {"fill": "#FFFFFF", "line": "none", "line_weight_pt": 0}},
+    {"id": "title_left", "type": "text_block", "x": 145, "y": 28, "w": 390, "h": 66, "text": "CURRENT PRACTICE", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 26, "font_weight": "bold", "text_color": "#555555", "text_fit": "shrink_to_fit"}},
+    {"id": "title_right", "type": "text_block", "x": 875, "y": 30, "w": 390, "h": 66, "text": "FRAA SOLUTION", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 26, "font_weight": "bold", "text_color": "#0B4DA2", "text_fit": "shrink_to_fit"}},
+    {"id": "divider_placeholder", "type": "text_block", "x": 0, "y": 0, "w": 1, "h": 1, "text": "", "style": {"fill": "none", "line": "none", "line_weight_pt": 0}},
+    {"id": "vs_circle", "type": "ellipse_node", "x": 542, "y": 486, "w": 114, "h": 114, "text": "VS", "style": {"fill": "#FFFFFF", "line": "#111111", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 36, "font_weight": "bold", "text_color": "#000000"}},
+
+    {"id": "tree_root", "type": "process_box", "x": 268, "y": 106, "w": 46, "h": 44, "text": "", "style": {"fill": "#8B5E3B", "line": "#8B5E3B", "line_weight_pt": 1.0}},
+    {"id": "tree_a", "type": "process_box", "x": 201, "y": 185, "w": 40, "h": 37, "text": "", "style": {"fill": "#8B5E3B", "line": "#8B5E3B", "line_weight_pt": 1.0}},
+    {"id": "tree_b", "type": "process_box", "x": 348, "y": 185, "w": 40, "h": 37, "text": "", "style": {"fill": "#8B5E3B", "line": "#8B5E3B", "line_weight_pt": 1.0}},
+    {"id": "tree_c", "type": "process_box", "x": 169, "y": 253, "w": 31, "h": 30, "text": "", "style": {"fill": "#8B5E3B", "line": "#8B5E3B", "line_weight_pt": 1.0}},
+    {"id": "tree_d", "type": "process_box", "x": 238, "y": 253, "w": 31, "h": 30, "text": "", "style": {"fill": "#8B5E3B", "line": "#8B5E3B", "line_weight_pt": 1.0}},
+    {"id": "tree_e", "type": "process_box", "x": 316, "y": 253, "w": 31, "h": 30, "text": "", "style": {"fill": "#8B5E3B", "line": "#8B5E3B", "line_weight_pt": 1.0}},
+    {"id": "tree_f", "type": "process_box", "x": 383, "y": 253, "w": 31, "h": 30, "text": "", "style": {"fill": "#8B5E3B", "line": "#8B5E3B", "line_weight_pt": 1.0}},
+    {"id": "manual_features", "type": "text_block", "x": 430, "y": 176, "w": 166, "h": 78, "text": "Manual\nFeatures", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 18, "font_weight": "bold", "text_color": "#7A5A42", "text_fit": "shrink_to_fit"}},
+    {"id": "failure_x", "type": "text_block", "x": 270, "y": 350, "w": 108, "h": 112, "text": "X", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 48, "font_weight": "bold", "text_color": "#7E7E7E", "text_fit": "shrink_to_fit"}},
+
+    {"id": "silo_transactions", "type": "rounded_process", "x": 32, "y": 444, "w": 196, "h": 137, "text": "Transactions", "style": {"fill": "#E7E7E7", "line": "#858585", "line_weight_pt": 1.7, "font_family": "Arial", "font_size_pt": 14, "font_weight": "bold", "text_color": "#303030", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "silo_profiles", "type": "rounded_process", "x": 296, "y": 531, "w": 196, "h": 135, "text": "Customer\nProfiles", "style": {"fill": "#E4E4E4", "line": "#858585", "line_weight_pt": 1.7, "font_family": "Arial", "font_size_pt": 14, "font_weight": "bold", "text_color": "#303030", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "silo_news", "type": "rounded_process", "x": 48, "y": 664, "w": 185, "h": 130, "text": "Market\nNews", "style": {"fill": "#E4E4E4", "line": "#858585", "line_weight_pt": 1.7, "font_family": "Arial", "font_size_pt": 14, "font_weight": "bold", "text_color": "#303030", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "silo_macro", "type": "rounded_process", "x": 313, "y": 753, "w": 187, "h": 145, "text": "Macro\nIndicators", "style": {"fill": "#E4E4E4", "line": "#858585", "line_weight_pt": 1.7, "font_family": "Arial", "font_size_pt": 14, "font_weight": "bold", "text_color": "#303030", "rounding_in": 0.08, "text_fit": "shrink_to_fit"}},
+    {"id": "no_interp", "type": "rounded_process", "x": 91, "y": 953, "w": 352, "h": 74, "text": "       No Interpretability", "allow_overlap": true, "style": {"fill": "#F5F5F5", "line": "#B0B0B0", "line_dash": "dash", "line_weight_pt": 1.5, "font_family": "Arial", "font_size_pt": 18, "font_weight": "bold", "text_color": "#666666", "rounding_in": 0.1, "text_fit": "shrink_to_fit"}},
+    {"id": "question_icon", "type": "ellipse_node", "x": 111, "y": 965, "w": 45, "h": 45, "text": "?", "allow_overlap": true, "style": {"fill": "#F5F5F5", "line": "#999999", "line_weight_pt": 1.6, "font_family": "Arial", "font_size_pt": 20, "font_weight": "bold", "text_color": "#777777", "text_fit": "shrink_to_fit"}},
+    {"id": "isolated_label", "type": "text_block", "x": 175, "y": 1050, "w": 260, "h": 56, "text": "Isolated Data", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 18, "font_weight": "bold", "text_color": "#5A5A5A", "text_fit": "shrink_to_fit"}},
+
+    {"id": "kb_icon_book", "type": "rounded_process", "x": 794, "y": 130, "w": 82, "h": 70, "text": "", "allow_overlap": true, "style": {"fill": "#FFFFFF", "line": "#0B4DA2", "line_weight_pt": 3.0, "rounding_in": 0.08}},
+    {"id": "kb_icon_glass", "type": "ellipse_node", "x": 860, "y": 154, "w": 60, "h": 60, "text": "", "allow_overlap": true, "style": {"fill": "#FFFFFF", "line": "#0B4DA2", "line_weight_pt": 3.0}},
+    {"id": "knowledge_label", "type": "text_block", "x": 785, "y": 228, "w": 170, "h": 75, "text": "Knowledge\nRetrieval", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 16, "font_weight": "bold", "text_color": "#0B4DA2", "text_fit": "shrink_to_fit"}},
+
+    {"id": "src_transactions", "type": "rounded_process", "x": 672, "y": 346, "w": 174, "h": 116, "text": "Transactions", "style": {"fill": "#FFFFFF", "line": "#0066D9", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 13, "font_weight": "bold", "text_color": "#0B4DA2", "rounding_in": 0.08}},
+    {"id": "src_profiles", "type": "rounded_process", "x": 672, "y": 496, "w": 174, "h": 112, "text": "Customer\nProfiles", "style": {"fill": "#FFFFFF", "line": "#16A3A3", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 14, "font_weight": "bold", "text_color": "#087D7D", "rounding_in": 0.08}},
+    {"id": "src_news", "type": "rounded_process", "x": 672, "y": 642, "w": 174, "h": 118, "text": "Market\nNews", "style": {"fill": "#FFFFFF", "line": "#7E5ACB", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 14, "font_weight": "bold", "text_color": "#5B3FA7", "rounding_in": 0.08}},
+    {"id": "src_macro", "type": "rounded_process", "x": 672, "y": 794, "w": 174, "h": 114, "text": "Macro\nIndicators", "style": {"fill": "#FFFFFF", "line": "#0A9A9A", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 14, "font_weight": "bold", "text_color": "#087D7D", "rounding_in": 0.08}},
+    {"id": "fusion_brace", "type": "bracket", "x": 672, "y": 944, "w": 345, "h": 40, "text": "", "style": {"line": "#13A538", "line_weight_pt": 2.0, "orientation": "horizontal", "draw_top": true, "draw_bottom": false}},
+    {"id": "fusion_label", "type": "text_block", "x": 700, "y": 976, "w": 340, "h": 60, "text": "Multi-Source Fusion", "style": {"fill": "none", "line": "none", "font_family": "Arial", "font_size_pt": 20, "font_weight": "bold", "text_color": "#16A334", "text_fit": "shrink_to_fit"}},
+    {"id": "reasoning", "type": "rounded_process", "x": 950, "y": 405, "w": 195, "h": 212, "text": "Retrieval-Augmented\nReasoning Module", "style": {"fill": "#075BD8", "line": "#38BDF8", "line_weight_pt": 3.0, "font_family": "Arial", "font_size_pt": 13, "font_weight": "bold", "text_color": "#FFFFFF", "rounding_in": 0.12, "text_fit": "shrink_to_fit"}},
+    {"id": "transformer", "type": "rounded_process", "x": 949, "y": 642, "w": 197, "h": 246, "text": "Transformer\nBackbone", "style": {"fill": "#FF8A00", "line": "#FFA53D", "line_weight_pt": 3.0, "font_family": "Arial", "font_size_pt": 18, "font_weight": "bold", "text_color": "#FFFFFF", "rounding_in": 0.12, "text_fit": "shrink_to_fit"}},
+    {"id": "agent", "type": "rounded_process", "x": 1200, "y": 638, "w": 180, "h": 225, "text": "Explainable\nAgent", "style": {"fill": "#16B630", "line": "#47D65D", "line_weight_pt": 3.0, "font_family": "Arial", "font_size_pt": 15, "font_weight": "bold", "text_color": "#FFFFFF", "rounding_in": 0.12, "text_fit": "shrink_to_fit"}},
+    {"id": "explain_bubble", "type": "rounded_process", "x": 1192, "y": 366, "w": 188, "h": 180, "text": "Risk is elevated\nprimarily due to\nrising leverage\nand negative\nnews sentiment.", "style": {"fill": "#FFFFFF", "line": "#0EBE2A", "line_weight_pt": 2.0, "font_family": "Arial", "font_size_pt": 12, "font_weight": "bold", "text_color": "#0A8F1F", "rounding_in": 0.1, "text_fit": "shrink_to_fit"}}
+  ],
+  "edges": [
+    {"id": "divider_line", "type": "line_segment", "from_point": [668, 20], "to_point": [532, 1100], "allow_diagonal": true, "style": {"line": "#111111", "line_weight_pt": 4.5, "end_arrow": "none"}},
+    {"id": "tree_line_1", "type": "line_segment", "from_point": [291, 150], "to_point": [291, 169], "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "tree_line_2", "type": "line_segment", "from_point": [221, 169], "to_point": [368, 169], "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "tree_line_3", "type": "line_segment", "from_point": [221, 169], "to_point": [221, 185], "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "tree_line_4", "type": "line_segment", "from_point": [368, 169], "to_point": [368, 185], "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "tree_line_5", "type": "line_segment", "from_point": [221, 222], "to_point": [185, 253], "allow_diagonal": true, "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "tree_line_6", "type": "line_segment", "from_point": [221, 222], "to_point": [254, 253], "allow_diagonal": true, "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "tree_line_7", "type": "line_segment", "from_point": [368, 222], "to_point": [332, 253], "allow_diagonal": true, "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "tree_line_8", "type": "line_segment", "from_point": [368, 222], "to_point": [399, 253], "allow_diagonal": true, "style": {"line": "#8B5E3B", "line_weight_pt": 1.6, "end_arrow": "none"}},
+    {"id": "manual_down", "type": "lane_arrow", "from_point": [307, 310], "to_point": [307, 376], "route": "vertical", "style": {"line": "#888888", "line_weight_pt": 7.0, "arrow_size": "large"}},
+    {"id": "kb_dashed_to_reasoning", "type": "dashed_feedback_path", "from_point": [932, 223], "points": [[1046, 223], [1046, 351]], "to_point": [1046, 386], "style": {"line": "#1685E8", "line_weight_pt": 2.5, "line_dash": "dash", "arrow_size": "medium"}},
+    {"id": "src_tx_to_bus", "type": "line_segment", "from_point": [846, 404], "to_point": [901, 404], "style": {"line": "#13A538", "line_weight_pt": 2.2, "end_arrow": "none"}},
+    {"id": "src_profile_to_bus", "type": "line_segment", "from_point": [846, 551], "to_point": [901, 551], "style": {"line": "#13A538", "line_weight_pt": 2.2, "end_arrow": "none"}},
+    {"id": "src_news_to_bus", "type": "line_segment", "from_point": [846, 701], "to_point": [901, 701], "style": {"line": "#13A538", "line_weight_pt": 2.2, "end_arrow": "none"}},
+    {"id": "src_macro_to_bus", "type": "line_segment", "from_point": [846, 852], "to_point": [901, 852], "style": {"line": "#13A538", "line_weight_pt": 2.2, "end_arrow": "none"}},
+    {"id": "bus_vertical", "type": "line_segment", "from_point": [901, 404], "to_point": [901, 852], "style": {"line": "#13A538", "line_weight_pt": 2.2, "end_arrow": "none"}},
+    {"id": "bus_to_reasoning", "type": "lane_arrow", "from_point": [901, 487], "to_point": [948, 487], "route": "horizontal", "style": {"line": "#13A538", "line_weight_pt": 2.2, "arrow_size": "medium"}},
+    {"id": "reasoning_to_transformer", "type": "lane_arrow", "from_point": [1048, 617], "to_point": [1048, 642], "route": "vertical", "style": {"line": "#166CD7", "line_weight_pt": 3.0, "arrow_size": "medium"}},
+    {"id": "transformer_to_agent", "type": "lane_arrow", "from_point": [1146, 710], "to_point": [1210, 710], "route": "horizontal", "style": {"line": "#13A538", "line_weight_pt": 2.5, "arrow_size": "medium"}},
+    {"id": "agent_to_bubble", "type": "lane_arrow", "from_point": [1289, 638], "to_point": [1289, 575], "route": "vertical", "style": {"line": "#13A538", "line_weight_pt": 2.8, "arrow_size": "medium"}}
+  ],
+  "assets": []
+}
