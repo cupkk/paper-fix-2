@@ -671,3 +671,502 @@
 - 本轮未修改 LaTeX 正文，也未替换 `\includegraphics` 指向。
 - 当前论文中仍使用原 `algorithm_1_0ebe5141.png`，motivation 图目前也未自动加入正文。
 - 下一步如果用户确认采用 Visiomaster 版本，可以再将 LaTeX 中算法机制图替换为 `figures/algorithm/algorithm_1_visiomaster.png` 或 `.svg/.pdf` 版本，并按 PRICAI/LNCS 模板重新编译检查。
+
+## 2026-06-06 按标准 ML/AI 论文模板审查当前稿件结构
+
+### 本轮触发原因
+- 用户提供了 Title、Abstract、Introduction、Related Work、Problem Formulation、Method、Experiments、Analysis、Limitations/Ethics、Conclusion、References 的写作模板，要求判断当前论文是否按该模板组织内容。
+
+### 审查对象
+- 主稿：`figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.tex`
+- BibTeX：`figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.bib`
+
+### 静态检查结果
+- 摘要约 230 词，处于 150--250 词建议范围内。
+- 一级章节为：Introduction、Related Work、Method、Experiments、Ablation and Analysis、Further Evaluation、Limitations and Reproducibility、Conclusion。
+- `Problem Formulation` 作为 `Method` 下的子节存在，而不是单独一级章节。
+- `Analysis` 被拆分为 `Ablation and Analysis` 与 `Further Evaluation`。
+- 公式数：7。
+- 表格数：8。
+- 图片数：2。
+- BibTeX 条目数：40；正文唯一引用 key 数：40。
+
+### 当前判断
+- 当前稿件总体符合该模板的核心逻辑：标题明确、摘要完整、引言有贡献列表、相关工作按方向组织、问题定义和方法公式存在、实验和分析较完整、限制部分真实说明了专有数据和统计显著性不足。
+- 但不是逐字按模板一级标题排布；这是 LNCS/PRICAI 短篇/长篇会议论文中可接受的压缩写法。
+- 建议后续优先增强三处：
+  1. Introduction 可进一步显式拆成背景、challenge、已有不足、本文 insight、贡献五段。
+  2. Related Work 每个小节末尾可再增加一句更直接的差异化表述。
+  3. Limitations and Reproducibility 可补一两句 ethics/fairness/privacy/safety 风险边界，使其更贴合用户给出的模板。
+
+## 2026-06-06 生成三章节修改前后中英对照稿
+
+### 本轮触发原因
+- 用户要求给出 `Introduction`、`Related Work`、`Limitations` 三章节的修改前后内容，并附带中文翻译，整理成一个文件。
+
+### 已生成文件
+- `FRAA_三章节修改前后中英对照_20260606.md`
+- 文件大小约 32 KB。
+- 文件结构：
+  - `Introduction`
+    - 修改前英文原文
+    - 修改前中文翻译
+    - 建议修改后英文稿
+    - 建议修改后中文翻译
+  - `Related Work`
+    - 修改前英文原文
+    - 修改前中文翻译
+    - 建议修改后英文稿
+    - 建议修改后中文翻译
+  - `Limitations and Reproducibility`
+    - 修改前英文原文
+    - 修改前中文翻译
+    - 建议修改后英文稿
+    - 建议修改后中文翻译
+
+### 修改后版本的写作取向
+- `Introduction` 按用户给出的五段式模板强化：背景价值、核心挑战、已有方法不足、本文 insight 与方法概览、贡献列表。
+- `Related Work` 保留原有三类文献组织，但每个小节末尾加入更明确的差异化表达。
+- `Limitations and Reproducibility` 在原有复现边界基础上补充治理、隐私、公平性、安全性、人工监督等伦理边界。
+
+### 当前决策
+- 本轮未修改投稿 TeX：`figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.tex`。
+- 新文件是人工精修参考稿，后续若用户确认采用，再替换到 TeX 并重新检查页数、引用、Overleaf 编译和 PDF 排版。
+
+## 2026-06-09 新增实验图并同步 Overleaf
+
+### 本轮触发原因
+- 用户指出实验部分不能只有表格，要求从仓库已有 13 张实验图及绘图代码中选择必要图片加入论文。
+- 用户明确要求调用 `nature-figure` 做图组设计与投稿级 QA，并使用 `figures-for-papers` 参考本地 Python/matplotlib 示例落地绘图，保证风格一致、满足投稿要求。
+
+### 图组设计决策
+- 未直接把 13 张候选图全部加入正文，避免 LNCS/PRICAI 版面膨胀和图表堆积。
+- 选择新增 2 张多面板实验总结图：
+  - `ablation_sensitivity_summary`：集中展示组件消融、特征组遮蔽、检索深度敏感性。
+  - `operational_evaluation_summary`：集中展示跨场景迁移、解释质量、延迟/吞吐、离线业务效用。
+- 这样做的理由：当前正文已有 8 张表和主结果图，新增两张 compact summary figure 能补足视觉证据，同时尽量控制页数。
+
+### 绘图与文件
+- 新增绘图脚本：
+  - `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/scripts/summary/figure_code_experiment_summary_panels.py`
+- 新增图文件目录：
+  - `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/figures/summary/`
+- 生成文件包括：
+  - `ablation_sensitivity_summary.pdf/png/svg`
+  - `operational_evaluation_summary.pdf/png/svg`
+- 为适配 Overleaf 当前文件树，也在论文 workspace 根目录和 `overleaf_pricai2026_package/` 根目录各保留一份 PDF/PNG 副本。
+
+### 图形规范检查
+- Python 绘图使用 `matplotlib.use("Agg")`，输出 PNG 600 dpi，并输出 PDF/SVG 矢量版本。
+- 未使用 `plt.title` 或 `set_title`，图标题由 LaTeX `\caption` 提供。
+- 坐标轴标签字号设为 10 pt，数值/散点标注不低于 8 pt。
+- 使用白底、无灰色背景，图例无边框，默认去除顶部和右侧 spine。
+- 双 y 轴面板保留右侧橙色 spine 作为 Recall@5 轴提示；这是为了避免读者混淆双指标轴。
+
+### LaTeX 修改
+- 修改主稿：
+  - `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.tex`
+- 同步修改：
+  - `overleaf_pricai2026_package/submission_pricai2026.tex`
+  - `overleaf_pricai2026_package.zip`
+- 新增 Fig. 3：
+  - `\includegraphics[width=0.94\textwidth]{ablation_sensitivity_summary.pdf}`
+  - 放置在 `Feature Groups and Retrieval Depth` 讨论之后，靠近组件消融、特征遮蔽和检索深度表格。
+- 新增 Fig. 4：
+  - `\includegraphics[width=0.82\textwidth]{operational_evaluation_summary.pdf}`
+  - 放置在离线业务效用段落之后，靠近 Further Evaluation 的解释质量、延迟和业务效用结果。
+- 两个新增 figure 均使用 `[!ht]`，避免 `p` 选项触发浮动体单独占页。
+- 精简了两个新增 caption，以压缩版面并保持 LNCS 风格。
+
+### 逻辑一致性修正
+- 发现原文中“knowledge retrieval 是最大 ablation contributor”的表述与 Table 3 的组件消融数值不完全一致。
+- 保留所有实验数值不变，仅修正文稿归因表述：
+  - 组件消融表述为 dynamic behavior、temporal encoding 和 retrieval 互补贡献。
+  - 特征组遮蔽表述为 knowledge-retrieved context 是最强 feature-family signal。
+- 已同步修改摘要、组件消融段落和结论相关表述。
+
+### Overleaf 同步与编译
+- Overleaf 项目：
+  - `https://www.overleaf.com/project/6a204ea1614e48bb59209a8b`
+- 上传覆盖：
+  - `submission_pricai2026.tex`
+  - `ablation_sensitivity_summary.pdf`
+  - `ablation_sensitivity_summary.png`
+  - `operational_evaluation_summary.pdf`
+  - `operational_evaluation_summary.png`
+- Overleaf 上传时新图进入项目根目录，因此最终 LaTeX 引用采用根目录文件名，而不是 `figures/summary/...` 路径。
+- 第一次编译加入两张全宽图后 PDF 变为 17 页，超过 PRICAI regular/long paper 16 页上限。
+- 随后压缩新增图尺寸、精简 caption、去掉 `p` 浮动选项，并重新上传编译。
+
+### 最终编译结果
+- 最终 Overleaf 编译：
+  - Errors：0
+  - Warnings：1
+  - Info：2
+  - 输出：`output.pdf (16 pages, 1639090 bytes)`
+- 剩余 warning：
+  - `Package amsmath Warning: Unable to redefine math accent \vec.`
+  - 这是 LNCS/amsmath 组合的既有低风险 warning。
+- Info：
+  - 2 个 `Underfull \vbox`，分别来自浮动体页面排布，不是编译错误。
+- 最终下载版 PDF：
+  - `overleaf_after_summary_figures_final_output_full.pdf`
+- 渲染检查目录：
+  - `tmp/pdfs/overleaf_after_summary_figures_final/`
+- 重点检查：
+  - 第 11 页：Fig. 3 与 Table 6、Table 7 同页，图表与正文相邻，panel c 已删除拥挤的重复直接标注。
+  - 第 12 页：Fig. 4 与 Table 8 和业务效用讨论同页，不再单独占页。
+  - 第 13--16 页：Limitations、Conclusion 与 References 正常排布。
+
+### 当前判断
+- 当前论文已加入必要实验图，不再只有表格支撑实验分析。
+- 当前 Overleaf 版本编译成功，16 页，仍符合 PRICAI regular/long paper 的 12--16 页范围，但已经达到页数上限。
+- 后续若再加入机制图、更多实验图或大段文字，必须同步删减正文、缩小图或压缩参考文献字段，否则会超页。
+
+## 2026-06-09 按 PRICAI/LNCS 官方模板重新检查排版
+
+### 本轮触发原因
+- 用户指出当前排版仍有问题，要求重新检索 PRICAI 2026 官网要求，可重新下载模板。
+- 用户特别指出：
+  - 不要为了页数改变模板排版。
+  - 有些公式疑似没有序号，需要检查公式编号。
+  - 图表后应有正常间距，例如 Fig. 3 与后续表格之间不能贴得太近。
+  - 先不用管官方 16 页限制，优先按模板规范排版，必要图片可以使用，但必须放在与正文对应的位置。
+
+### 官方模板核对
+- 重新访问 PRICAI 2026 官网投稿页面，确认稿件使用 Springer LNAI/LNCS 格式。
+- 下载 Springer LNCS LaTeX2e 官方模板包：
+  - `official_template_check/llncs2e.zip`
+  - 展开目录：`official_template_check/llncs2e/`
+- 下载 Springer 作者说明：
+  - `official_template_check/springer_author_instructions.pdf`
+- 哈希核对结果：
+  - 当前论文 workspace 的 `llncs.cls` 与官方模板包中的 `llncs.cls` SHA256 完全一致。
+- 官方 `samplepaper.tex` 形式确认：
+  - `\begin{table}` 不加硬性浮动参数。
+  - 表题位于表上。
+  - `\begin{figure}` 不加硬性浮动参数。
+  - 图题位于图下。
+  - 显示公式使用 `equation` 环境。
+
+### LaTeX 排版修正
+- 修改主稿：
+  - `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.tex`
+- 同步修改：
+  - `overleaf_pricai2026_package/submission_pricai2026.tex`
+  - `overleaf_pricai2026_package.zip`
+- 删除此前为了压页数加入的硬性浮动参数：
+  - `\begin{table}[!ht]` 改回 `\begin{table}`。
+  - `\begin{figure}[!ht]` 改回 `\begin{figure}`。
+- 恢复数据图为更接近官方样例的整栏图：
+  - Fig. 2 主结果图：`width=\textwidth`
+  - Fig. 3 消融与敏感性图：`width=\textwidth`
+  - Fig. 4 operational evaluation 图：`width=\textwidth`
+- 为用户指出的 Fig. 3 与后续表格间距问题，局部在 Fig. 3 caption 后加入 `\vspace{0.5\baselineskip}`，只影响该处浮动体内部间距，不修改全局模板行距。
+
+### 公式编号检查
+- 静态检查：
+  - 未发现 `\[...\]`、`equation*`、`displaymath`、`\nonumber`、`\notag`。
+  - 当前 7 个显示公式均使用 `equation` 环境。
+  - 无重复 label。
+  - 所有 `\includegraphics` 路径存在。
+- 编译 PDF 文本提取检查：
+  - 第 4 页显示公式编号 `(1)`--`(4)`。
+  - 第 5 页显示公式编号 `(5)`--`(7)`。
+  - 公式编号连续，无缺号。
+
+### Overleaf 同步与编译
+- Overleaf 项目：
+  - `https://www.overleaf.com/project/6a204ea1614e48bb59209a8b`
+- 上传覆盖新版 `submission_pricai2026.tex` 后重新编译。
+- 最终编译结果：
+  - Errors：0
+  - Warnings：1
+  - Info：0
+  - PDF 页数：16
+- 下载版 PDF：
+  - `overleaf_after_official_template_layout_spacing_output_full.pdf`
+- 渲染检查目录：
+  - `tmp/pdfs/overleaf_after_official_template_layout_spacing/`
+
+### 视觉检查结果
+- 第 11 页：
+  - Fig. 3 恢复为整栏宽度。
+  - Fig. 3 与 Table 6 之间的间距已明显改善，不再紧贴。
+  - Table 6、Table 7 与正文排布自然。
+- 第 12 页：
+  - Fig. 4 恢复为整栏宽度。
+  - Fig. 4 与 Table 8 及业务效用正文对应，位置合理。
+- 当前排版优先遵循 LNCS 默认浮动规则，不再以压缩 16 页为首要目标。
+
+### 当前判断
+- 当前稿件使用的 `llncs.cls` 是官方最新模板包中的同一文件。
+- 图题/表题位置符合 LNCS 样例：表题在表上，图题在图下。
+- 公式编号连续完整。
+- 新增实验图保留，并按正文对应位置放置；局部图表间距已修复。
+
+## 2026-06-09 同步中英对照人工精修稿到当前主稿
+
+### 本轮触发原因
+- 用户要求更新 `FRAA_中英对照人工精修稿_20260604.md`。
+- 该文件此前仍保留新增实验图和消融归因修正前的旧表述，需要与当前 `submission_pricai2026.tex` 对齐，方便后续人工逐段精修。
+
+### 修改文件
+- `FRAA_中英对照人工精修稿_20260604.md`
+
+### 已同步内容
+- 摘要中将旧版“knowledge retrieval 是最大贡献组件”的表述改为当前主稿中的更严谨表述：
+  - dynamic behavior、temporal encoding 和 timestamp-valid retrieval 具有互补贡献。
+  - feature-group occlusion 显示 knowledge-retrieved context 是最强 feature-family signal。
+- 5.1 组件消融段落同步为当前主稿：
+  - 三种移除都会使完整模型退化。
+  - 性能收益不是来自单一附加模块。
+  - 保留所有 Log Loss 和 Recall@5 数值不变。
+- 5.2 检索深度段落补充 Fig. 3 引用说明，并加入 Fig. 3 的中英图注：
+  - Ablation and sensitivity analyses。
+  - 包含组件比较、特征族遮蔽、检索深度敏感性。
+- 6.2 离线业务效用段落补充 Fig. 4 引用说明，并加入 Fig. 4 的中英图注：
+  - Operational evaluation of FRAA。
+  - 包含场景迁移、解释质量、延迟吞吐、离线回放效用。
+- 结论段落同步为当前主稿的互补贡献与特征组遮蔽表述。
+
+### 检查结果
+- 已用关键词检查确认旧表述 `Ablation studies identify knowledge retrieval as the largest contributor` 和 `most influential component` 不再保留。
+- `Figure 3 / 图 3` 与 `Figure 4 / 图 4` 已加入对照稿。
+- 本轮未修改 LaTeX 主稿、Overleaf 包、实验图或参考文献。
+
+### 下一步建议
+- 如果用户继续人工精修，可以直接以 `FRAA_中英对照人工精修稿_20260604.md` 为当前对照底稿。
+- 若人工精修后需要回填 LaTeX，应再对照当前 `submission_pricai2026.tex` 做逐段替换，并重新编译检查页数、浮动体和引用跳转。
+
+## 2026-06-09 核对 Overleaf 网页端并生成纯中文人工精修稿
+
+### 本轮触发原因
+- 用户要求检查 `FRAA_中英对照人工精修稿_20260604.md`，确保内容与网页端一致后，删除英文部分，只保留中文翻译。
+
+### Overleaf 一致性核对
+- 打开 Overleaf 项目：
+  - `https://www.overleaf.com/project/6a204ea1614e48bb59209a8b`
+- 页面标题确认仍为：
+  - `FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment`
+- 通过 Overleaf 页面提供的 `Download as source (.zip)` 链接，在浏览器上下文中读取网页端源码包。
+- 从源码包中解出 `submission_pricai2026.tex` 后计算规范化换行 SHA-256：
+  - Overleaf 网页端：`a0d9294503ea76b206269f9744adba912ea124dffbd6395fa8e6e9bbb450d4f2`
+  - 本地主稿 `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.tex`：`a0d9294503ea76b206269f9744adba912ea124dffbd6395fa8e6e9bbb450d4f2`
+  - 本地 Overleaf 包 `overleaf_pricai2026_package/submission_pricai2026.tex`：`a0d9294503ea76b206269f9744adba912ea124dffbd6395fa8e6e9bbb450d4f2`
+- 结论：网页端、主稿和本地 Overleaf 包在正文内容上完全一致；原始字节差异仅来自 Windows CRLF 与 LF 换行差异。
+
+### Markdown 文件处理
+- 修改文件：
+  - `FRAA_中英对照人工精修稿_20260604.md`
+- 文件标题改为：
+  - `FRAA 中文人工精修稿`
+- 删除所有 `**EN**` 段及其英文正文。
+- 删除所有 `**ZH**` 标签，仅保留中文正文。
+- 删除英文图表 caption，仅保留中文图表说明。
+- 将中英并列章节标题改为中文标题，例如：
+  - `## 1 引言`
+  - `## 3 方法`
+  - `## 8 结论`
+- 将 `Table~\ref{...}`、`Figure~\ref{...}`、`Fig.~\ref{...}` 统一改为中文引用前缀：
+  - `表~\ref{...}`
+  - `图~\ref{...}`
+- 将表头中的明显英文说明替换为中文，例如：
+  - `Model / 模型` 改为 `模型`
+  - `Faithfulness` 改为 `保真度`
+  - `Readability` 改为 `可读性`
+  - `Latency` 改为 `延迟`
+  - `Throughput` 改为 `吞吐量`
+
+### 检查结果
+- 未发现残留：
+  - `**EN**`
+  - `**ZH**`
+  - `Caption EN:`
+  - `Caption ZH:`
+  - `Table~\ref`
+  - `Figure~\ref`
+  - `Fig.~\ref`
+  - `Title /`
+  - `Table n / 表 n`
+  - `Figure n / 图 n`
+- 结构保留完整：
+  - 正文一级章节：8 个。
+  - 表：8 个。
+  - 图：4 个。
+
+### 注意事项
+- 本轮未修改 LaTeX 主稿、Overleaf 网页端、实验图或参考文献。
+- 文件名仍沿用用户指定的 `FRAA_中英对照人工精修稿_20260604.md`，但文件内容已经改为纯中文人工精修稿。
+
+## 2026-06-10 基于表格数据重绘投稿图并同步 Overleaf
+
+### 本轮触发原因
+- 用户指出当前图片和表格数据不一致，要求“所有数据以表格为主”重新绘图。
+- 用户要求先按 `nature-figure` 做图组设计和投稿级 QA，再参考 `figures-for-papers` 本地 Python 示例落地绘图，保持顶刊风格，并同步到 Overleaf 编译。
+
+### 图组设计决策
+- 保留必要图表，减少重复表格堆叠：
+  - 保留 Fig. 1 机制/算法图：`figures/algorithm/algorithm_1_0ebe5141.png`。
+  - 保留 Fig. 2 主结果图：由主结果表的 Log Loss 和 Recall@5 绘制。
+  - 保留 Fig. 3 检索证据图：合并 feature-family occlusion 与 retrieval depth sensitivity。
+  - 保留 Fig. 4 解释质量图：由专家评分与 ROUGE-L 表格数据绘制。
+  - 保留 Fig. 5 效率图：由 latency/throughput 表格数据绘制。
+  - 保留 Table 1 主结果表与 Table 2 架构消融表。
+- 删除或转为图中信息的冗余表格：
+  - scenario/product adaptation。
+  - feature occlusion table。
+  - retrieval depth table。
+  - explanation-quality table。
+  - latency table。
+  - offline business/RAR lift table。
+
+### 修改文件
+- 新增/更新绘图脚本：
+  - `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/scripts/final_figures/figure_code_pricai_final_figures.py`
+- 更新 LaTeX 主稿：
+  - `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/submission_pricai2026.tex`
+- 更新 Overleaf 包：
+  - `overleaf_pricai2026_package/submission_pricai2026.tex`
+  - 根目录 4 张 PDF 数据图。
+- 最终下载的 Overleaf PDF：
+  - `overleaf_final_table_based_figures_clean_output.pdf`
+
+### 新生成图文件
+- `main_results_comparison.pdf/png/svg`
+- `retrieval_depth_sensitivity.pdf/png/svg`
+- `explanation_quality_evaluation.pdf/png/svg`
+- `inference_latency_throughput.pdf/png/svg`
+
+### 本地一致性检查
+- `submission_pricai2026.tex` 与 `overleaf_pricai2026_package/submission_pricai2026.tex` 哈希一致。
+- `submission_pricai2026.bib` 与 Overleaf 包内 bib 哈希一致。
+- 4 张根目录 PDF 数据图与 Overleaf 包内同名文件哈希一致。
+- 当前 TeX 静态统计：
+  - figure 数量：5。
+  - table 数量：2。
+  - 正文唯一引用数：40。
+- 已确认旧标签不再出现：
+  - `tab:adaptation`
+  - `tab:feature_occlusion`
+  - `tab:retrieval_depth`
+  - `tab:explanation_quality`
+  - `tab:latency`
+  - `tab:business`
+  - `fig:ablation_summary`
+  - `fig:operational_summary`
+
+### Overleaf 同步与清理
+- Overleaf 项目：
+  - `https://www.overleaf.com/project/6a204ea1614e48bb59209a8b`
+- 上传覆盖：
+  - `submission_pricai2026.tex`
+  - `main_results_comparison.pdf`
+  - `retrieval_depth_sensitivity.pdf`
+  - `explanation_quality_evaluation.pdf`
+  - `inference_latency_throughput.pdf`
+- 清理 Overleaf 文件树中未引用文件：
+  - 误传的 `/figures/main_result/submission_pricai2026.tex`
+  - `ablation_sensitivity_summary.pdf`
+  - `ablation_sensitivity_summary.png`
+  - `operational_evaluation_summary.pdf`
+  - `operational_evaluation_summary.png`
+  - `overleaf_pricai2026_package.zip`
+  - `/figures/main_result/main_results_comparison.pdf`
+  - `/figures/main_result/main_results_comparison.png`
+- 清理后 Overleaf 文件树仅保留：
+  - `/submission_pricai2026.tex`
+  - `/submission_pricai2026.bib`
+  - `/llncs.cls`
+  - `/splncs04.bst`
+  - `/figures/algorithm/algorithm_1_0ebe5141.png`
+  - `/main_results_comparison.pdf`
+  - `/retrieval_depth_sensitivity.pdf`
+  - `/explanation_quality_evaluation.pdf`
+  - `/inference_latency_throughput.pdf`
+
+### Overleaf 编译结果
+- 最终编译页数：14 页。
+- Errors：0。
+- Warnings：1。
+  - `Package amsmath Warning: Unable to redefine math accent \vec.`
+- Info：1。
+  - `Underfull \vbox (badness 3930) has occurred while \output is active []`
+- 以上两项均非致命编译问题，PDF 已正常生成。
+
+### PDF 检查结果
+- 最终 PDF：`overleaf_final_table_based_figures_clean_output.pdf`
+- 文本提取检查：
+  - Fig. 1：第 6 页。
+  - Fig. 2 / Table 1：第 7-8 页。
+  - Table 2 / Fig. 3：第 8-9 页。
+  - Fig. 4：第 10 页。
+  - Fig. 5：第 10-11 页。
+- 旧内容确认已消失：
+  - `Scenario Adaptation=False`
+  - `Table 3=False`
+  - `Table 4=False`
+  - `Business Utility=False`
+  - `ablation_sensitivity_summary=False`
+  - `operational_evaluation_summary=False`
+- 渲染抽查目录：
+  - `tmp/pdfs/overleaf_after_table_based_figures/`
+
+### 当前判断
+- 本轮已完成“以表格数据为准重新绘图、减少冗余表格、同步 Overleaf、清理网页端未引用文件、重新编译检查”的任务。
+- 当前 PDF 仍有一个模板/包级别的 `amsmath` 警告和一个 underfull vbox 提示；不影响投稿 PDF 输出。
+- 第 8 页包含 Table 1、Fig. 2、Table 2，页面较密集但没有遮挡、空白页或单独浮页；属于 LNCS 浮动体压缩后的可接受状态。
+
+### 本地 Overleaf 包收尾
+- 同步清理本地 `overleaf_pricai2026_package`：
+  - 删除未引用 PNG。
+  - 删除 `figures/ablation` 与 `figures/main_result` 中的数据图重复副本。
+  - 保留 `figures/algorithm/algorithm_1_0ebe5141.png`。
+- 重新生成 `overleaf_pricai2026_package.zip`。
+- 压缩包内容已检查，包含 9 个必要文件：
+  - `submission_pricai2026.tex`
+  - `submission_pricai2026.bib`
+  - `llncs.cls`
+  - `splncs04.bst`
+  - `figures/algorithm/algorithm_1_0ebe5141.png`
+  - `main_results_comparison.pdf`
+  - `retrieval_depth_sensitivity.pdf`
+  - `explanation_quality_evaluation.pdf`
+  - `inference_latency_throughput.pdf`
+
+## 2026-06-10 替换 Fig. 1 流程图
+
+### 本轮触发原因
+- 用户重新绘制了流程图并放入本地仓库，要求替换当前论文中的流程图。
+
+### 新流程图来源
+- 新文件：
+  - `D:\github\paper-fix-2\流程图.png`
+- 文件属性：
+  - 尺寸：`8400 x 3919`
+  - 像素格式：`Format24bppRgb`
+  - SHA-256：`14A2C75F79147E413570CB7B5C28CD69F705D7FBB3B24259915ACF247F90EFAB`
+
+### 替换操作
+- 覆盖论文工作区当前 Fig. 1 文件：
+  - `figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7/figures/algorithm/algorithm_1_0ebe5141.png`
+- 覆盖本地 Overleaf 包中的同名文件：
+  - `overleaf_pricai2026_package/figures/algorithm/algorithm_1_0ebe5141.png`
+- 覆盖后两处目标文件与源文件 SHA-256 完全一致。
+- LaTeX 主稿无需修改，因为 Fig. 1 仍引用：
+  - `figures/algorithm/algorithm_1_0ebe5141.png`
+
+### Overleaf 包更新
+- 已重新生成：
+  - `overleaf_pricai2026_package.zip`
+- zip 内容仍保持 9 个必要文件，只更新其中的算法流程图 PNG。
+
+### Overleaf 网页端状态
+- 尝试重新打开 Overleaf 项目：
+  - `https://www.overleaf.com/project/6a204ea1614e48bb59209a8b`
+- 当前 Playwright 浏览器会话返回：
+  - `Restricted, sorry you don’t have permission to load this page.`
+- 判断：当前自动化浏览器会话已无 Overleaf 登录权限，因此本轮未能直接覆盖网页端文件。
+- 下一步：用户重新登录 Overleaf 或恢复网页端登录会话后，应上传本地包中的：
+  - `overleaf_pricai2026_package/figures/algorithm/algorithm_1_0ebe5141.png`
+  到 Overleaf 的 `/figures/algorithm/algorithm_1_0ebe5141.png`，覆盖原文件后重新编译。

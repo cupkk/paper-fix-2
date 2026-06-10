@@ -1,0 +1,144 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Primary" [ref=e3]:
+    - generic [ref=e4]:
+      - link "Overleaf" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - menubar [ref=e9]:
+        - menuitem "Product" [ref=e10] [cursor=pointer]
+        - menuitem "Solutions" [ref=e11] [cursor=pointer]
+        - menuitem "Templates" [ref=e12] [cursor=pointer]
+        - menuitem "Pricing" [ref=e13] [cursor=pointer]
+        - menuitem "Help & resources" [ref=e14] [cursor=pointer]
+        - menuitem "Sign up" [ref=e15] [cursor=pointer]
+        - menuitem "Log in" [ref=e16] [cursor=pointer]
+  - main [ref=e17]:
+    - generic [ref=e20]:
+      - heading "Restricted, sorry you don’t have permission to load this page." [level=1] [ref=e22]
+      - paragraph [ref=e23]:
+        - link "Take me home!" [ref=e24] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e25]: arrow_left_alt
+          - text: Take me home!
+  - contentinfo [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - link "Overleaf" [ref=e30] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e31]:
+          - heading "About" [level=2] [ref=e32]
+          - list [ref=e33]:
+            - listitem [ref=e34]:
+              - link "About us" [ref=e35] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e36]:
+              - link "Careers" [ref=e37] [cursor=pointer]:
+                - /url: https://digitalscience.pinpointhq.com/
+            - listitem [ref=e38]:
+              - link "Blog" [ref=e39] [cursor=pointer]:
+                - /url: /blog
+        - generic [ref=e40]:
+          - heading "Solutions" [level=2] [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - link "For business" [ref=e44] [cursor=pointer]:
+                - /url: /for/enterprises
+            - listitem [ref=e45]:
+              - link "For universities" [ref=e46] [cursor=pointer]:
+                - /url: /for/universities
+            - listitem [ref=e47]:
+              - link "For government" [ref=e48] [cursor=pointer]:
+                - /url: /for/government
+            - listitem [ref=e49]:
+              - link "For publishers" [ref=e50] [cursor=pointer]:
+                - /url: /for/publishers
+            - listitem [ref=e51]:
+              - link "Customer stories" [ref=e52] [cursor=pointer]:
+                - /url: /about/customer-stories
+        - generic [ref=e53]:
+          - heading "Learn" [level=2] [ref=e54]
+          - list [ref=e55]:
+            - listitem [ref=e56]:
+              - link "Get started with LaTeX in Overleaf" [ref=e57] [cursor=pointer]:
+                - /url: https://learn.overleaf.com/101-get-started-with-latex-in-overleaf
+            - listitem [ref=e58]:
+              - link "Templates" [ref=e59] [cursor=pointer]:
+                - /url: /latex/templates
+            - listitem [ref=e60]:
+              - link "Webinars" [ref=e61] [cursor=pointer]:
+                - /url: https://learn.overleaf.com/calendar
+            - listitem [ref=e62]:
+              - link "Overleaf learning center" [ref=e63] [cursor=pointer]:
+                - /url: https://learn.overleaf.com/
+            - listitem [ref=e64]:
+              - link "How to insert images" [ref=e65] [cursor=pointer]:
+                - /url: /learn/latex/Inserting_Images
+            - listitem [ref=e66]:
+              - link "How to create tables" [ref=e67] [cursor=pointer]:
+                - /url: /learn/latex/Tables
+        - generic [ref=e68]:
+          - heading "Pricing" [level=2] [ref=e69]
+          - list [ref=e70]:
+            - listitem [ref=e71]:
+              - link "For individuals" [ref=e72] [cursor=pointer]:
+                - /url: /user/subscription/plans?itm_referrer=footer-for-indv
+            - listitem [ref=e73]:
+              - link "For groups and organizations" [ref=e74] [cursor=pointer]:
+                - /url: /user/subscription/plans?plan=group&itm_referrer=footer-for-groups
+            - listitem [ref=e75]:
+              - link "For students" [ref=e76] [cursor=pointer]:
+                - /url: /user/subscription/plans?plan=student&period=annual&itm_referrer=footer-for-students
+        - generic [ref=e77]:
+          - heading "Get involved" [level=2] [ref=e78]
+          - list [ref=e79]:
+            - listitem [ref=e80]:
+              - link "Let us know what you think" [ref=e81] [cursor=pointer]:
+                - /url: https://forms.gle/67PSpN1bLnjGCmPQ9
+        - generic [ref=e82]:
+          - heading "Help" [level=2] [ref=e83]
+          - list [ref=e84]:
+            - listitem [ref=e85]:
+              - link "Documentation" [ref=e86] [cursor=pointer]:
+                - /url: /learn
+            - listitem [ref=e87]:
+              - link "Contact us" [ref=e88] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e89]:
+              - link "Website status" [ref=e90] [cursor=pointer]:
+                - /url: https://status.overleaf.com/
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: © 2026 Overleaf
+            - link "Privacy and Terms" [ref=e95] [cursor=pointer]:
+              - /url: /legal
+            - link "Compliance" [ref=e96] [cursor=pointer]:
+              - /url: https://www.digital-science.com/security-certifications/
+          - list [ref=e97]:
+            - listitem [ref=e98]:
+              - button "Select Language" [ref=e99] [cursor=pointer]:
+                - generic [ref=e100]: translate
+                - text: English
+        - generic [ref=e102]:
+          - link "Overleaf on X" [ref=e103] [cursor=pointer]:
+            - /url: https://x.com/overleaf
+            - img [ref=e104]
+            - generic [ref=e106]: Overleaf on X
+          - link "Overleaf on Facebook" [ref=e107] [cursor=pointer]:
+            - /url: https://www.facebook.com/overleaf.editor
+            - img [ref=e108]
+            - generic [ref=e112]: Overleaf on Facebook
+          - link "Overleaf on LinkedIn" [ref=e113] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/writelatex-limited
+            - img [ref=e114]
+            - generic [ref=e118]: Overleaf on LinkedIn
+  - region "Cookie banner" [ref=e119]:
+    - generic [ref=e120]:
+      - text: We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our
+      - link "cookie policy" [ref=e121] [cursor=pointer]:
+        - /url: /legal#Cookies
+      - text: .
+    - generic [ref=e122]:
+      - button "Essential cookies only" [ref=e123] [cursor=pointer]
+      - button "Accept all cookies" [ref=e124] [cursor=pointer]

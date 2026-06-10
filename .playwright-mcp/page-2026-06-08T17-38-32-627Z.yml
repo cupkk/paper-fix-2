@@ -1,0 +1,450 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - list [ref=e5]:
+      - listitem [ref=e6]:
+        - button "Close" [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: close
+          - generic [ref=e9]: Close
+        - link "Click here to use Overleaf in Chinese" [ref=e11] [cursor=pointer]:
+          - /url: https://cn.overleaf.com/project
+          - text: Click here to use Overleaf in
+          - strong [ref=e12]: Chinese
+          - img [ref=e13]
+    - navigation "Primary" [ref=e14]:
+      - generic [ref=e15]:
+        - link "Overleaf" [ref=e17] [cursor=pointer]:
+          - /url: /
+        - menubar [ref=e20]:
+          - menuitem "Product" [ref=e21] [cursor=pointer]:
+            - text: Product
+            - img [ref=e22]
+          - menuitem "Solutions" [ref=e24] [cursor=pointer]:
+            - text: Solutions
+            - img [ref=e25]
+          - menuitem "Templates" [ref=e27] [cursor=pointer]
+          - menuitem "Pricing" [ref=e28] [cursor=pointer]
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - navigation "Project categories and tags" [ref=e31]:
+          - button "New project" [ref=e33] [cursor=pointer]
+          - generic [ref=e34]:
+            - list [ref=e35]:
+              - listitem [ref=e36] [cursor=pointer]:
+                - button "All projects" [ref=e37]
+              - listitem [ref=e38] [cursor=pointer]:
+                - button "Your projects" [ref=e39]
+              - listitem [ref=e40] [cursor=pointer]:
+                - button "Shared with you" [ref=e41]
+              - listitem [ref=e42] [cursor=pointer]:
+                - button "Archived projects" [ref=e43]
+              - listitem [ref=e44] [cursor=pointer]:
+                - button "Trashed projects" [ref=e45]
+              - listitem [ref=e46] [cursor=pointer]:
+                - separator [ref=e47]
+              - listitem [ref=e48] [cursor=pointer]: Organize Tags
+              - listitem [ref=e49] [cursor=pointer]:
+                - button "New tag" [ref=e50]:
+                  - img [ref=e51]
+                  - generic [ref=e53]: New tag
+            - separator [ref=e54]
+            - generic [ref=e55]:
+              - paragraph [ref=e56]: Are you affiliated with an institution?
+              - link "Add affiliation" [ref=e57] [cursor=pointer]:
+                - /url: /user/settings
+                - generic [ref=e58]: Add affiliation
+        - generic [ref=e59]:
+          - navigation "Account and help" [ref=e60]:
+            - menu [ref=e61]:
+              - menuitem "Help" [ref=e62] [cursor=pointer]:
+                - img [ref=e64]
+            - menu [ref=e66]:
+              - menuitem "Account" [ref=e67] [cursor=pointer]:
+                - img [ref=e69]
+          - generic [ref=e71]: Digital Science
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - region "Notification" [ref=e76]:
+              - list [ref=e77]:
+                - listitem [ref=e78]:
+                  - alert [ref=e79]:
+                    - generic [ref=e81]: info
+                    - generic [ref=e82]:
+                      - generic [ref=e83]: Why do Fortune 500 companies and top research institutions trust Overleaf to streamline their collaboration? Get in touch to learn more.
+                      - link "Contact sales" [ref=e85] [cursor=pointer]:
+                        - /url: /for/contact-sales-4
+                        - generic [ref=e86]: Contact sales
+                    - button "Close" [ref=e88] [cursor=pointer]:
+                      - generic [ref=e89]: close
+                - listitem [ref=e90]:
+                  - alert [ref=e91]:
+                    - generic [ref=e93]: info
+                    - generic:
+                      - generic:
+                        - paragraph: Help us improve your experience using a screen reader with Overleaf by filling out this quick survey.
+                      - link "Take survey" [ref=e95] [cursor=pointer]:
+                        - /url: https://docs.google.com/forms/d/e/1FAIpQLSdxKP_biRXvrkmJzlBjMwI_qPSuv4NbBvYUzSOc3OOTIOTmnQ/viewform
+                        - generic: Take survey
+                    - button "Close" [ref=e97] [cursor=pointer]
+            - main "All projects" [ref=e98]:
+              - generic [ref=e99]:
+                - heading "All projects" [level=1] [ref=e100]
+                - generic [ref=e103]:
+                  - link "You’re on the free plan" [ref=e104] [cursor=pointer]:
+                    - /url: /learn/how-to/Overleaf_premium_features
+                    - text: You’re on the
+                    - strong [ref=e105]: free plan
+                    - generic [ref=e106]: info
+                  - link "Upgrade" [ref=e108] [cursor=pointer]:
+                    - /url: /user/subscription/plans
+                    - generic [ref=e109]: Upgrade
+              - generic [ref=e110]:
+                - search [ref=e113]:
+                  - generic [ref=e116]:
+                    - generic:
+                      - generic: search
+                    - textbox "Search in all projects…" [ref=e117]
+                - table "Projects list" [ref=e120]:
+                  - caption [ref=e121]: Projects list
+                  - rowgroup [ref=e122]:
+                    - row "Select Projects Title Owner Last modified Actions" [ref=e123]:
+                      - columnheader "Select Projects" [ref=e124]:
+                        - checkbox "Select all projects" [ref=e126]
+                      - columnheader "Title" [ref=e127]:
+                        - button "Sort by Title" [ref=e128] [cursor=pointer]: Title
+                      - columnheader "Owner" [ref=e129]:
+                        - button "Sort by Owner" [ref=e130] [cursor=pointer]: Owner
+                      - columnheader "Last modified" [ref=e131]:
+                        - button "Reverse Last modified sort order" [ref=e132] [cursor=pointer]:
+                          - text: Last modified
+                          - generic [ref=e133]: arrow_downward_alt
+                      - columnheader "Actions" [ref=e134]
+                  - rowgroup [ref=e135]:
+                    - 'row "Select FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment You 4 days ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e136]':
+                      - 'cell "Select FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment" [ref=e137]':
+                        - 'checkbox "Select FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment" [ref=e139]'
+                      - 'cell "FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment" [ref=e140]':
+                        - 'link "FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment" [ref=e141] [cursor=pointer]':
+                          - /url: /project/6a204ea1614e48bb59209a8b
+                      - cell "You" [ref=e142]
+                      - cell "4 days ago by You" [ref=e143]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e144]:
+                        - generic [ref=e145]:
+                          - button "Copy" [ref=e147] [cursor=pointer]:
+                            - generic [ref=e149]: file_copy
+                          - button "Download .zip file" [ref=e151] [cursor=pointer]:
+                            - generic [ref=e153]: download
+                          - button "Download PDF" [ref=e155] [cursor=pointer]:
+                            - generic [ref=e157]: picture_as_pdf
+                          - button "Archive" [ref=e159] [cursor=pointer]:
+                            - generic [ref=e161]: inbox
+                          - button "Trash" [ref=e163] [cursor=pointer]:
+                            - generic [ref=e165]: delete
+                    - row "Select Sparse-sensor early prediction and source inversion of hydrogen leakage dispersion in enclosed spaces Sparse-sensor early prediction and source inversion of hydrogen leakage dispersion in enclosed spaces You 4 days ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e166]:
+                      - cell "Select Sparse-sensor early prediction and source inversion of hydrogen leakage dispersion in enclosed spaces" [ref=e167]:
+                        - checkbox "Select Sparse-sensor early prediction and source inversion of hydrogen leakage dispersion in enclosed spaces" [ref=e169]
+                      - cell "Sparse-sensor early prediction and source inversion of hydrogen leakage dispersion in enclosed spaces" [ref=e170]:
+                        - link "Sparse-sensor early prediction and source inversion of hydrogen leakage dispersion in enclosed spaces" [ref=e171] [cursor=pointer]:
+                          - /url: /project/6a2050411395e109a4402399
+                      - cell "You" [ref=e172]
+                      - cell "4 days ago by You" [ref=e173]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e174]:
+                        - generic [ref=e175]:
+                          - button "Copy" [ref=e177] [cursor=pointer]:
+                            - generic [ref=e179]: file_copy
+                          - button "Download .zip file" [ref=e181] [cursor=pointer]:
+                            - generic [ref=e183]: download
+                          - button "Download PDF" [ref=e185] [cursor=pointer]:
+                            - generic [ref=e187]: picture_as_pdf
+                          - button "Archive" [ref=e189] [cursor=pointer]:
+                            - generic [ref=e191]: inbox
+                          - button "Trash" [ref=e193] [cursor=pointer]:
+                            - generic [ref=e195]: delete
+                    - row "Select InsightGraph：连接 Deep Research 运行轨迹与多产物输出的共享中间图谱 InsightGraph：连接 Deep Research 运行轨迹与多产物输出的共享中间图谱 You 8 days ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e196]:
+                      - cell "Select InsightGraph：连接 Deep Research 运行轨迹与多产物输出的共享中间图谱" [ref=e197]:
+                        - checkbox "Select InsightGraph：连接 Deep Research 运行轨迹与多产物输出的共享中间图谱" [ref=e199]
+                      - cell "InsightGraph：连接 Deep Research 运行轨迹与多产物输出的共享中间图谱" [ref=e200]:
+                        - link "InsightGraph：连接 Deep Research 运行轨迹与多产物输出的共享中间图谱" [ref=e201] [cursor=pointer]:
+                          - /url: /project/6a1c62718ac7f5fc4325c1a5
+                      - cell "You" [ref=e202]
+                      - cell "8 days ago by You" [ref=e203]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e204]:
+                        - generic [ref=e205]:
+                          - button "Copy" [ref=e207] [cursor=pointer]:
+                            - generic [ref=e209]: file_copy
+                          - button "Download .zip file" [ref=e211] [cursor=pointer]:
+                            - generic [ref=e213]: download
+                          - button "Download PDF" [ref=e215] [cursor=pointer]:
+                            - generic [ref=e217]: picture_as_pdf
+                          - button "Archive" [ref=e219] [cursor=pointer]:
+                            - generic [ref=e221]: inbox
+                          - button "Trash" [ref=e223] [cursor=pointer]:
+                            - generic [ref=e225]: delete
+                    - row "Select CVPR-FINAL CVPR-FINAL You 14 days ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e226]:
+                      - cell "Select CVPR-FINAL" [ref=e227]:
+                        - checkbox "Select CVPR-FINAL" [ref=e229]
+                      - cell "CVPR-FINAL" [ref=e230]:
+                        - link "CVPR-FINAL" [ref=e231] [cursor=pointer]:
+                          - /url: /project/6a0b0cbdcec0a4e042ca3b70
+                      - cell "You" [ref=e232]
+                      - cell "14 days ago by You" [ref=e233]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e234]:
+                        - generic [ref=e235]:
+                          - button "Copy" [ref=e237] [cursor=pointer]:
+                            - generic [ref=e239]: file_copy
+                          - button "Download .zip file" [ref=e241] [cursor=pointer]:
+                            - generic [ref=e243]: download
+                          - button "Download PDF" [ref=e245] [cursor=pointer]:
+                            - generic [ref=e247]: picture_as_pdf
+                          - button "Archive" [ref=e249] [cursor=pointer]:
+                            - generic [ref=e251]: inbox
+                          - button "Trash" [ref=e253] [cursor=pointer]:
+                            - generic [ref=e255]: delete
+                    - row "Select GASP 实验章节初稿 GASP 实验章节初稿 You 19 days ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e256]:
+                      - cell "Select GASP 实验章节初稿" [ref=e257]:
+                        - checkbox "Select GASP 实验章节初稿" [ref=e259]
+                      - cell "GASP 实验章节初稿" [ref=e260]:
+                        - link "GASP 实验章节初稿" [ref=e261] [cursor=pointer]:
+                          - /url: /project/6a0e641475200991a302413c
+                      - cell "You" [ref=e262]
+                      - cell "19 days ago by You" [ref=e263]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e264]:
+                        - generic [ref=e265]:
+                          - button "Copy" [ref=e267] [cursor=pointer]:
+                            - generic [ref=e269]: file_copy
+                          - button "Download .zip file" [ref=e271] [cursor=pointer]:
+                            - generic [ref=e273]: download
+                          - button "Download PDF" [ref=e275] [cursor=pointer]:
+                            - generic [ref=e277]: picture_as_pdf
+                          - button "Archive" [ref=e279] [cursor=pointer]:
+                            - generic [ref=e281]: inbox
+                          - button "Trash" [ref=e283] [cursor=pointer]:
+                            - generic [ref=e285]: delete
+                    - row "Select CVPR CVPR You 21 days ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e286]:
+                      - cell "Select CVPR" [ref=e287]:
+                        - checkbox "Select CVPR" [ref=e289]
+                      - cell "CVPR" [ref=e290]:
+                        - link "CVPR" [ref=e291] [cursor=pointer]:
+                          - /url: /project/6a07ebb828647e04837ca870
+                      - cell "You" [ref=e292]
+                      - cell "21 days ago by You" [ref=e293]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e294]:
+                        - generic [ref=e295]:
+                          - button "Copy" [ref=e297] [cursor=pointer]:
+                            - generic [ref=e299]: file_copy
+                          - button "Download .zip file" [ref=e301] [cursor=pointer]:
+                            - generic [ref=e303]: download
+                          - button "Download PDF" [ref=e305] [cursor=pointer]:
+                            - generic [ref=e307]: picture_as_pdf
+                          - button "Archive" [ref=e309] [cursor=pointer]:
+                            - generic [ref=e311]: inbox
+                          - button "Trash" [ref=e313] [cursor=pointer]:
+                            - generic [ref=e315]: delete
+                    - row "Select Formatting Instructions For NeurIPS 2026 Formatting Instructions For NeurIPS 2026 You a month ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e316]:
+                      - cell "Select Formatting Instructions For NeurIPS 2026" [ref=e317]:
+                        - checkbox "Select Formatting Instructions For NeurIPS 2026" [ref=e319]
+                      - cell "Formatting Instructions For NeurIPS 2026" [ref=e320]:
+                        - link "Formatting Instructions For NeurIPS 2026" [ref=e321] [cursor=pointer]:
+                          - /url: /project/69f9c05a8293dde095f89ce1
+                      - cell "You" [ref=e322]
+                      - cell "a month ago by You" [ref=e323]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e324]:
+                        - generic [ref=e325]:
+                          - button "Copy" [ref=e327] [cursor=pointer]:
+                            - generic [ref=e329]: file_copy
+                          - button "Download .zip file" [ref=e331] [cursor=pointer]:
+                            - generic [ref=e333]: download
+                          - button "Download PDF" [ref=e335] [cursor=pointer]:
+                            - generic [ref=e337]: picture_as_pdf
+                          - button "Archive" [ref=e339] [cursor=pointer]:
+                            - generic [ref=e341]: inbox
+                          - button "Trash" [ref=e343] [cursor=pointer]:
+                            - generic [ref=e345]: delete
+                    - row "Select 基于相位振荡CPG与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真——提交版 基于相位振荡CPG与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真——提交版 You a month ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e346]:
+                      - cell "Select 基于相位振荡CPG与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真——提交版" [ref=e347]:
+                        - checkbox "Select 基于相位振荡CPG与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真——提交版" [ref=e349]
+                      - cell "基于相位振荡CPG与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真——提交版" [ref=e350]:
+                        - link "基于相位振荡CPG与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真——提交版" [ref=e351] [cursor=pointer]:
+                          - /url: /project/69f4279b7e6dfa292604a1d0
+                      - cell "You" [ref=e352]
+                      - cell "a month ago by You" [ref=e353]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e354]:
+                        - generic [ref=e355]:
+                          - button "Copy" [ref=e357] [cursor=pointer]:
+                            - generic [ref=e359]: file_copy
+                          - button "Download .zip file" [ref=e361] [cursor=pointer]:
+                            - generic [ref=e363]: download
+                          - button "Download PDF" [ref=e365] [cursor=pointer]:
+                            - generic [ref=e367]: picture_as_pdf
+                          - button "Archive" [ref=e369] [cursor=pointer]:
+                            - generic [ref=e371]: inbox
+                          - button "Trash" [ref=e373] [cursor=pointer]:
+                            - generic [ref=e375]: delete
+                    - row "Select 基于相位振荡 CPG 与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真 基于相位振荡 CPG 与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真 You a month ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e376]:
+                      - cell "Select 基于相位振荡 CPG 与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真" [ref=e377]:
+                        - checkbox "Select 基于相位振荡 CPG 与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真" [ref=e379]
+                      - cell "基于相位振荡 CPG 与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真" [ref=e380]:
+                        - link "基于相位振荡 CPG 与各向异性阻力模型的四连杆鳗鱼机器人蜿蜒推进仿真" [ref=e381] [cursor=pointer]:
+                          - /url: /project/69f41a213a785b94872fb355
+                      - cell "You" [ref=e382]
+                      - cell "a month ago by You" [ref=e383]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e384]:
+                        - generic [ref=e385]:
+                          - button "Copy" [ref=e387] [cursor=pointer]:
+                            - generic [ref=e389]: file_copy
+                          - button "Download .zip file" [ref=e391] [cursor=pointer]:
+                            - generic [ref=e393]: download
+                          - button "Download PDF" [ref=e395] [cursor=pointer]:
+                            - generic [ref=e397]: picture_as_pdf
+                          - button "Archive" [ref=e399] [cursor=pointer]:
+                            - generic [ref=e401]: inbox
+                          - button "Trash" [ref=e403] [cursor=pointer]:
+                            - generic [ref=e405]: delete
+                    - row "Select 软体机器人论文 软体机器人论文 You 2 months ago by You Copy Download .zip file Download PDF Archive Trash" [ref=e406]:
+                      - cell "Select 软体机器人论文" [ref=e407]:
+                        - checkbox "Select 软体机器人论文" [ref=e409]
+                      - cell "软体机器人论文" [ref=e410]:
+                        - link "软体机器人论文" [ref=e411] [cursor=pointer]:
+                          - /url: /project/69e63248d6728daaa8b249dd
+                      - cell "You" [ref=e412]
+                      - cell "2 months ago by You" [ref=e413]
+                      - cell "Copy Download .zip file Download PDF Archive Trash" [ref=e414]:
+                        - generic [ref=e415]:
+                          - button "Copy" [ref=e417] [cursor=pointer]:
+                            - generic [ref=e419]: file_copy
+                          - button "Download .zip file" [ref=e421] [cursor=pointer]:
+                            - generic [ref=e423]: download
+                          - button "Download PDF" [ref=e425] [cursor=pointer]:
+                            - generic [ref=e427]: picture_as_pdf
+                          - button "Archive" [ref=e429] [cursor=pointer]:
+                            - generic [ref=e431]: inbox
+                          - button "Trash" [ref=e433] [cursor=pointer]:
+                            - generic [ref=e435]: delete
+                - paragraph [ref=e438]: Showing 10 out of 10 projects.
+          - contentinfo [ref=e439]:
+            - generic [ref=e440]:
+              - generic [ref=e441]:
+                - link "Overleaf" [ref=e443] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e444]: Overleaf
+                - generic [ref=e445]:
+                  - heading "About" [level=2] [ref=e446]
+                  - list [ref=e447]:
+                    - listitem [ref=e448]:
+                      - link "About us" [ref=e449] [cursor=pointer]:
+                        - /url: /about
+                    - listitem [ref=e450]:
+                      - link "Careers" [ref=e451] [cursor=pointer]:
+                        - /url: https://digitalscience.pinpointhq.com/
+                    - listitem [ref=e452]:
+                      - link "Blog" [ref=e453] [cursor=pointer]:
+                        - /url: /blog
+                - generic [ref=e454]:
+                  - heading "Solutions" [level=2] [ref=e455]
+                  - list [ref=e456]:
+                    - listitem [ref=e457]:
+                      - link "For business" [ref=e458] [cursor=pointer]:
+                        - /url: /for/enterprises
+                    - listitem [ref=e459]:
+                      - link "For universities" [ref=e460] [cursor=pointer]:
+                        - /url: /for/universities
+                    - listitem [ref=e461]:
+                      - link "For government" [ref=e462] [cursor=pointer]:
+                        - /url: /for/government
+                    - listitem [ref=e463]:
+                      - link "For publishers" [ref=e464] [cursor=pointer]:
+                        - /url: /for/publishers
+                    - listitem [ref=e465]:
+                      - link "Customer stories" [ref=e466] [cursor=pointer]:
+                        - /url: /about/customer-stories
+                - generic [ref=e467]:
+                  - heading "Learn" [level=2] [ref=e468]
+                  - list [ref=e469]:
+                    - listitem [ref=e470]:
+                      - link "Get started with LaTeX in Overleaf" [ref=e471] [cursor=pointer]:
+                        - /url: https://learn.overleaf.com/101-get-started-with-latex-in-overleaf
+                    - listitem [ref=e472]:
+                      - link "Templates" [ref=e473] [cursor=pointer]:
+                        - /url: /latex/templates
+                    - listitem [ref=e474]:
+                      - link "Webinars" [ref=e475] [cursor=pointer]:
+                        - /url: https://learn.overleaf.com/calendar
+                    - listitem [ref=e476]:
+                      - link "Overleaf learning center" [ref=e477] [cursor=pointer]:
+                        - /url: https://learn.overleaf.com/
+                    - listitem [ref=e478]:
+                      - link "How to insert images" [ref=e479] [cursor=pointer]:
+                        - /url: /learn/latex/Inserting_Images
+                    - listitem [ref=e480]:
+                      - link "How to create tables" [ref=e481] [cursor=pointer]:
+                        - /url: /learn/latex/Tables
+                - generic [ref=e482]:
+                  - heading "Pricing" [level=2] [ref=e483]
+                  - list [ref=e484]:
+                    - listitem [ref=e485]:
+                      - link "For individuals" [ref=e486] [cursor=pointer]:
+                        - /url: /user/subscription/plans?itm_referrer=footer-for-indv
+                    - listitem [ref=e487]:
+                      - link "For groups and organizations" [ref=e488] [cursor=pointer]:
+                        - /url: /user/subscription/plans?plan=group&itm_referrer=footer-for-groups
+                    - listitem [ref=e489]:
+                      - link "For students" [ref=e490] [cursor=pointer]:
+                        - /url: /user/subscription/plans?plan=student&period=annual&itm_referrer=footer-for-students
+                - generic [ref=e491]:
+                  - heading "Get Involved" [level=2] [ref=e492]
+                  - list [ref=e493]:
+                    - listitem [ref=e494]:
+                      - link "Let us know what you think" [ref=e495] [cursor=pointer]:
+                        - /url: https://forms.gle/67PSpN1bLnjGCmPQ9
+                    - listitem [ref=e496]:
+                      - link "Join the beta program" [ref=e497] [cursor=pointer]:
+                        - /url: /beta/participate
+                - generic [ref=e498]:
+                  - heading "Help" [level=2] [ref=e499]
+                  - list [ref=e500]:
+                    - listitem [ref=e501]:
+                      - link "Documentation" [ref=e502] [cursor=pointer]:
+                        - /url: /learn
+                    - listitem [ref=e503]:
+                      - link "Contact us" [ref=e504] [cursor=pointer]:
+                        - /url: /contact
+                    - listitem [ref=e505]:
+                      - link "Website status" [ref=e506] [cursor=pointer]:
+                        - /url: https://status.overleaf.com/
+              - generic [ref=e507]:
+                - generic [ref=e508]:
+                  - generic [ref=e509]:
+                    - generic [ref=e510]: © 2026 Overleaf
+                    - link "Privacy and Terms" [ref=e511] [cursor=pointer]:
+                      - /url: /legal
+                    - link "Compliance" [ref=e512] [cursor=pointer]:
+                      - /url: https://www.digital-science.com/security-certifications/
+                  - button "Select a language" [ref=e515] [cursor=pointer]:
+                    - generic [ref=e516]: translate
+                    - text: English
+                - generic [ref=e518]:
+                  - link "Overleaf on X" [ref=e519] [cursor=pointer]:
+                    - /url: https://x.com/overleaf
+                    - img [ref=e520]
+                    - generic [ref=e522]: Overleaf on X
+                  - link "Overleaf on Facebook" [ref=e523] [cursor=pointer]:
+                    - /url: https://www.facebook.com/overleaf.editor
+                    - img [ref=e524]
+                    - generic [ref=e528]: Overleaf on Facebook
+                  - link "Overleaf on LinkedIn" [ref=e529] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/company/writelatex-limited
+                    - img [ref=e530]
+                    - generic [ref=e534]: Overleaf on LinkedIn
+        - region "Cookie banner" [ref=e535]:
+          - generic [ref=e536]:
+            - text: We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our
+            - link "cookie policy" [ref=e537] [cursor=pointer]:
+              - /url: /legal#Cookies
+            - text: .
+          - generic [ref=e538]:
+            - button "Essential cookies only" [ref=e539] [cursor=pointer]:
+              - generic [ref=e540]: Essential cookies only
+            - button "Accept all cookies" [ref=e541] [cursor=pointer]:
+              - generic [ref=e542]: Accept all cookies
