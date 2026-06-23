@@ -134,13 +134,6 @@
 			<v:textRect cx="14.0343" cy="507.479" width="28.07" height="28.0685"/>
 			<ellipse cx="14.0343" cy="507.479" rx="14.0343" ry="14.0343" class="st1"/>
 			<text x="9.86" y="511.98" class="st2" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>3</text>		</g>
-		<g id="shape6-16" v:mID="6" v:groupContext="shape" transform="translate(753.359,-476.042)">
-			<title>工作表.6</title>
-			<desc>3</desc>
-			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
-			<v:textRect cx="14.0343" cy="507.479" width="28.07" height="28.0685"/>
-			<ellipse cx="14.0343" cy="507.479" rx="14.0343" ry="14.0343" class="st7"/>
-			<text x="9.86" y="511.98" class="st2" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>3</text>		</g>
 		<g id="shape7-19" v:mID="7" v:groupContext="shape" transform="translate(781.428,-472.112)">
 			<title>工作表.7</title>
 			<desc>Task-Specific Outputs</desc>
