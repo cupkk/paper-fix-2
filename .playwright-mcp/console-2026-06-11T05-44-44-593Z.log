@@ -1,0 +1,4 @@
+[  500976ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://cdn.overleaf.com/fonts/Merriweather-Regular-04fe8093bb1cda6cafd3.woff2 @ https://www.overleaf.com/project/6a204ea1614e48bb59209a8b:80
+[  501835ms] [ERROR] Failed to load resource: the server responded with a status of 410 () @ https://www.overleaf.com/project/6a204ea1614e48bb59209a8b/output/cached/output.overleaf.json:0
+[  523288ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdp.customer.io/v1/analytics-js/snippet/2530db5896ec00db632a/analytics.min.js:0
+[  523870ms] [ERROR] WebSocket connection to 'wss://www.overleaf.com/socket.io/1/websocket/Ub7sjFPwG0x9D5fOwR90?projectId=6a204ea1614e48bb59209a8b&esh=1&ssp=1' failed: Error in connection establishment: net::ERR_CONNECTION_CLOSED @ https://www.overleaf.com/socket.io/socket.io.js:1

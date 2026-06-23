@@ -5,3 +5,9 @@
 [   48828ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
 [   48843ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
 [   49248ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1085632ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=4c7ecb09-634f-4a7f-880c-ec2f000e2131:0
+[ 1095889ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://consumer.cloud.gist.build/api/v4/users?sessionId=4c7ecb09-634f-4a7f-880c-ec2f000e2131:0
+[ 1118553ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://consumer.cloud.gist.build/api/v4/users?sessionId=4c7ecb09-634f-4a7f-880c-ec2f000e2131:0
+[ 1174535ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1174556ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1174590ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0

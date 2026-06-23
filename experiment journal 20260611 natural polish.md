@@ -98,3 +98,59 @@ Overleaf 编译状态：
 下一位 agent 应优先读取本日志和当前 Overleaf PDF，而不是重新从旧压缩包或旧 PDF 判断论文状态。若用户继续要求排版压缩，可以在不改官方模板的前提下，优先尝试局部调整 Fig. 4/Fig. 5 的浮动参数或将效率图改成更紧凑的小表格；不要直接修改 `llncs.cls` 或加入全局负间距。
 
 若用户要求最终投稿前学术诚信审计，应重新进行一次 DOI/URL 联网逐条核验，并将结果固化为最终 reference verification 表。当前本轮只验证了 BibTeX 与正文引用一致性、引用分散度和 PDF 编译状态。
+
+## 七、追加更新：20260611 排版紧凑化与旧小节删除
+
+### 触发原因
+
+用户指出三处问题：
+
+- Overleaf 第 11 页仍像是两张图占据一整页。
+- `Limitations and Reproducibility` 章节不需要，应删除。
+- Related Work 内容偏多，贡献列表前的空白过大。
+
+### 修改内容
+
+本轮继续修改：
+
+- `D:\github\paper-fix-2\figure_workspace_0ee7a6fe-ccd3-4659-a621-c986942de0c7\submission_pricai2026.tex`
+- `D:\github\paper-fix-2\overleaf_pricai2026_package\submission_pricai2026.tex`
+- `D:\github\paper-fix-2\overleaf_pricai2026_package.zip`
+
+具体操作：
+
+1. 删除 `Limitations and Reproducibility` 小节。
+2. 将该小节中必须保留的边界说明压缩进 Conclusion，避免论文显得缺少边界意识。
+3. 删除 Fig. 5 的浮动图环境，不再在正文中引用 `fig:latency` 或 `inference_latency_throughput.pdf`；latency 和 throughput 数值保留在 Efficiency Analysis 正文中。
+4. 压缩 Related Work 的表述，减少文献清单式句子，但保留 40 篇真实参考文献的正文引用覆盖。
+5. 贡献列表不再使用 `itemize`，改为三条悬挂缩进短段落，解决 `itemize` 在 LNCS 下产生的顶部空白问题。
+
+### Overleaf 同步与核验
+
+同步过程中发现一次网页端粘贴只替换了可见区域，导致 TeX 内容被错误叠加到约 60K 字符。随后使用 CodeMirror API 程序化选中全文，再粘贴本地最终 TeX，确认网页端源码恢复为约 30K 字符，并且贡献部分为 `\hangindent` 悬挂缩进版本。
+
+最终 Overleaf 编译和下载结果：
+
+- 最终 PDF：`D:\github\paper-fix-2\overleaf_after_layout_fix_output_full.pdf`
+- 页数：14 页
+- 最终渲染检查图：
+  - `D:\github\paper-fix-2\tmp\pdfs\overleaf_after_layout_fix_final_manual_contrib\page_2.png`
+  - `D:\github\paper-fix-2\tmp\pdfs\overleaf_after_layout_fix_final_manual_contrib\page_11.png`
+
+最终静态检查：
+
+- `unique_cited = 40`
+- `bib_entries = 40`
+- `max_keys_per_cite = 2`
+- `sent_viol = []`
+- `missing = []`
+- `unused = []`
+- PDF 文本中 `Limitations and Reproducibility = False`
+- PDF 文本中 `Fig. 5. = False`
+- PDF 文本中 `Inference latency and throughput = False`
+
+视觉检查结论：
+
+- 第 2 页贡献列表已无截图中那种大块空白，三条贡献紧跟引导句。
+- 第 11 页只保留 Fig. 4、效率分析正文和 Conclusion，不再出现两张图占一整页的问题。
+- 未修改真实实验数值、BibTeX 条目或官方 LNCS 模板文件。

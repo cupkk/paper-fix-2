@@ -1,0 +1,627 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e7]:
+      - navigation "Project actions" [ref=e8]:
+        - generic [ref=e9]:
+          - link "Overleaf logo" [ref=e12] [cursor=pointer]:
+            - /url: /project
+            - generic "Overleaf logo" [ref=e13]
+          - menubar [ref=e14]:
+            - button "File" [ref=e16] [cursor=pointer]
+            - button "Edit" [ref=e18] [cursor=pointer]
+            - button "Insert" [ref=e20] [cursor=pointer]
+            - button "View" [ref=e22] [cursor=pointer]
+            - button "Format" [ref=e24] [cursor=pointer]
+            - button "Help" [ref=e26] [cursor=pointer]
+        - button "Project title options" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: "FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment"
+          - generic [ref=e30]: keyboard_arrow_down
+        - generic [ref=e31]:
+          - button "h" [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]: h
+          - button "History" [ref=e37] [cursor=pointer]:
+            - generic [ref=e39]: history
+          - button "Layout options" [ref=e43] [cursor=pointer]:
+            - generic [ref=e44]: space_dashboard
+          - button "Share" [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: person_add
+              - text: Share
+      - generic [ref=e50]:
+        - navigation "Sidebar" [ref=e51]:
+          - tablist [ref=e52]:
+            - generic [ref=e53]:
+              - tab "File tree" [selected] [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]: description
+                - generic [ref=e56]: File tree
+              - tab "Project search" [ref=e57] [cursor=pointer]:
+                - generic [ref=e58]: search
+                - generic [ref=e59]: Project search
+              - tab "Integrations" [ref=e60] [cursor=pointer]:
+                - generic [ref=e61]: integration_instructions
+                - generic [ref=e62]: Integrations
+              - tab "Review panel" [ref=e63] [cursor=pointer]:
+                - generic [ref=e64]: rate_review
+                - generic [ref=e65]: Review panel
+              - tab "Chat" [ref=e66] [cursor=pointer]:
+                - generic [ref=e67]: forum
+                - generic [ref=e68]: Chat
+              - tab "AI assistant" [ref=e69] [cursor=pointer]:
+                - img [ref=e70]
+                - generic [ref=e73]: AI assistant
+            - navigation "Help and editor settings" [ref=e74]:
+              - button "Help" [ref=e77] [cursor=pointer]:
+                - generic [ref=e78]: help
+              - button "Settings" [ref=e79] [cursor=pointer]:
+                - generic [ref=e80]: settings
+        - tabpanel "File tree" [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e87]:
+              - generic [ref=e88]:
+                - button "Hide file tree" [ref=e89] [cursor=pointer]:
+                  - generic [ref=e90]: keyboard_arrow_down
+                  - heading "File tree" [level=4] [ref=e91]
+                - generic [ref=e92]:
+                  - button "New file" [ref=e93] [cursor=pointer]:
+                    - generic [ref=e94]: note_add
+                    - generic [ref=e95]: New file
+                  - button "New folder" [ref=e96] [cursor=pointer]:
+                    - generic [ref=e97]: create_new_folder
+                    - generic [ref=e98]: New folder
+                  - button "Upload" [ref=e99] [cursor=pointer]:
+                    - generic [ref=e100]: upload
+                    - generic [ref=e101]: Upload
+                  - button "Close" [ref=e102] [cursor=pointer]:
+                    - generic [ref=e103]: close
+                    - generic [ref=e104]: Close
+              - tree [ref=e106]:
+                - generic [ref=e107]:
+                  - treeitem "figures" [expanded] [ref=e108]:
+                    - button "Collapse figures" [ref=e109] [cursor=pointer]:
+                      - generic "Collapse" [ref=e110]:
+                        - generic [ref=e111]: expand_more
+                      - generic [ref=e113]: figures
+                  - tree [ref=e114]:
+                    - generic [ref=e115]:
+                      - treeitem "algorithm" [expanded] [ref=e116]:
+                        - button "Collapse algorithm" [ref=e117] [cursor=pointer]:
+                          - generic "Collapse" [ref=e118]:
+                            - generic [ref=e119]: expand_more
+                          - generic [ref=e121]: algorithm
+                      - tree [ref=e122]:
+                        - treeitem "algorithm_1_0ebe5141.png" [ref=e124]:
+                          - generic [ref=e125] [cursor=pointer]:
+                            - generic [ref=e126]: image
+                            - generic [ref=e128]: algorithm_1_0ebe5141.png
+                      - treeitem "main_result" [ref=e129]:
+                        - button "Expand main_result" [ref=e130] [cursor=pointer]:
+                          - generic "Expand" [ref=e131]:
+                            - generic [ref=e132]: chevron_right
+                          - generic [ref=e134]: main_result
+                  - treeitem "explanation_quality_evaluation.pdf" [ref=e135]:
+                    - generic [ref=e136] [cursor=pointer]:
+                      - generic [ref=e137]: image
+                      - generic [ref=e139]: explanation_quality_evaluation.pdf
+                  - treeitem "inference_latency_throughput.pdf" [ref=e140]:
+                    - generic [ref=e141] [cursor=pointer]:
+                      - generic [ref=e142]: image
+                      - generic [ref=e144]: inference_latency_throughput.pdf
+                  - treeitem "llncs.cls" [ref=e145]:
+                    - generic [ref=e146] [cursor=pointer]:
+                      - generic [ref=e147]: description
+                      - generic [ref=e149]: llncs.cls
+                  - treeitem "main_results_comparison.pdf" [ref=e150]:
+                    - generic [ref=e151] [cursor=pointer]:
+                      - generic [ref=e152]: image
+                      - generic [ref=e154]: main_results_comparison.pdf
+                  - treeitem "retrieval_depth_sensitivity.pdf" [ref=e155]:
+                    - generic [ref=e156] [cursor=pointer]:
+                      - generic [ref=e157]: image
+                      - generic [ref=e159]: retrieval_depth_sensitivity.pdf
+                  - treeitem "splncs04.bst" [ref=e160]:
+                    - generic [ref=e161] [cursor=pointer]:
+                      - generic [ref=e162]: description
+                      - generic [ref=e164]: splncs04.bst
+                  - treeitem "submission_pricai2026.bib" [ref=e165]:
+                    - generic [ref=e166] [cursor=pointer]:
+                      - generic [ref=e167]: book_5
+                      - generic [ref=e169]: submission_pricai2026.bib
+                  - treeitem "submission_pricai2026.tex" [selected] [ref=e170]:
+                    - generic [ref=e171] [cursor=pointer]:
+                      - generic [ref=e172]: description
+                      - generic [ref=e174]: submission_pricai2026.tex
+                    - button "Open submission_pricai2026.tex action menu" [ref=e176] [cursor=pointer]:
+                      - generic [ref=e177]: more_vert
+                      - generic [ref=e178]: Menu
+            - separator [ref=e179]:
+              - generic "Resize" [ref=e180]
+            - generic [ref=e183]:
+              - button "Hide File outline" [ref=e185] [cursor=pointer]:
+                - generic [ref=e186]: keyboard_arrow_down
+                - heading "File outline" [level=4] [ref=e187]
+              - tree [ref=e190]:
+                - treeitem "Introduction" [ref=e191]:
+                  - button "Introduction" [ref=e193] [cursor=pointer]
+                - treeitem "Related Work" [expanded] [ref=e194]:
+                  - generic [ref=e195]:
+                    - button "Collapse" [ref=e196] [cursor=pointer]:
+                      - generic [ref=e197]: keyboard_arrow_down
+                    - button "Related Work" [ref=e198] [cursor=pointer]
+                  - group [ref=e199]:
+                    - treeitem "Financial Risk Modeling and Tabular Baselines" [ref=e200]:
+                      - button "Financial Risk Modeling and Tabular Baselines" [ref=e202] [cursor=pointer]
+                    - treeitem "Sequential User Modeling" [ref=e203]:
+                      - button "Sequential User Modeling" [ref=e205] [cursor=pointer]
+                    - treeitem "Retrieval-Augmented and Explainable AI" [ref=e206]:
+                      - button "Retrieval-Augmented and Explainable AI" [ref=e208] [cursor=pointer]
+                - treeitem "Methodology" [expanded] [ref=e209]:
+                  - generic [ref=e210]:
+                    - button "Collapse" [ref=e211] [cursor=pointer]:
+                      - generic [ref=e212]: keyboard_arrow_down
+                    - button "Methodology" [ref=e213] [cursor=pointer]
+                  - group [ref=e214]:
+                    - treeitem "Problem Formulation" [ref=e215]:
+                      - button "Problem Formulation" [ref=e217] [cursor=pointer]
+                    - treeitem "Multi-Source State Construction" [ref=e218]:
+                      - button "Multi-Source State Construction" [ref=e220] [cursor=pointer]
+                    - treeitem "Time-Aware Sequence Encoding" [ref=e221]:
+                      - button "Time-Aware Sequence Encoding" [ref=e223] [cursor=pointer]
+                    - treeitem "Retrieval-Augmented Evidence Fusion" [ref=e224]:
+                      - button "Retrieval-Augmented Evidence Fusion" [ref=e226] [cursor=pointer]
+                    - treeitem "Risk Scoring and Explanation Generation" [ref=e227]:
+                      - button "Risk Scoring and Explanation Generation" [ref=e229] [cursor=pointer]
+                - treeitem "Experiments" [expanded] [ref=e230]:
+                  - generic [ref=e231]:
+                    - button "Collapse" [ref=e232] [cursor=pointer]:
+                      - generic [ref=e233]: keyboard_arrow_down
+                    - button "Experiments" [ref=e234] [cursor=pointer]
+                  - group [ref=e235]:
+                    - treeitem "Dataset and Evaluation Protocol" [ref=e236]:
+                      - button "Dataset and Evaluation Protocol" [ref=e238] [cursor=pointer]
+                    - treeitem "Baselines and Training Details" [ref=e239]:
+                      - button "Baselines and Training Details" [ref=e241] [cursor=pointer]
+                    - treeitem "Evaluation Questions" [ref=e242]:
+                      - button "Evaluation Questions" [ref=e244] [cursor=pointer]
+                    - treeitem "Main Results" [ref=e245]:
+                      - button "Main Results" [ref=e247] [cursor=pointer]
+                    - treeitem "Scenario Adaptation" [ref=e248]:
+                      - button "Scenario Adaptation" [ref=e250] [cursor=pointer]
+                    - treeitem "Offline Replay Utility" [ref=e251]:
+                      - button "Offline Replay Utility" [ref=e253] [cursor=pointer]
+                    - treeitem "Ablation and Analysis" [expanded] [ref=e254]:
+                      - generic [ref=e255]:
+                        - button "Collapse" [ref=e256] [cursor=pointer]:
+                          - generic [ref=e257]: keyboard_arrow_down
+                        - button "Ablation and Analysis" [ref=e258] [cursor=pointer]
+                      - group [ref=e259]:
+                        - treeitem "Architectural Components" [ref=e260]:
+                          - button "Architectural Components" [ref=e262] [cursor=pointer]
+                        - treeitem "Context-Window Sensitivity" [ref=e263]:
+                          - button "Context-Window Sensitivity" [ref=e265] [cursor=pointer]
+                        - treeitem "Feature Groups and Retrieval Depth" [ref=e266]:
+                          - button "Feature Groups and Retrieval Depth" [ref=e268] [cursor=pointer]
+                        - treeitem "Incremental Feature-Group Addition" [ref=e269]:
+                          - button "Incremental Feature-Group Addition" [ref=e271] [cursor=pointer]
+                    - treeitem "Further Evaluation" [expanded] [ref=e272]:
+                      - generic [ref=e273]:
+                        - button "Collapse" [ref=e274] [cursor=pointer]:
+                          - generic [ref=e275]: keyboard_arrow_down
+                        - button "Further Evaluation" [ref=e276] [cursor=pointer]
+                      - group [ref=e277]:
+                        - treeitem "Explanation Quality" [ref=e278]:
+                          - button "Explanation Quality" [ref=e280] [cursor=pointer]
+                        - treeitem "Efficiency Analysis" [ref=e281]:
+                          - button "Efficiency Analysis" [ref=e283] [cursor=pointer]
+                - treeitem "Conclusion" [ref=e284]:
+                  - button "Conclusion" [ref=e286] [cursor=pointer]
+        - separator [ref=e287]:
+          - generic "Resize" [ref=e288]:
+            - button "Click to hide the panel" [ref=e289] [cursor=pointer]:
+              - generic: chevron_left
+        - generic [ref=e291]:
+          - region "Editor" [ref=e292]:
+            - generic [ref=e299]:
+              - generic [ref=e302]:
+                - toolbar "Editor tools" [ref=e303]:
+                  - generic "Undo/Redo actions" [ref=e304]:
+                    - button "Undo" [ref=e305] [cursor=pointer]:
+                      - generic [ref=e306]: undo
+                      - generic [ref=e307]: Undo
+                    - button "Redo" [ref=e308] [cursor=pointer]:
+                      - generic [ref=e309]: redo
+                      - generic [ref=e310]: Redo
+                  - generic "Text formatting" [ref=e311]:
+                    - button "Section heading level" [ref=e312] [cursor=pointer]:
+                      - generic [ref=e313]: text_fields
+                      - generic [ref=e314]: expand_more
+                  - generic "Text style" [ref=e315]:
+                    - button "Bold" [ref=e316] [cursor=pointer]:
+                      - generic [ref=e317]: format_bold
+                      - generic [ref=e318]: Bold
+                    - button "Italic" [ref=e319] [cursor=pointer]:
+                      - generic [ref=e320]: format_italic
+                      - generic [ref=e321]: Italic
+                  - generic "Insert math and symbols" [ref=e322]:
+                    - button "Insert math" [ref=e323] [cursor=pointer]:
+                      - generic [ref=e324]: calculate
+                    - button "Insert symbol" [ref=e325] [cursor=pointer]: Ω
+                  - generic "Insert misc (links, citations, cross-references, figures, tables)"
+                  - generic "List and indentation"
+                  - button "More editor toolbar items" [ref=e327] [cursor=pointer]:
+                    - generic [ref=e328]: more_horiz
+                  - generic [ref=e329]:
+                    - generic "Code and visual editor switch" [ref=e330]:
+                      - group "Editor mode." [ref=e332]:
+                        - generic [ref=e333]: Editor mode.
+                        - radio "Code" [ref=e334]
+                        - generic [ref=e336] [cursor=pointer]: Code
+                        - generic [ref=e337]:
+                          - radio "Visual" [checked] [ref=e338]
+                          - generic [ref=e340] [cursor=pointer]: Visual
+                    - button "Toggle Writefull toolbar" [ref=e343] [cursor=pointer]:
+                      - img "Writefull logo" [ref=e344]
+                    - button "Search file" [ref=e345] [cursor=pointer]:
+                      - generic [ref=e346]: search
+                      - generic [ref=e347]: Search file
+                - menubar "Writefull toolbar" [ref=e349]:
+                  - generic "Writefull suggestions" [ref=e350]:
+                    - button "Reject suggestion" [disabled] [ref=e352]:
+                      - generic [ref=e353]: close
+                    - button "Block this suggestion from appearing again" [disabled] [ref=e355]:
+                      - generic [ref=e356]: block
+                    - button "Accept suggestion" [disabled] [ref=e358]:
+                      - generic [ref=e359]: check
+                    - button "Previous suggestion" [ref=e361] [cursor=pointer]:
+                      - generic [ref=e362]: chevron_left
+                    - button "Next suggestion" [ref=e364] [cursor=pointer]:
+                      - generic [ref=e365]: chevron_right
+                  - generic "Generation options" [ref=e366]:
+                    - button "Get AI assistance for your LaTeX writing and more" [ref=e368] [cursor=pointer]:
+                      - generic [ref=e369]: smart_toy
+                    - button "Title generator" [ref=e371] [cursor=pointer]:
+                      - generic [ref=e372]: password
+                    - button "Abstract generator" [ref=e374] [cursor=pointer]:
+                      - generic [ref=e375]: text_snippet
+                  - generic "Contextual widgets" [ref=e376]:
+                    - 'button "Paraphrase: Select some text to use this widget" [disabled] [ref=e378]':
+                      - generic [ref=e379]: transform
+                    - button "Translate" [disabled] [ref=e381]:
+                      - generic [ref=e382]: translate
+                    - button "Change style" [disabled] [ref=e384]:
+                      - generic [ref=e385]: shuffle
+                    - button "Split / Join" [disabled] [ref=e387]:
+                      - generic [ref=e388]: call_split
+                    - 'button "Summarize: Select some text to use this widget" [disabled] [ref=e390]':
+                      - generic [ref=e391]: content_paste
+                    - 'button "Explain: Select some text to use this widget" [disabled] [ref=e393]':
+                      - generic [ref=e394]: description
+                    - 'button "Synonyms in Context: Select between 1 and 5 words to use this widget" [disabled] [ref=e396]':
+                      - generic [ref=e397]: find_replace
+                  - generic "Settings" [ref=e398]:
+                    - button "Settings" [ref=e400] [cursor=pointer]:
+                      - generic [ref=e401]: settings
+                  - button "More editor toolbar items" [ref=e403] [cursor=pointer]:
+                    - generic [ref=e404]: more_horiz
+                - generic [ref=e405]:
+                  - generic [ref=e406]: description
+                  - generic [ref=e407]: submission_pricai2026.tex
+              - generic [ref=e408]:
+                - generic [ref=e409]:
+                  - generic [ref=e410]:
+                    - generic [ref=e411]: "36"
+                    - generic [ref=e412]: "38"
+                    - generic [ref=e413]: "39"
+                    - generic [ref=e414]: "40"
+                    - generic [ref=e415]: "42"
+                    - generic [ref=e416]: "43"
+                    - generic [ref=e417]: "44"
+                    - generic [ref=e418]: "45"
+                    - generic [ref=e419]: "46"
+                    - generic [ref=e420]: "47"
+                    - generic [ref=e421]: "48"
+                    - generic [ref=e422]: "49"
+                  - generic [ref=e425] [cursor=pointer]: ▾
+                - textbox "Visual Editor editing" [active] [ref=e427]:
+                  - generic [ref=e429] [cursor=pointer]:
+                    - generic [ref=e430]: Show document preamble
+                    - generic [ref=e431]: expand_more
+                    - generic [ref=e432]: Expand
+                  - generic [ref=e434] [cursor=pointer]: "FRAA: A Retrieval-Augmented Agent for Explainable Financial Risk Assessment"
+                  - generic [ref=e439]: abstract
+                  - generic [ref=e441]: Financial risk assessment requires probabilities that respond to changing behavior and external evidence while remaining transparent enough for human review. Many deployed systems still depend on engineered tabular features and tree ensembles. These models are effective when feature stores are stable, but they incorporate long behavioral histories and newly released market or regulatory information only indirectly. This paper presents the Financial Risk Assessment Agent (FRAA), a retrieval-augmented model that encodes time-aware user behavior, retrieves timestamp-valid financial documents, fuses the retrieved evidence through cross-attention, and returns both a calibrated risk score and a concise justification. On a proprietary 24-month dataset with over 20 million users, 1.2 billion interactions, and 15 data sources, FRAA achieves a Log Loss of 0.5163 and Recall@5 of 0.4185. This corresponds to a 19.6% Log Loss reduction relative to a deployed Random Forest baseline and a 9.4% reduction relative to a non-retrieval Transformer. Additional transfer, context-window, feature-addition, and offline replay analyses show that the gains persist under related product scenarios and translate into an estimated 10.45% risk-adjusted revenue lift in the offline replay setting. Expert evaluation rates the generated explanations at 4.32/5 for faithfulness, and the tested serving configuration reaches 15.7 ms latency per query.
+                  - generic [ref=e444]:
+                    - text: "keywords:"
+                    - generic [ref=e445]: Financial risk assessment \and Retrieval-augmented generation \and Explainable AI \and Risk scoring \and Time-aware Transformer
+                  - generic [ref=e449]: Introduction
+                  - generic [ref=e452]:
+                    - text: Financial institutions assess user-level risk from evidence that is heterogeneous, time-varying, and often incomplete at the moment of decision. Such evidence includes transaction histories, account states, macroeconomic indicators, regulatory disclosures, and news sentiment. Existing risk pipelines often separate behavioral modeling, external evidence collection, and explanation generation into different stages, which makes the final decision difficult to update and audit. Reliable risk estimates support credit review and consumer lending decisions 📚
+                    - generic [ref=e453]: hand1997statistical,thomas2000survey
+                    - text: . They also underpin fraud prevention and compliance workflows 📚
+                    - generic [ref=e454]: bolton2002statistical,ngai2011application
+                    - text: . In practice, many deployed systems still use carefully engineered tabular features with tree-based models such as Random Forests 📚
+                    - generic [ref=e455]: breiman2001random
+                    - text: . Gradient boosting is another standard choice for tabular risk modeling 📚
+                    - generic [ref=e456]: friedman2001greedy,chen2016xgboost
+                    - text: . These baselines remain useful, but the central difficulty is not simply fitting a classifier. It is keeping the risk representation synchronized with behavioral changes and newly released external evidence 📚
+                    - generic [ref=e457]: crook2007recent,lessmann2015benchmarking
+                    - text: .
+                  - generic [ref=e460]:
+                    - text: Sequence models address one side of this problem. Recurrent architectures such as LSTM and gated recurrent units can represent user behavior over time 📚
+                    - generic [ref=e461]: hochreiter1997lstm,cho2014learning
+                    - text: . Transformer encoders improve long-range sequence modeling 📚
+                    - generic [ref=e462]: vaswani2017attention
+                    - text: . Sequential recommendation studies show the value of self-attention for evolving user states 📚
+                    - generic [ref=e463]: kang2018sasrec,sun2019bert4rec
+                    - text: . Similar temporal modeling ideas have been applied to credit-card fraud detection 📚
+                    - generic [ref=e464]: jurgovsky2018sequence
+                    - text: . In financial risk assessment, however, the sequence is only part of the evidence. A purely parametric model can use market or regulatory information only if that information was encoded during training or manually attached as a feature. It also gives reviewers little direct evidence for why a high-risk case was flagged.
+                  - generic [ref=e467]:
+                    - text: Retrieval methods provide a way to condition decisions on external evidence available at inference time. Classical probabilistic retrieval motivates sparse evidence matching 📚
+                    - generic [ref=e468]: robertson2009probabilistic
+                    - text: . Dense retrieval and RAG extend this idea to neural document representations and generation 📚
+                    - generic [ref=e469]: karpukhin2020dpr,lewis2020rag
+                    - text: . Fusion-based retrieval models further show that non-parametric evidence can be integrated into downstream prediction 📚
+                    - generic [ref=e470]: izacard2021leveraging
+                    - text: . Prediction alone is still insufficient for analyst-facing risk review. Local explanation methods support instance-level inspection 📚
+                    - generic [ref=e471]: ribeiro2016lime,lundberg2017shap
+                    - text: . Broader XAI surveys frame transparency as a system-level requirement 📚
+                    - generic [ref=e472]: guidotti2018survey,arrieta2020explainable
+                    - text: . Calibration studies show that probability estimates require their own evaluation 📚
+                    - generic [ref=e473]: guo2017calibration,niculescu2005predicting
+                    - text: . Post-hoc calibration remains relevant when raw classifier scores are not directly reliable probabilities 📚
+                    - generic [ref=e474]: zadrozny2002transforming
+                    - text: . These observations motivate a risk model that retrieves time-valid financial evidence and links that evidence to both prediction and explanation.
+                - button "Editing" [ref=e478] [cursor=pointer]:
+                  - generic [ref=e479]: edit
+                  - generic [ref=e480]: Editing
+                  - generic [ref=e481]: keyboard_arrow_down
+          - separator [ref=e482]:
+            - generic "Resize" [ref=e483]:
+              - button "Click to hide the PDF" [ref=e484] [cursor=pointer]:
+                - generic: chevron_right
+              - generic [ref=e485]:
+                - button "Go to code location in PDF" [ref=e487] [cursor=pointer]:
+                  - generic [ref=e489]: arrow_right_alt
+                - 'button "Go to PDF location in code (Tip: double click on the PDF for best results)" [ref=e491] [cursor=pointer]':
+                  - generic [ref=e493]: arrow_left_alt
+          - region "PDF preview" [ref=e494]:
+            - generic [ref=e495]:
+              - toolbar "PDF" [ref=e496]:
+                - generic [ref=e497]:
+                  - group [ref=e498]:
+                    - button "Recompile" [ref=e499] [cursor=pointer]:
+                      - generic [ref=e500]: Recompile
+                    - button "Toggle compile options menu" [ref=e501] [cursor=pointer]:
+                      - generic [ref=e502]: expand_more
+                  - button "View logs" [ref=e503] [cursor=pointer]:
+                    - generic [ref=e504]:
+                      - generic [ref=e505]: description
+                      - generic:
+                        - generic: "1"
+                  - link "Download PDF" [ref=e506] [cursor=pointer]:
+                    - /url: /download/project/6a204ea1614e48bb59209a8b/build/b2fda78f-3bf3-421e-9464-bb3a140045ee-19eb61b402d-d2e3ac5189bba2ff/output/cached/output.pdf
+                    - generic [ref=e508]: download
+                - generic [ref=e512]:
+                  - button "PDF zoom level" [ref=e514] [cursor=pointer]: 137%
+                  - button [ref=e515] [cursor=pointer]:
+                    - generic [ref=e517]: more_horiz
+              - tabpanel [ref=e520]:
+                - generic [ref=e521]:
+                  - generic "Page ⁨1⁩" [ref=e522]
+                  - generic "Page ⁨2⁩" [ref=e524]
+                  - generic "Page ⁨3⁩" [ref=e525]
+                  - generic "Page ⁨4⁩" [ref=e526]
+                  - generic "Page ⁨5⁩" [ref=e527]
+                  - generic "Page ⁨6⁩" [ref=e528]
+                  - generic "Page ⁨7⁩" [ref=e529]
+                  - generic "Page ⁨8⁩" [ref=e530]
+                  - generic "Page ⁨9⁩" [ref=e531]
+                  - generic "Page ⁨10⁩" [ref=e532]
+                  - generic "Page ⁨11⁩" [ref=e533]
+                  - generic "Page ⁨12⁩" [ref=e534]:
+                    - generic [ref=e536]:
+                      - generic [ref=e537]:
+                        - text: "12"
+                        - link [ref=e538] [cursor=pointer]:
+                          - /url: "#table.6"
+                      - text: Table 6 complements the occlusion analysis. Knowledge-retrieved context alone is useful, transaction dynamics gives the sharpest single improvement, and the complete feature set performs best. This supports combining external evidence with dynamic behavior rather than relying on either signal family alone. 4.8 Further Evaluation Explanation Quality Beyond risk scores, FRAA is intended to support human review by explaining why a high-risk case was flagged. We evaluate the generated explanations using expert ratings and lexical overlap with reference explanations. Faithfulness Readability 3.6 3.8 4.0 4.2 4.4 4.6 Expert score (1-5) 3.89 4.02 4.32 4.51 a Template FRAA Template FRAA 0.25 0.30 0.35 0.40 0.45 ROUGE-L 0.3026 0.4131 b Fig. 4. Explanation-quality evaluation. (a) Expert-rated faithfulness and readability on a five-point scale. (b) ROUGE-L overlap with reference explanations.
+                      - generic [ref=e539]:
+                        - text: Five domain experts evaluated 1,000 high-risk test predictions. Figure 4
+                        - link [ref=e540] [cursor=pointer]:
+                          - /url: "#figure.4"
+                      - text: shows that FRAA improves faithfulness, readability, and ROUGE-L over a tem- plate baseline that lists the top three feature groups. The full model obtains faithfulness of 4.32/5, readability of 4.51/5, and ROUGE-L of 0.4131. These ratings indicate auditability, not that generated text is sufficient for automatic decision making. Efficiency Analysis The final evaluation asks whether retrieval and fusion are
+                      - generic [ref=e541]:
+                        - text: practical for analyst-facing review. Table 7 reports mean per-query latency and
+                        - link [ref=e542] [cursor=pointer]:
+                          - /url: "#table.7"
+                      - text: "throughput under the same batch-size-64 serving configuration. Table 7. Inference latency and throughput comparison under batch size 64. Model Latency (ms/query) Throughput (queries/s) RF + KB features 1.9 12,530 XGBoost 2.1 11,200 LSTM 8.3 5,910 Transformer 12.4 4,320 FRAA (full) 15.7 4,070 FRAA is slower than tabular baselines because it performs retrieval and neu- ral sequence encoding, but the tested latency remains compatible with interac- tive review: the full model requires 15.7 ms/query and reaches 4,070 queries/s. Retrieval accounts for approximately 4.2 ms of the total latency. Throughput remains sufficient for batched offline scoring and analyst triage in the tested configuration."
+                  - generic "Page ⁨13⁩" [ref=e546]:
+                    - generic [ref=e548]:
+                      - text: "FRAA for Financial Risk Assessment 13 5 Conclusion This paper presented FRAA, a retrieval-augmented model for explainable finan- cial risk assessment. On a large-scale proprietary multi-source dataset, FRAA obtains the lowest Log Loss and highest Recall@5 among the evaluated mod- els. The ablation, occlusion, incremental feature-addition, context-window, and retrieval-depth analyses trace the gains mainly to timestamp-valid external ev- idence and dynamic behavior, with five retrieved documents and a 120-day be- havioral window giving the best observed trade-offs. Scenario adaptation and offline replay analyses suggest that the same representation can transfer to re- lated financial products and may improve risk-adjusted utility, although the RAR values remain offline estimates rather than online A/B results. Explanation and latency evaluations indicate that the model can support analyst-facing review under the tested serving configuration. The evaluation is limited to one propri- etary financial environment, so future work should add public benchmarks where legally possible, repeatability analysis under multiple splits or random seeds, and institution-level transfer tests. Taken together, the results suggest that external evidence retrieval is most valuable when it is time-valid, fused with temporal behavior, and exposed through auditable explanations. References 1. Abdou, H.A., Pointon, J.: Credit scoring, statistical techniques and evaluation criteria: A review of the literature. Intelligent Systems in Accounting, Finance and Management 18"
+                      - generic [ref=e549]:
+                        - text: (2–3), 59–88 (2011). https://doi.org/10.1002/isaf.325
+                        - link "https://doi.org/10.1002/isaf.325" [ref=e550] [cursor=pointer]:
+                          - /url: https://doi.org/10.1002/isaf.325
+                        - link "https://doi.org/10.1002/isaf.325" [ref=e551] [cursor=pointer]:
+                          - /url: https://doi.org/10.1002/isaf.325
+                      - text: "2. Arik, S.O., Pfister, T.: Tabnet: Attentive interpretable tabular learning. Proceed- ings of the AAAI Conference on Artificial Intelligence 35"
+                      - generic [ref=e552]:
+                        - text: (8), 6679–6687 (2021).
+                        - link "https://doi.org/10.1609/aaai.v35i8.16826" [ref=e553] [cursor=pointer]:
+                          - /url: https://doi.org/10.1609/aaai.v35i8.16826
+                        - link "https://doi.org/10.1609/aaai.v35i8.16826" [ref=e554] [cursor=pointer]:
+                          - /url: https://doi.org/10.1609/aaai.v35i8.16826
+                      - text: "https://doi.org/10.1609/aaai.v35i8.16826 3. Baesens, B., Van Gestel, T., Viaene, S., Stepanova, M., Suykens, J., Vanthienen, J.: Benchmarking state-of-the-art classification algorithms for credit scoring. Journal of the Operational Research Society 54"
+                      - generic [ref=e555]:
+                        - text: (6), 627–635 (2003). https://doi.org/10.
+                        - link "https://doi.org/10.1057/palgrave.jors.2601545" [ref=e556] [cursor=pointer]:
+                          - /url: https://doi.org/10.1057/palgrave.jors.2601545
+                        - link "https://doi.org/10.1057/palgrave.jors.2601545" [ref=e557] [cursor=pointer]:
+                          - /url: https://doi.org/10.1057/palgrave.jors.2601545
+                        - link "https://doi.org/10.1057/palgrave.jors.2601545" [ref=e558] [cursor=pointer]:
+                          - /url: https://doi.org/10.1057/palgrave.jors.2601545
+                        - link "https://doi.org/10.1057/palgrave.jors.2601545" [ref=e559] [cursor=pointer]:
+                          - /url: https://doi.org/10.1057/palgrave.jors.2601545
+                      - text: "1057/palgrave.jors.2601545 4. Barredo Arrieta, A., Diaz-Rodriguez, N., Del Ser, J., Bennetot, A., Tabik, S., Bar- bado, A., Garcia, S., Gil-Lopez, S., Molina, D., Benjamins, R., Chatila, R., Her- rera, F.: Explainable artificial intelligence (xai): Concepts, taxonomies, opportuni- ties and challenges toward responsible ai. Information Fusion 58"
+                      - generic [ref=e560]:
+                        - text: ", 82–115 (2020)."
+                        - link "https://doi.org/10.1016/j.inffus.2019.12.012" [ref=e561] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.inffus.2019.12.012
+                        - link "https://doi.org/10.1016/j.inffus.2019.12.012" [ref=e562] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.inffus.2019.12.012
+                      - text: "https://doi.org/10.1016/j.inffus.2019.12.012 5. Bellotti, T., Crook, J.: Support vector machines for credit scoring and discovery of significant features. Expert Systems with Applications 36"
+                      - generic [ref=e563]:
+                        - text: (2), 3302–3308 (2009).
+                        - link "https://doi.org/10.1016/j.eswa.2008.01.005" [ref=e564] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2008.01.005
+                        - link "https://doi.org/10.1016/j.eswa.2008.01.005" [ref=e565] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2008.01.005
+                      - text: "https://doi.org/10.1016/j.eswa.2008.01.005 6. Bolton, R.J., Hand, D.J.: Statistical fraud detection: A review. Statistical Science 17"
+                      - generic [ref=e566]:
+                        - text: (3), 235–255 (2002). https://doi.org/10.1214/ss/1042727940
+                        - link "https://doi.org/10.1214/ss/1042727940" [ref=e567] [cursor=pointer]:
+                          - /url: https://doi.org/10.1214/ss/1042727940
+                        - link "https://doi.org/10.1214/ss/1042727940" [ref=e568] [cursor=pointer]:
+                          - /url: https://doi.org/10.1214/ss/1042727940
+                      - text: "7. Breiman, L.: Random forests. Machine Learning 45"
+                      - generic [ref=e569]:
+                        - text: (1), 5–32 (2001). https://doi.
+                        - link "https://doi.org/10.1023/A:1010933404324" [ref=e570] [cursor=pointer]:
+                          - /url: https://doi.org/10.1023/A:1010933404324
+                        - link "https://doi.org/10.1023/A:1010933404324" [ref=e571] [cursor=pointer]:
+                          - /url: https://doi.org/10.1023/A:1010933404324
+                        - link "https://doi.org/10.1023/A:1010933404324" [ref=e572] [cursor=pointer]:
+                          - /url: https://doi.org/10.1023/A:1010933404324
+                        - link "https://doi.org/10.1023/A:1010933404324" [ref=e573] [cursor=pointer]:
+                          - /url: https://doi.org/10.1023/A:1010933404324
+                      - text: "org/10.1023/A:1010933404324 8. Brown, I., Mues, C.: An experimental comparison of classification algorithms for imbalanced credit scoring data sets. Expert Systems with Applications 39 (3),"
+                      - generic [ref=e574]:
+                        - text: 3446–3453 (2012). https://doi.org/10.1016/j.eswa.2011.09.033
+                        - link "https://doi.org/10.1016/j.eswa.2011.09.033" [ref=e575] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2011.09.033
+                        - link "https://doi.org/10.1016/j.eswa.2011.09.033" [ref=e576] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2011.09.033
+                  - generic "Page ⁨14⁩" [ref=e597]:
+                    - generic [ref=e599]:
+                      - text: "14 9. Chen, T., Guestrin, C.: Xgboost: A scalable tree boosting system. In: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and"
+                      - generic [ref=e600]:
+                        - text: Data Mining. pp. 785–794 (2016). https://doi.org/10.1145/2939672.2939785
+                        - link "https://doi.org/10.1145/2939672.2939785" [ref=e601] [cursor=pointer]:
+                          - /url: https://doi.org/10.1145/2939672.2939785
+                        - link "https://doi.org/10.1145/2939672.2939785" [ref=e602] [cursor=pointer]:
+                          - /url: https://doi.org/10.1145/2939672.2939785
+                      - text: "10. Cho, K., van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., Bengio, Y.: Learning phrase representations using rnn encoder-decoder for statistical machine translation. In: Proceedings of the 2014 Conference on Em-"
+                      - generic [ref=e603]:
+                        - text: "pirical Methods in Natural Language Processing. pp. 1724–1734 (2014). https:"
+                        - link "https://doi.org/10.3115/v1/D14-1179" [ref=e604] [cursor=pointer]:
+                          - /url: https://doi.org/10.3115/v1/D14-1179
+                        - link "https://doi.org/10.3115/v1/D14-1179" [ref=e605] [cursor=pointer]:
+                          - /url: https://doi.org/10.3115/v1/D14-1179
+                        - link "https://doi.org/10.3115/v1/D14-1179" [ref=e606] [cursor=pointer]:
+                          - /url: https://doi.org/10.3115/v1/D14-1179
+                        - link "https://doi.org/10.3115/v1/D14-1179" [ref=e607] [cursor=pointer]:
+                          - /url: https://doi.org/10.3115/v1/D14-1179
+                      - text: "//doi.org/10.3115/v1/D14-1179 11. Crook, J.N., Edelman, D.B., Thomas, L.C.: Recent developments in consumer credit risk assessment. European Journal of Operational Research 183 (3), 1447–"
+                      - generic [ref=e608]:
+                        - text: 1465 (2007). https://doi.org/10.1016/j.ejor.2006.09.100
+                        - link "https://doi.org/10.1016/j.ejor.2006.09.100" [ref=e609] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.ejor.2006.09.100
+                        - link "https://doi.org/10.1016/j.ejor.2006.09.100" [ref=e610] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.ejor.2006.09.100
+                      - text: "12. Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: Bert: Pre-training of deep bidi- rectional transformers for language understanding. In: Proceedings of the 2019 Conference of the North American Chapter of the Association for Computa-"
+                      - generic [ref=e611]:
+                        - text: "tional Linguistics: Human Language Technologies. pp. 4171–4186 (2019). https:"
+                        - link "https://doi.org/10.18653/v1/N19-1423" [ref=e612] [cursor=pointer]:
+                          - /url: https://doi.org/10.18653/v1/N19-1423
+                        - link "https://doi.org/10.18653/v1/N19-1423" [ref=e613] [cursor=pointer]:
+                          - /url: https://doi.org/10.18653/v1/N19-1423
+                        - link "https://doi.org/10.18653/v1/N19-1423" [ref=e614] [cursor=pointer]:
+                          - /url: https://doi.org/10.18653/v1/N19-1423
+                        - link "https://doi.org/10.18653/v1/N19-1423" [ref=e615] [cursor=pointer]:
+                          - /url: https://doi.org/10.18653/v1/N19-1423
+                      - text: "//doi.org/10.18653/v1/N19-1423 13. Friedman, J.H.: Greedy function approximation: A gradient boosting machine. The Annals of Statistics 29"
+                      - generic [ref=e616]:
+                        - text: (5), 1189–1232 (2001). https://doi.org/10.1214/aos/
+                        - link "https://doi.org/10.1214/aos/1013203451" [ref=e617] [cursor=pointer]:
+                          - /url: https://doi.org/10.1214/aos/1013203451
+                        - link "https://doi.org/10.1214/aos/1013203451" [ref=e618] [cursor=pointer]:
+                          - /url: https://doi.org/10.1214/aos/1013203451
+                        - link "https://doi.org/10.1214/aos/1013203451" [ref=e619] [cursor=pointer]:
+                          - /url: https://doi.org/10.1214/aos/1013203451
+                        - link "https://doi.org/10.1214/aos/1013203451" [ref=e620] [cursor=pointer]:
+                          - /url: https://doi.org/10.1214/aos/1013203451
+                      - text: "1013203451 14. Guidotti, R., Monreale, A., Ruggieri, S., Turini, F., Giannotti, F., Pedreschi, D.: A survey of methods for explaining black box models. ACM Computing Surveys 51"
+                      - generic [ref=e621]:
+                        - text: (5), 1–42 (2018). https://doi.org/10.1145/3236009
+                        - link "https://doi.org/10.1145/3236009" [ref=e622] [cursor=pointer]:
+                          - /url: https://doi.org/10.1145/3236009
+                        - link "https://doi.org/10.1145/3236009" [ref=e623] [cursor=pointer]:
+                          - /url: https://doi.org/10.1145/3236009
+                      - text: "15. Guo, C., Pleiss, G., Sun, Y., Weinberger, K.Q.: On calibration of modern neu- ral networks. In: Proceedings of the 34th International Conference on Machine Learning. pp. 1321–1330 (2017) 16. Hand, D.J., Henley, W.E.: Statistical classification methods in consumer credit scoring: A review. Journal of the Royal Statistical Society: Series A (Statistics in Society) 160"
+                      - generic [ref=e624]:
+                        - text: (3), 523–541 (1997). https://doi.org/10.1111/j.1467-985X.1997.00078.
+                        - link "https://doi.org/10.1111/j.1467-985X.1997.00078.x" [ref=e625] [cursor=pointer]:
+                          - /url: https://doi.org/10.1111/j.1467-985X.1997.00078.x
+                        - link "https://doi.org/10.1111/j.1467-985X.1997.00078.x" [ref=e626] [cursor=pointer]:
+                          - /url: https://doi.org/10.1111/j.1467-985X.1997.00078.x
+                      - generic [ref=e627]:
+                        - text: x
+                        - link "https://doi.org/10.1111/j.1467-985X.1997.00078.x" [ref=e628] [cursor=pointer]:
+                          - /url: https://doi.org/10.1111/j.1467-985X.1997.00078.x
+                        - link "https://doi.org/10.1111/j.1467-985X.1997.00078.x" [ref=e629] [cursor=pointer]:
+                          - /url: https://doi.org/10.1111/j.1467-985X.1997.00078.x
+                      - text: "17. Hochreiter, S., Schmidhuber, J.: Long short-term memory. Neural Computation 9"
+                      - generic [ref=e630]:
+                        - text: (8), 1735–1780 (1997). https://doi.org/10.1162/neco.1997.9.8.1735
+                        - link "https://doi.org/10.1162/neco.1997.9.8.1735" [ref=e631] [cursor=pointer]:
+                          - /url: https://doi.org/10.1162/neco.1997.9.8.1735
+                        - link "https://doi.org/10.1162/neco.1997.9.8.1735" [ref=e632] [cursor=pointer]:
+                          - /url: https://doi.org/10.1162/neco.1997.9.8.1735
+                      - text: "18. Hu, E.J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., Chen, W.: Lora: Low-rank adaptation of large language models. In: Proceedings of the International Conference on Learning Representations (2022) 19. Izacard, G., Grave, E.: Leveraging passage retrieval with generative models for open domain question answering. In: Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics. pp. 874–880"
+                      - generic [ref=e633]:
+                        - text: (2021). https://doi.org/10.18653/v1/2021.eacl-main.74
+                        - link "https://doi.org/10.18653/v1/2021.eacl-main.74" [ref=e634] [cursor=pointer]:
+                          - /url: https://doi.org/10.18653/v1/2021.eacl-main.74
+                        - link "https://doi.org/10.18653/v1/2021.eacl-main.74" [ref=e635] [cursor=pointer]:
+                          - /url: https://doi.org/10.18653/v1/2021.eacl-main.74
+                      - text: "20. Johnson, J., Douze, M., Jegou, H.: Billion-scale similarity search with gpus. IEEE Transactions on Big Data 7"
+                      - generic [ref=e636]:
+                        - text: (3), 535–547 (2021). https://doi.org/10.1109/
+                        - link "https://doi.org/10.1109/TBDATA.2019.2921572" [ref=e637] [cursor=pointer]:
+                          - /url: https://doi.org/10.1109/TBDATA.2019.2921572
+                        - link "https://doi.org/10.1109/TBDATA.2019.2921572" [ref=e638] [cursor=pointer]:
+                          - /url: https://doi.org/10.1109/TBDATA.2019.2921572
+                        - link "https://doi.org/10.1109/TBDATA.2019.2921572" [ref=e639] [cursor=pointer]:
+                          - /url: https://doi.org/10.1109/TBDATA.2019.2921572
+                        - link "https://doi.org/10.1109/TBDATA.2019.2921572" [ref=e640] [cursor=pointer]:
+                          - /url: https://doi.org/10.1109/TBDATA.2019.2921572
+                      - text: "TBDATA.2019.2921572 21. Jurgovsky, J., Granitzer, M., Ziegler, K., Calabretto, S., Portier, P.E., He-Guelton, L., Caelen, O.: Sequence classification for credit-card fraud detection. Expert Sys- tems with Applications 100"
+                      - generic [ref=e641]:
+                        - text: ", 234–245 (2018). https://doi.org/10.1016/j.eswa.2018."
+                        - link "https://doi.org/10.1016/j.eswa.2018.01.037" [ref=e642] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2018.01.037
+                        - link "https://doi.org/10.1016/j.eswa.2018.01.037" [ref=e643] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2018.01.037
+                        - link "https://doi.org/10.1016/j.eswa.2018.01.037" [ref=e644] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2018.01.037
+                        - link "https://doi.org/10.1016/j.eswa.2018.01.037" [ref=e645] [cursor=pointer]:
+                          - /url: https://doi.org/10.1016/j.eswa.2018.01.037
+                      - text: "01.037 22. Kang, W.C., McAuley, J.: Self-attentive sequential recommendation. In: Proceed-"
+                      - generic [ref=e646]:
+                        - text: ings of the IEEE International Conference on Data Mining. pp. 197–206 (2018).
+                        - link "https://doi.org/10.1109/ICDM.2018.00035" [ref=e647] [cursor=pointer]:
+                          - /url: https://doi.org/10.1109/ICDM.2018.00035
+                        - link "https://doi.org/10.1109/ICDM.2018.00035" [ref=e648] [cursor=pointer]:
+                          - /url: https://doi.org/10.1109/ICDM.2018.00035
+                      - text: "https://doi.org/10.1109/ICDM.2018.00035 23. Karpukhin, V., Oguz, B., Min, S., Lewis, P., Wu, L., Edunov, S., Chen, D., Yih, W.t.: Dense passage retrieval for open-domain question answering. In: Proceedings"
+                  - generic "Page ⁨15⁩" [ref=e685]
+                  - generic "Page ⁨16⁩" [ref=e686]
+  - generic:
+    - generic:
+      - button "Close overlay"
+  - generic:
+    - generic:
+      - button "Close overlay"
+  - generic:
+    - generic:
+      - button "Close overlay"

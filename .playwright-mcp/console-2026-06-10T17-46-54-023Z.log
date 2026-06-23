@@ -1,0 +1,69 @@
+[    3561ms] [INFO] Writefull loaded (version 2025.68.0) @ https://cdn.overleaf.com/js/7311-f6c9004b7eb8292c1209.js:0
+[    5710ms] [WARNING] Measure loop restarted more than 5 times @ https://cdn.overleaf.com/js/7311-f6c9004b7eb8292c1209.js:0
+[   18263ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[   18267ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[   18783ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[   90673ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[   90799ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[   90868ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[   91013ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[   91034ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  475753ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.growthbook.io/sub/sdk-QfwoU5Go16cslnt:0
+[  488400ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=4c7ecb09-634f-4a7f-880c-ec2f000e2131:0
+[  510178ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  510179ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  510277ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  956531ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  956567ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  956604ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  956604ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  956605ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  956755ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  956939ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  962756ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  962807ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  965517ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  967005ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  967049ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  970828ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  970880ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  970892ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  970989ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  971233ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  990629ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  990675ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  990694ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  990715ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  991006ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  994384ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  994439ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  994448ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[  994490ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1034585ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1034890ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1045171ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1045271ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1062345ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1062405ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1063126ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1063618ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1063688ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1096715ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 1352066ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://nlp.writefull.ai/suggest-wfo-v3:0
+[ 4096283ms] [ERROR] Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=4c7ecb09-634f-4a7f-880c-ec2f000e2131:0
+[ 4755856ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=1cfa3462-61d6-470a-a9c7-fbbd49730745:0
+[ 4755856ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ https://cdn.growthbook.io/sub/sdk-QfwoU5Go16cslnt:0
+[31038643ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://www.overleaf.com/socket.io/1/?projectId=6a204ea1614e48bb59209a8b&esh=1&ssp=1&t=1781144646619:0
+[31039046ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.growthbook.io/sub/sdk-QfwoU5Go16cslnt:0
+[31039056ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://www.overleaf.com/system/messages:0
+[31039058ms] [ERROR] FetchError: There was an error fetching the JSON
+    at https://cdn.overleaf.com/js/7474-aa2735c073ce42fe5eb5.js:1:7493 @ :0
+[31039067ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://auth.writefull.ai/v2/user/idToken:0
+[31238434ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.growthbook.io/sub/sdk-QfwoU5Go16cslnt:0
+[31258648ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.growthbook.io/sub/sdk-QfwoU5Go16cslnt:0
+[31264095ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=3378fa98-0e5d-42b8-b315-f4a91aacbfe4:0
+[31282698ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=3378fa98-0e5d-42b8-b315-f4a91aacbfe4:0
+[31318125ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=3378fa98-0e5d-42b8-b315-f4a91aacbfe4:0
+[32802413ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.growthbook.io/sub/sdk-QfwoU5Go16cslnt:0
+[32806534ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=3378fa98-0e5d-42b8-b315-f4a91aacbfe4:0
+[33076090ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://realtime.cloud.gist.build/api/v3/sse?userToken=NjllNjMwYzgzNzM5YTM4ZWUzYjFjZDZj&siteId=6420c27bb72163938e7d&sessionId=3378fa98-0e5d-42b8-b315-f4a91aacbfe4:0
