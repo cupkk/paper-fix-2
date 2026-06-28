@@ -1,0 +1,69 @@
+# Playwright / browser automation artifacts
+.playwright-mcp/
+
+# Temporary / scratch directories
+tmp/
+exports/
+official_template_check/
+
+# Overleaf build artifacts and snapshots
+overleaf_after_*
+overleaf_entities_*
+overleaf_final_*
+overleaf_network_*
+overleaf_window_*
+overleaf_pricai2026_compiled_*
+overleaf_pricai_final_*
+overleaf_project_state.*
+overleaf_revised_*
+overleaf_40refs_*
+
+# PDFs (keep only in package dirs)
+*.pdf
+!overleaf_pricai2026_package/**/*.pdf
+!figure_workspace_*/**/*.pdf
+!visiomaster_rebuild/**/*.pdf
+
+# Images (keep only in package/workspace dirs)
+overleaf_*.png
+tmp/*.png
+参考范文.pdf
+流程图.png
+
+# Base64 dumps
+*.json
+!overleaf_pricai2026_package/**/*.json
+!figure_workspace_*/**/*.json
+!visiomaster_rebuild/**/*.json
+
+# Experiment journals and audit notes
+experiment journal *.md
+
+# ZIP archives
+*.zip
+
+# Reference / verification data dumps
+reference_doi_updates_*.json
+reference_verification_*.json
+
+# Overleaf package snapshot (keep the dir, not the zip)
+overleaf_pricai2026_package.zip
+figure_workspace_*.zip
+
+# Audit notes
+FRAA_P0修改说明_*.md
+FRAA_全面审计与85录用率优化建议_*.md
+FRAA_第4章正文润色对照稿_*.md
+
+# LaTeX auxiliary files in package dirs
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.blg
+*.bbl
+*.synctex.gz
+*.fdb_latexmk
+*.fls

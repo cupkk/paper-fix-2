@@ -47,16 +47,27 @@ Financial institutions assess user-level risk from evidence that is heterogeneou
 
 Sequence models address one side of this problem. Recurrent architectures such as LSTM and gated recurrent units can represent user behavior over time \cite{hochreiter1997lstm,cho2014learning}. Transformer encoders improve long-range sequence modeling \cite{vaswani2017attention}. Sequential recommendation studies show the value of self-attention for evolving user states \cite{kang2018sasrec,sun2019bert4rec}. Similar temporal modeling ideas have been applied to credit-card fraud detection \cite{jurgovsky2018sequence}. In financial risk assessment, however, the sequence is only part of the evidence. A purely parametric model can use market or regulatory information only if that information was encoded during training or manually attached as a feature. It also gives reviewers little direct evidence for why a high-risk case was flagged.
 
-Retrieval methods provide a way to condition decisions on external evidence available at inference time. Classical probabilistic retrieval motivates sparse evidence matching \cite{robertson2009probabilistic}. Dense retrieval and RAG extend this idea to neural document representations and generation \cite{karpukhin2020dpr,lewis2020rag}. Fusion-based retrieval models further show that non-parametric evidence can be integrated into downstream prediction \cite{izacard2021leveraging}. Prediction alone is still insufficient for analyst-facing risk review. Local explanation methods support instance-level inspection \cite{ribeiro2016lime,lundberg2017shap}. Broader XAI surveys frame transparency as a system-level requirement \cite{guidotti2018survey,arrieta2020explainable}. Calibration studies show that probability estimates require their own evaluation \cite{guo2017calibration,niculescu2005predicting}. Post-hoc calibration remains relevant when raw classifier scores are not directly reliable probabilities \cite{zadrozny2002transforming}. These observations motivate a risk model that retrieves time-valid financial evidence and links that evidence to both prediction and explanation.
+Retrieval methods provide a way to condition decisions on external evidence available at inference time. Classical probabilistic retrieval motivates sparse evidence matching \cite{robertson2009probabilistic}. Dense retrieval and RAG extend this idea to neural document representations and generation \cite{karpukhin2020dpr,lewis2020rag}. Fusion-based retrieval models further show that non-parametric evidence can be integrated into downstream prediction \cite{izacard2021leveraging}. Prediction alone is still insufficient for analyst-facing risk review. Local explanation methods support instance-level inspection \cite{ribeiro2016lime,lundberg2017shap}. Broader XAI surveys frame transparency as a system-level requirement \cite{guidotti2018survey,arrieta2020explainable}. Calibration studies show that probability estimates require their own evaluation \cite{guo2017calibration,niculescu2005predicting}. Post-hoc calibration remains relevant when raw classifier scores are not directly reliable probabilities \cite{zadrozny2002transforming}. This literature leaves a stricter requirement for financial risk review: a usable model should expose both a calibrated probability and the time-valid evidence behind it.
 
 This work develops the \textbf{Financial Risk Assessment Agent (FRAA)}, a retrieval-augmented model for explainable financial risk assessment. The word ``agent'' is used in a constrained operational sense. For each scoring request, FRAA builds a user state, queries a timestamped financial knowledge base, fuses retrieved evidence with behavioral features, estimates a risk probability, and generates a short explanation grounded in the retrieved context and influential feature groups. FRAA is therefore a structured retrieve-fuse-score-explain pipeline rather than an open-ended autonomous system.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.96\textwidth]{figures/motivation/motivation_1_rebuilt.png}
+\caption{Conceptual motivation for FRAA. Unlike isolated, manually engineered risk pipelines, FRAA unifies behavioral streams, retrieves time-valid external knowledge, and produces explainable risk assessments.}
+\label{fig:motivation}
+\end{figure}
+
 The main contributions are:
-\par\noindent\begin{tabular}{@{}p{1.4em}@{}p{\dimexpr\linewidth-1.4em\relax}@{}}
-\textemdash{} & We formulate financial risk scoring as a time-constrained retrieval problem and instantiate it with FRAA, which combines temporal user encoding, timestamp-valid evidence retrieval, cross-attention fusion, and explanation generation.\\
-\textemdash{} & We evaluate FRAA on a large-scale proprietary multi-source dataset with a strict chronological split, and compare it with deployed tree-based baselines and neural sequence models.\\
-\textemdash{} & We analyze the retrieval, temporal, and explanation components through ablation, retrieval-depth, explanation-quality, and latency studies.
-\end{tabular}
+\begin{itemize}
+\setlength{\itemsep}{1pt}
+\setlength{\topsep}{4pt}
+\setlength{\parsep}{0pt}
+\setlength{\partopsep}{0pt}
+\item[\textendash] We formulate financial risk scoring as a time-constrained retrieval problem and instantiate it with FRAA, which combines temporal user encoding, decision-time-valid retrieval that excludes post-decision documents, cross-attention fusion, and explanation generation.
+\item[\textendash] We evaluate FRAA on a large-scale proprietary multi-source dataset with a strict chronological split, and compare it with deployed tree-based baselines and neural sequence models.
+\item[\textendash] We analyze the retrieval, temporal, and explanation components through ablation, retrieval-depth, explanation-quality, and latency studies.
+\end{itemize}
 
 \section{Related Work}
 
@@ -67,7 +78,7 @@ Classical credit-risk systems are built around statistical classifiers, scorecar
 Sequential recommendation and behavior modeling show that recurrent networks can capture evolving user states \cite{hochreiter1997lstm,cho2014learning}. Transformer encoders extend this capacity with attention-based long-range dependencies \cite{vaswani2017attention}. SASRec and BERT4Rec then demonstrate the value of self-attention for sequential user modeling in recommendation tasks \cite{kang2018sasrec,sun2019bert4rec}. Financial risk assessment has a related temporal structure: transactions, account changes, and market signals form irregular sequences whose relevance depends on timing and context. Sequence models have also been used for credit-card fraud detection, where temporal order is central to identifying abnormal behavior \cite{jurgovsky2018sequence}. FRAA follows this line of work but adapts it to calibrated risk scoring, where explanation is part of the target behavior rather than an optional post-processing step.
 
 \subsection{Retrieval-Augmented and Explainable AI}
-Retrieval-augmented methods condition model outputs on non-parametric external evidence. Classical probabilistic retrieval provides the foundation for document matching \cite{robertson2009probabilistic}. Dense passage retrieval and RAG adapt retrieval to neural representations and generation \cite{karpukhin2020dpr,lewis2020rag}. Fusion-in-decoder models show that retrieved evidence can be integrated into downstream generation and prediction \cite{izacard2021leveraging}. BERT-style encoders and Sentence-BERT provide practical document representations for semantic matching \cite{devlin2019bert,reimers2019sentence}. Approximate nearest-neighbor search makes retrieval feasible at large scale \cite{malkov2020hnsw,johnson2019billion}. In regulated domains, however, retrieval alone is not sufficient. LIME and SHAP support instance-level inspection \cite{ribeiro2016lime,lundberg2017shap}. Broader XAI surveys frame transparency as a modeling and deployment requirement \cite{guidotti2018survey,arrieta2020explainable}. Calibration studies further show that score reliability must be checked separately from discrimination \cite{guo2017calibration,niculescu2005predicting}. Post-processing methods remain useful when raw scores need probability calibration \cite{zadrozny2002transforming}. Together, these lines of work point to the same requirement: a risk model should expose not only a probability, but also the evidence used to support it.
+Retrieval-augmented methods condition model outputs on non-parametric external evidence. Classical probabilistic retrieval provides the foundation for document matching \cite{robertson2009probabilistic}. Dense passage retrieval and RAG adapt retrieval to neural representations and generation \cite{karpukhin2020dpr,lewis2020rag}. Fusion-in-decoder models show that retrieved evidence can be integrated into downstream generation and prediction \cite{izacard2021leveraging}. BERT-style encoders and Sentence-BERT provide practical document representations for semantic matching \cite{devlin2019bert,reimers2019sentence}. Approximate nearest-neighbor search makes retrieval feasible at large scale \cite{malkov2020hnsw,johnson2019billion}. In regulated domains, however, retrieval alone is not sufficient. LIME and SHAP support instance-level inspection \cite{ribeiro2016lime,lundberg2017shap}. Broader XAI surveys frame transparency as a modeling and deployment requirement \cite{guidotti2018survey,arrieta2020explainable}. Calibration studies further show that score reliability must be checked separately from discrimination \cite{guo2017calibration,niculescu2005predicting}. Post-processing methods remain useful when raw scores need probability calibration \cite{zadrozny2002transforming}. In regulated risk settings, a usable model should expose not just a probability, but the evidence that was valid at the decision time. The missing constraint is therefore not retrieval alone, but retrieval whose candidate set is filtered before scoring. Existing retrieval, calibration, and explanation methods do not address this requirement jointly.
 
 \section{Method}
 \label{sec:method}
@@ -75,7 +86,7 @@ Retrieval-augmented methods condition model outputs on non-parametric external e
 \subsection{Problem Formulation}
 For a user $u$ and decision time $t$, the task is to estimate the probability $\hat{r}_t \in [0,1]$ that a material adverse event will occur within the next 30 days. The label $y_t \in \{0,1\}$ indicates whether such an event is observed. The model receives a time-ordered window of behavioral, profile, macroeconomic, and external-document signals available no later than $t$. This chronological constraint is applied throughout training and testing to avoid future information leakage.
 
-Each training instance is built from an observation window ending at $t$ and a prediction window that immediately follows it. Dynamic events after $t$ are excluded. Slowly changing attributes are read from the latest snapshot available before $t$. External documents follow the same rule: a document can be retrieved only if its publication or ingestion timestamp is no later than the scoring time. This setup reflects operational risk review, where decisions are made before the adverse event and before later market information becomes available.
+Each training instance is built from an observation window ending at $t$ and a prediction window that immediately follows it. Dynamic events after $t$ are excluded. Slowly changing attributes are read from the latest snapshot available before $t$. External documents follow the same rule: a document can be retrieved only if its publication or ingestion timestamp is no later than the scoring time. The protocol matches operational risk review, where decisions are made before the adverse event and before later market information becomes available.
 
 \subsection{Multi-Source State Construction}
 FRAA maps the available evidence into three feature families. The dynamic transactional context $\mathbf{d}_t \in \mathbb{R}^{D_d}$ summarizes recent transaction amount, frequency, volatility, merchant category, and event timing. The quasi-static profile context $\mathbf{s}_t \in \mathbb{R}^{D_s}$ contains slowly changing user attributes, including account tenure, product holdings, balance ranges, and risk tier. The market and macro context $\mathbf{m}_t \in \mathbb{R}^{D_m}$ contains time-aligned external indicators available before the scoring time. The external-document branch is motivated by evidence that news and regulatory language can carry risk-relevant signals \cite{tetlock2007giving,loughran2011liability}.
@@ -85,7 +96,7 @@ Let $D_d$, $D_s$, and $D_m$ denote the dimensions of the three feature families.
 \mathbf{x}_t = \mathbf{W}_p [\mathbf{d}_t \Vert \mathbf{s}_t \Vert \mathbf{m}_t] + \mathbf{b}_p,
 \label{eq:state_projection}
 \end{equation}
-where $\Vert$ denotes concatenation, $\mathbf{W}_p \in \mathbb{R}^{D_h \times (D_d+D_s+D_m)}$ and $\mathbf{b}_p \in \mathbb{R}^{D_h}$ are trainable parameters, and $\mathbf{x}_t \in \mathbb{R}^{D_h}$ is the initial user-state representation.
+where $\Vert$ denotes concatenation, $\mathbf{W}_p \in \mathbb{R}^{D_h \times (D_d+D_s+D_m)}$ and $\mathbf{b}_p \in \mathbb{R}^{D_h}$ are trainable parameters, and $\mathbf{x}_t \in \mathbb{R}^{D_h}$ is the initial user-state representation. External documents are not concatenated into this projected state; they are retrieved later from the timestamp-filtered knowledge base and fused through cross-attention.
 
 \subsection{Time-Aware Sequence Encoding}
 Financial behavior is observed at irregular intervals. FRAA therefore injects a time-gap encoding into each event representation. Let $\Delta \tau_i$ denote the elapsed time between consecutive events. The input to layer $l$ of the Transformer encoder is updated as
@@ -143,7 +154,7 @@ where $\hat{e}_t$ is the generated explanation, $e_t^{\mathrm{ref}}$ is an exper
 
 \begin{figure}
 \centering
-\includegraphics[width=0.88\textwidth]{figures/algorithm/algorithm_1_0ebe5141.png}
+\includegraphics[width=\textwidth]{figures/algorithm/algorithm_1_0ebe5141.png}
 \caption{Overview of FRAA. The model encodes multi-source financial behavior, retrieves timestamp-valid documents from a financial knowledge base, fuses retrieved evidence with the user state, and outputs both a calibrated risk score and an explanation.}
 \label{fig:algorithm}
 \end{figure}
@@ -154,23 +165,20 @@ Figure~\ref{fig:algorithm} summarizes the inference path from multi-source evide
 \label{sec:experiments}
 
 \subsection{Dataset and Evaluation Protocol}
-The dataset is a proprietary 24-month multi-source corpus from a financial risk environment. It contains over 20 million users, 1.2 billion interactions, and 15 heterogeneous data sources. Records include transaction events, account status snapshots, product holdings, macroeconomic series, and timestamped news or regulatory signals. The target indicates whether a material adverse event, such as default, severe delinquency, or forced liquidation, occurs within the next 30 days.
+The dataset is a proprietary 24-month multi-source corpus from a financial risk environment. It contains over 20 million users, 1.2 billion interactions, and 15 heterogeneous data sources. Records include transaction credits and debits, transaction amount and merchant category, account status snapshots, balance and credit-line changes, product holdings, macroeconomic series, and timestamped news or regulatory signals. The target indicates whether a material adverse event, such as default, severe delinquency, or forced liquidation, occurs within the next 30 days.
 
 We use a strict chronological split. Historical records are used to build lookback features and timestamp-valid knowledge-base entries. The model is trained on a 12-month period, tuned on the following month, and evaluated on the final month. No validation or test-period documents are made available to earlier predictions. We report Log Loss for probability calibration, Recall@1/Recall@5 for risk-review ranking, area under the receiver operating characteristic curve (AUC) for feature-group occlusion, and longest common subsequence ROUGE (ROUGE-L) for explanation overlap with expert-written references.
 
-The evaluation protocol follows the main failure modes of financial risk systems. Log Loss measures whether predicted probabilities are useful for downstream thresholding and risk appetite control. Recall@1 and Recall@5 measure the ranking quality of the highest-risk cases, which are the cases most likely to be reviewed by analysts. The chronological split and timestamp-valid retrieval rule are used for every model variant, including ablations, so that performance differences do not arise from different access to future information.
+The evaluation protocol follows the main failure modes of financial risk systems. Log Loss measures whether predicted probabilities are useful for downstream thresholding, capital allocation, and risk appetite control. Recall@1 and Recall@5 measure the ranking quality of the highest-risk cases, which are the cases most likely to be reviewed by analysts under limited daily review capacity. The chronological split and timestamp-valid retrieval rule are used for every model variant, including ablations, so that performance differences do not arise from different access to future information.
 
 \subsection{Baselines and Training Details}
-We compare FRAA with a deployed Random Forest (RF), RF with static knowledge-base (KB) features, XGBoost, LSTM, and a non-retrieval Transformer. These baselines cover the main operational choices in the target setting: tabular ensembles, tabular ensembles with manually attached external features, recurrent sequence modeling, and neural sequence modeling without retrieval. We retain the deployed tree-based baseline because credit-scoring studies repeatedly find tree ensembles difficult to displace on heterogeneous tabular data \cite{baesens2003benchmarking,brown2012experimental}. We also include a neural tabular reference point because recent tabular deep learning remains competitive only under careful benchmarking \cite{arik2021tabnet}. All baselines use the same chronological split and available feature families. FRAA is implemented in PyTorch and trained with AdamW, learning rate $1\times10^{-4}$, weight decay $1\times10^{-5}$, batch size 64, and a maximum budget of 50 epochs. The checkpoint is selected by validation Log Loss, and no test-set information is used for model selection.
+We compare FRAA with a deployed Random Forest (RF), RF with static knowledge-base (KB) features, XGBoost, LSTM, and a non-retrieval Transformer. These baselines cover the main operational choices in the target setting: tabular ensembles, tabular ensembles with manually attached external features, recurrent sequence modeling, and neural sequence modeling without retrieval. We retain the deployed tree-based baseline because credit-scoring studies repeatedly find tree ensembles difficult to displace on heterogeneous tabular data \cite{baesens2003benchmarking,brown2012experimental}. We also include a neural tabular reference point because recent tabular deep learning remains competitive only under careful benchmarking \cite{arik2021tabnet}. All baselines use the same chronological split and available feature families. FRAA is implemented in PyTorch and trained with Distributed Data Parallel on 8 NVIDIA A100 GPUs with 512 GB RAM. The model uses 8 attention blocks, hidden dimension 256, and input/output embedding dimension 512. We use AdamW with learning rate $1\times10^{-4}$, weight decay $1\times10^{-5}$, batch size 64, and a maximum budget of 50 epochs. The checkpoint is selected by validation Log Loss, and no test-set information is used for model selection.
 
-Hyperparameters are chosen on the validation month and then fixed for the test month. For retrieval variants, document embeddings are constructed offline and indexed before evaluation. During scoring, the retrieval pool is filtered by timestamp before nearest-neighbor search. This step is essential because a high-capacity retrieval model could otherwise use documents that were unavailable when the decision should have been made.
-
-\subsection{Evaluation Questions}
-The experiments address three questions. First, does retrieval-augmented evidence improve calibrated risk prediction and high-risk ranking relative to tree-based and neural baselines? Second, which temporal, feature, and retrieval components account for the observed gains? Third, are the explanations and latency compatible with analyst-facing risk review? The following sections follow this order, separating predictive performance, ablation evidence, and operational evaluation.
+Hyperparameters are chosen on the validation month and then fixed for the test month. The financial knowledge base contains 1.2 million timestamped documents. Document embeddings are constructed offline and served through a FAISS index. During scoring, the retrieval pool is filtered by timestamp before nearest-neighbor search, and the top-$K=5$ entries are retrieved unless otherwise stated. This step is essential because a high-capacity retrieval model could otherwise use documents that were unavailable when the decision should have been made. The Transformer and FRAA (-KB) baselines use the same temporal user-state backbone without timestamp-valid document retrieval, so the full-model comparison separates retrieval and fusion from sequence modeling alone.
 
 \subsection{Main Results}
 
-We first compare the full model with deployed and neural baselines under the same chronological split. Table~\ref{tab:main_results} reports the numerical results, and Fig.~\ref{fig:main_results} visualizes the two primary metrics. The ordering is consistent across calibration and ranking: the full retrieval-augmented model outperforms tree-based baselines, the non-retrieval Transformer, and all ablated FRAA variants.
+We begin with the main predictive comparison, evaluating FRAA against the deployed and neural baselines under the same chronological split. Table~\ref{tab:main_results} reports the numerical results, and Fig.~\ref{fig:main_results} visualizes the two primary metrics. The ordering is consistent across calibration and ranking: the full retrieval-augmented model outperforms tree-based baselines, the non-retrieval Transformer, and all ablated FRAA variants.
 
 \begin{table}[H]
 \centering
@@ -197,7 +205,7 @@ FRAA (-KB) & 0.5385 & 0.4023 \\
 \end{tabular}
 \end{table}
 
-Relative to the deployed RF baseline, FRAA reduces Log Loss by 19.6\% and raises Recall@5 from 0.3172 to 0.4185. Relative to the non-retrieval Transformer, it reduces Log Loss by 9.4\% and raises Recall@5 by 8.8\%. The ablated variants remain below the full model, indicating that retrieval, temporal encoding, and dynamic features contribute complementary information.
+Relative to the deployed RF baseline, FRAA reduces Log Loss by 19.6\% and raises Recall@5 from 0.3172 to 0.4185. Relative to the non-retrieval Transformer, it reduces Log Loss by 9.4\% and raises Recall@5 by 8.8\%. Because the chronological split and timestamp-valid retrieval rule exclude post-decision information, these gains reflect evidence available at scoring time rather than later documents. The ablated variants remain below the full model, indicating that retrieval, temporal encoding, and dynamic features contribute complementary information.
 
 \begin{figure}[H]
 \centering
@@ -208,7 +216,7 @@ Relative to the deployed RF baseline, FRAA reduces Log Loss by 19.6\% and raises
 
 \subsection{Scenario Adaptation}
 
-We next test whether the representation learned from the multi-source corpus adapts to related product distributions. Table~\ref{tab:scenario_adaptation} reports relative Recall@1 and Recall@5 lifts against a scenario-specific baseline. LP-FT updates a small prediction layer, LoRA-FT updates low-rank adapters, and full-FT updates the full model \cite{hu2022lora}.
+After the main comparison, we test whether the representation learned from the multi-source corpus adapts to related product distributions. Table~\ref{tab:scenario_adaptation} reports relative Recall@1 and Recall@5 lifts against a scenario-specific baseline trained for each target product. LP-FT updates only a small prediction layer, LoRA-FT updates low-rank adapters, and full-FT updates the full model \cite{hu2022lora}. This comparison separates lightweight domain alignment from full cross-product adaptation.
 
 \begin{table}[H]
 \centering
@@ -229,15 +237,13 @@ LoRA-FT (<5\% params) & +13.49 / +12.63 & +11.72 / +10.88 \\
 \end{tabular}
 \end{table}
 
-Full-FT gives the largest gains in both credit-card risk scoring and mortgage delinquency forecasting. LoRA-FT retains much of this improvement with fewer updated parameters, suggesting that the learned representation is reusable across related products. These results are offline scenario-transfer evidence and should not be read as deployment validation.
-
-An offline replay under a fixed risk-appetite constraint follows the same ordering as the predictive results: models with larger Log Loss reductions also give higher estimated decision utility. We treat this only as directional decision-support evidence, not as a causal claim about deployed outcomes.
+Full-FT gives the largest gains in both credit-card risk scoring and mortgage delinquency forecasting. LoRA-FT retains much of this improvement with fewer updated parameters, suggesting that the learned representation is reusable across related products. LP-FT is weaker but still improves over the scenario-specific baseline, indicating that even shallow domain alignment can help.
 
 \subsection{Ablation and Analysis}
 \label{sec:ablation}
 
 \subsubsection{Architectural Components}
-The component ablation removes one design choice at a time while keeping the training split, feature availability, and evaluation metrics unchanged. This setup separates the effect of retrieval from the effect of stronger sequence modeling.
+The component ablation removes one design choice at a time while keeping the training split, feature availability, and evaluation metrics unchanged. With these factors fixed, the ablation separates the effect of retrieval from the effect of stronger sequence modeling.
 
 \begin{table}[H]
 \centering
@@ -261,24 +267,63 @@ FRAA (-KB) & 0.5385 & 0.4023 \\
 Table~\ref{tab:component_ablation} isolates the contribution of dynamic transactions (-Dyn), temporal encoding (-TE), and knowledge retrieval (-KB). All three removals degrade the full model, confirming that the gains do not come from a single add-on. Removing the knowledge component increases Log Loss from 0.5163 to 0.5385 and decreases Recall@5 from 0.4185 to 0.4023, supporting the retrieval-augmented design. Removing temporal encoding also reduces performance, which is consistent with the irregular timing of financial events. The -Dyn variant remains stronger than the non-retrieval Transformer. External evidence and temporal encoding therefore compensate for some missing dynamic transaction information, but they do not replace it.
 
 \subsubsection{Context Window}
-We varied the behavioral lookback window to test how much history the model needs. Performance improved from 30 to 120 days and then slightly declined at 180 days, so the main experiments use the 120-day window. This pattern suggests that older events add limited signal and may introduce noise.
+We also varied the behavioral lookback window to test how much history the model needs. Performance improved from 30 to 120 days and then slightly declined at 180 days, so the main experiments use the 120-day window. The slight decline at 180 days indicates that older events add limited signal and may introduce noise.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Context-window sensitivity. Lower Log Loss and higher Recall@5 are better.}
+\label{tab:context_window}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Window length} & \textbf{Log Loss} & \textbf{Recall@5} \\
+\midrule
+30 days & 0.5413 & 0.3942 \\
+\rowcolor{tablerowalt}
+60 days & 0.5291 & 0.4045 \\
+90 days & 0.5210 & 0.4123 \\
+\rowcolor{tablerowalt}
+\textbf{120 days} & \best{0.5163} & \best{0.4185} \\
+180 days & 0.5172 & 0.4171 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsubsection{Feature Groups and Retrieval Depth}
-We next examine two complementary views: feature-family occlusion and retrieval depth. Figure~\ref{fig:retrieval_depth} summarizes both analyses. Knowledge-retrieved context produces the largest AUC drop, followed by transaction dynamics; static profile variables still contribute, but less than time-sensitive behavioral and external-evidence signals. Retrieval depth also has a clear optimum: one or three documents provide insufficient context, whereas seven or ten slightly degrade both metrics. We therefore use $K=5$ in the main experiments.
+We then examine two complementary views of the retrieval signal: feature-family occlusion and retrieval depth. Figure~\ref{fig:retrieval_depth} summarizes both analyses. Knowledge-retrieved context produces the largest AUC drop, followed by transaction dynamics; static profile variables still contribute, but less than time-sensitive behavioral and external-evidence signals. Retrieval depth also has a clear optimum: one or three documents provide insufficient context, whereas seven or ten slightly degrade both metrics. We therefore use $K=5$ in the main experiments.
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.92\textwidth]{retrieval_depth_sensitivity.pdf}
-\caption{Retrieval evidence analysis. (a) Feature-family occlusion measured by AUC drop. (b) Retrieval-depth sensitivity, with $K=5$ selected for the main experiments.}
+\caption{Retrieval evidence analysis. (a) Feature-family occlusion measured by AUC drop. (b) Retrieval-depth sensitivity, with $K=5$ selected for the main experiments. Table~\ref{tab:incremental_features} provides the complementary reverse feature-addition check.}
 \label{fig:retrieval_depth}
 \end{figure}
 
-The reverse feature-addition check leads to the same interpretation. Knowledge-retrieved context alone is useful, transaction dynamics gives the sharpest single improvement, and the complete feature set performs best. This supports combining external evidence with dynamic behavior rather than relying on either signal family alone.
+The reverse feature-addition check leads to the same interpretation. Table~\ref{tab:incremental_features} starts from knowledge-retrieved context and adds feature groups in the order suggested by the occlusion analysis. Knowledge-retrieved context alone is useful, transaction dynamics gives the sharpest single improvement, and the complete feature set performs best. This supports combining external evidence with dynamic behavior rather than relying on either signal family alone.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Incremental feature-group addition ordered by feature-family importance.}
+\label{tab:incremental_features}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Feature groups included} & \textbf{Log Loss} & \textbf{Recall@5} \\
+\midrule
+Knowledge-retrieved context & 0.5412 & 0.3971 \\
+\rowcolor{tablerowalt}
++ Transaction dynamics & 0.5275 & 0.4083 \\
++ Macroeconomic indicators & 0.5198 & 0.4146 \\
+\rowcolor{tablerowalt}
+\textbf{+ Quasi-static profile} & \best{0.5163} & \best{0.4185} \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Explanation and Efficiency Analysis}
 
 \subsubsection{Explanation Quality}
-Beyond risk scores, FRAA is intended to support human review by explaining why a high-risk case was flagged. We evaluate the generated explanations using expert ratings and lexical overlap with reference explanations.
+In addition to risk scoring, FRAA is intended to support human review by explaining why a high-risk case was flagged. We evaluate the generated explanations using expert ratings and lexical overlap with reference explanations.
 
 \begin{figure}[!h]
 \centering
@@ -287,39 +332,36 @@ Beyond risk scores, FRAA is intended to support human review by explaining why a
 \label{fig:explanation_quality}
 \end{figure}
 
-Five domain experts evaluated 1,000 high-risk test predictions. Figure~\ref{fig:explanation_quality} shows that FRAA improves faithfulness, readability, and ROUGE-L over a template baseline that lists the top three feature groups. The full model obtains faithfulness of 4.32/5, readability of 4.51/5, and ROUGE-L of 0.4131. These ratings indicate auditability, not that generated text is sufficient for automatic decision making.
+Five domain experts evaluated 1,000 high-risk test predictions. Figure~\ref{fig:explanation_quality} shows that FRAA improves faithfulness, readability, and ROUGE-L over a template baseline that lists the top three feature groups. ROUGE-L is computed against reference explanations written by a senior risk analyst and checked against timestamp-valid evidence. The full model obtains faithfulness of 4.32/5, readability of 4.51/5, and ROUGE-L of 0.4131. These ratings indicate auditability, not that generated text is sufficient for automatic decision making.
 
 \subsubsection{Efficiency Analysis}
-The final evaluation asks whether retrieval and fusion are practical for analyst-facing review. Table~\ref{tab:latency} reports mean per-query latency and throughput under the same batch-size-64 serving configuration.
+Finally, we evaluate whether retrieval and fusion are practical for analyst-facing review. Table~\ref{tab:latency} reports mean per-query latency, throughput, and Recall@5 under the same batch-size-64 serving configuration.
 
 \begin{table}[H]
 \centering
 \scriptsize
-\caption{Inference latency and throughput comparison under batch size 64.}
+\caption{Inference latency, throughput, and Recall@5 comparison under batch size 64.}
 \label{tab:latency}
-\begin{tabular}{lcc}
+\begin{tabular}{lccc}
 \toprule
-\textbf{Model} & \textbf{Latency (ms/query)} & \textbf{Throughput (queries/s)} \\
+\textbf{Model} & \textbf{Latency (ms/query)} & \textbf{Throughput (queries/s)} & \textbf{Recall@5} \\
 \midrule
-RF + KB features & 1.9 & 12,530 \\
+RF + KB features & 1.9 & 12,530 & 0.3291 \\
 \rowcolor{tablerowalt}
-XGBoost & 2.1 & 11,200 \\
-LSTM & 8.3 & 5,910 \\
+XGBoost & 2.1 & 11,200 & 0.3495 \\
+LSTM & 8.3 & 5,910 & 0.3738 \\
 \rowcolor{tablerowalt}
-Transformer & 12.4 & 4,320 \\
-\textbf{FRAA (full)} & 15.7 & 4,070 \\
+Transformer & 12.4 & 4,320 & 0.3846 \\
+\textbf{FRAA (full)} & 15.7 & 4,070 & \best{0.4185} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 FRAA is slower than tabular baselines because it performs retrieval and neural sequence encoding, but the tested latency remains compatible with interactive review: the full model requires 15.7 ms/query and reaches 4,070 queries/s. Retrieval accounts for approximately 4.2 ms of the total latency. Throughput remains sufficient for batched offline scoring and analyst triage in the tested configuration.
 
-\subsection{Limitations and Reproducibility}
-The main reproducibility risk is external validation under distribution shift rather than the scoring protocol itself. To make the protocol auditable, we specify the 30-day prediction horizon, strict chronological split, validation-month hyperparameter selection, 120-day behavioral window, timestamp-filtered retrieval, fixed retrieval depth ($K=5$), and the evaluation metrics used for calibration and ranking. No test-set labels are used for checkpoint selection, and retrieval candidates are filtered by timestamp at scoring time. Future work should add repeated temporal splits, multi-seed training runs, and institution-level transfer tests to quantify stability under distribution shift.
+\section{Conclusion and Future Work}
 
-\section{Conclusion}
-
-This paper presented FRAA, a retrieval-augmented model for explainable financial risk assessment. On a large-scale proprietary multi-source dataset, FRAA achieves the best Log Loss and Recall@5 among the evaluated models. The ablation and retrieval-depth analyses suggest that external evidence is most useful when retrieval is constrained by decision time and fused with temporal user behavior. The explanation and latency results further indicate that the model can support analyst-facing review under the tested serving configuration. Future work should test repeated temporal splits, multi-seed training runs, and institution-level transfer to quantify stability under distribution shift. Overall, FRAA shows that time-valid retrieval can improve risk scoring when it is tied to both calibrated prediction and auditable explanation.
+This paper presented FRAA, a retrieval-augmented model for explainable financial risk assessment. On a large-scale proprietary multi-source dataset, FRAA achieves the lowest Log Loss and highest Recall@5 among the evaluated models. The ablation and retrieval-depth analyses suggest that external evidence is most useful when retrieval is constrained by decision time and fused with temporal user behavior. To make the evaluation auditable, the 30-day horizon, chronological split, validation-month hyperparameter selection, 120-day behavioral window, timestamp-filtered retrieval, fixed retrieval depth ($K=5$), and evaluation metrics are fixed before test evaluation. No test-set labels are used for checkpoint selection, and all variants follow the same chronological split and timestamp-valid retrieval rule. The explanation and latency results further indicate that the model can support analyst-facing review under the tested serving configuration. Future work should examine broader temporal and institution-level validation. Overall, FRAA shows that time-valid retrieval can improve risk scoring when it is tied to both calibrated prediction and auditable explanation.
 
 \bibliographystyle{splncs04}
 \bibliography{submission_pricai2026}

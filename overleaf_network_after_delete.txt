@@ -1,8 +1,0 @@
-161. [GET] https://www.overleaf.com/project/6a204ea1614e48bb59209a8b/doc/submission_pricai2026.tex => [404] 
-196. [GET] https://www.overleaf.com/project/6a204ea1614e48bb59209a8b/docs => [404] 
-197. [GET] https://www.overleaf.com/project/6a204ea1614e48bb59209a8b/documents => [404] 
-210. [POST] https://www.overleaf.com/project/6a204ea1614e48bb59209a8b/doc/6a204ea1614e48bb59209a92/metadata => [200] 
-275. [DELETE] https://www.overleaf.com/project/6a204ea1614e48bb59209a8b/doc/6a211fe9f044d8749a9090f4 => [204] 
-276. [DELETE] https://www.overleaf.com/project/6a204ea1614e48bb59209a8b/doc/6a211fe9f044d8749a9090f4 => [204] 
-
-Note: 132 static requests not shown, run with "static" option to see them.
